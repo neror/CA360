@@ -1,0 +1,14 @@
+{
+	"CFBundleDevelopmentRegion" = English;
+	CFBundleDisplayName = "${PRODUCT_NAME}";
+	CFBundleExecutable = "${EXECUTABLE_NAME}";
+	CFBundleIconFile = "";
+	CFBundleIdentifier = "com.freetimestudios.${PRODUCT_NAME:rfc1034identifier}";
+	"CFBundleInfoDictionaryVersion" = "6.0";
+	CFBundleName = "${PRODUCT_NAME}";
+	CFBundlePackageType = APPL;
+	CFBundleSignature = "????";
+	CFBundleVersion = "1.0";
+	LSRequiresIPhoneOS = YES;
+	NSMainNibFile = MainWindow;
+}

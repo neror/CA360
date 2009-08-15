@@ -1,0 +1,4 @@
+build
+*.svn
+*.o
+*.DS_Store
