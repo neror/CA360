@@ -167,27 +167,27 @@ const static CGPoint kSimpleLayerStartPosition = { 160.f, 310.f };
 }
 
 - (void)rotate:(id)sender {
-  CATransform3D rotated;
   if(self.cumulative) {
     CATransform3D currentTransform = simpleLayer_.transform;
-    rotated = CATransform3DRotate(currentTransform, 45.f, 0.f, 0.f, 1.f);
+    CATransform3D rotated = CATransform3DRotate(currentTransform, 45.f, 0.f, 0.f, 1.f);
+    simpleLayer_.transform = rotated;
   } else {
-    rotated = CATransform3DMakeRotation(45.f, 0.f, 0.f, 1.f);
+    simpleLayer_.transform = CATransform3DIdentity;
+    [simpleLayer_ setValue:[NSNumber numberWithFloat:45.f] forKeyPath:@"transform.rotation.z"];
   }
-  simpleLayer_.transform = rotated;
   [simpleLayer_ setNeedsDisplay];
   [self updatePropertiesLabel];
 }
 
 - (void)scale:(id)sender {
-  CATransform3D scaled;
   if(self.cumulative) {
     CATransform3D currentTransform = simpleLayer_.transform;
-    scaled = CATransform3DScale(currentTransform, 1.5f, 1.5f, 1.5f);
+    CATransform3D scaled = CATransform3DScale(currentTransform, 1.5f, 1.5f, 1.5f);
+    simpleLayer_.transform = scaled;
   } else {
-    scaled = CATransform3DMakeScale(1.5f, 1.5f, 1.5f);
+    simpleLayer_.transform = CATransform3DIdentity;
+    [simpleLayer_ setValue:[NSNumber numberWithFloat:1.5f] forKeyPath:@"transform.scale"];
   }
-  simpleLayer_.transform = scaled;
   [simpleLayer_ setNeedsDisplay];
   [self updatePropertiesLabel];
 }
