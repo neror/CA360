@@ -33,6 +33,7 @@
 #import "KeyframeAnimation.h"
 #import "GradientLayers.h"
 #import "LayerTransforms.h"
+#import "ImageContent.h"
 
 @interface SampleManager (Private)
 
@@ -56,14 +57,14 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(SampleManager);
   if (self != nil) {
     NSArray *geom = [NSArray arrayWithObjects:[GeometryProperties class], [LayerTransforms class], nil];
     NSArray *hier = [NSArray arrayWithObjects:[LayerTree class], nil];
-    NSArray *drawing = [NSArray arrayWithObjects:[LayerDrawing class], nil];
+    NSArray *drawing = [NSArray arrayWithObjects:[ImageContent class], [LayerDrawing class], nil];
     NSArray *animation = [NSArray arrayWithObjects:[SimpleAnimation class], [KeyframeAnimation class], nil];
     NSArray *special = [NSArray arrayWithObjects:[ShapeLayers class], [GradientLayers class], nil];
     
     
     groups_ = [[NSArray alloc] initWithObjects:@"Geometry & Transforms",
                                                @"Layer Hierarchy",
-                                               @"Drawing and Style Properties",
+                                               @"Content & Style Properties",
                                                @"Animation",
                                                @"Special Layer Types",
                                                nil];

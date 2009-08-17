@@ -12,7 +12,6 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
-		28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
 		28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
 		DF80136D10377A1200B48250 /* GradientLayers.m in Sources */ = {isa = PBXBuildFile; fileRef = DF80136C10377A1200B48250 /* GradientLayers.m */; };
 		DF80136E10377A1200B48250 /* GradientLayers.m in Sources */ = {isa = PBXBuildFile; fileRef = DF80136C10377A1200B48250 /* GradientLayers.m */; };
@@ -20,6 +19,18 @@
 		DF8014A31038D12900B48250 /* CALayer+FTDebugDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8014A11038D12900B48250 /* CALayer+FTDebugDrawing.m */; };
 		DF8015621038E1C400B48250 /* LayerTransforms.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8015611038E1C400B48250 /* LayerTransforms.m */; };
 		DF8015631038E1C400B48250 /* LayerTransforms.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8015611038E1C400B48250 /* LayerTransforms.m */; };
+		DFF70C321039D8BC0052EE6A /* ImageContent.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF70C311039D8BC0052EE6A /* ImageContent.m */; };
+		DFF70C331039D8BC0052EE6A /* ImageContent.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF70C311039D8BC0052EE6A /* ImageContent.m */; };
+		DFF70C461039D9E60052EE6A /* FTSLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = DFF70C451039D9E60052EE6A /* FTSLogo.png */; };
+		DFF70C471039D9E60052EE6A /* FTSLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = DFF70C451039D9E60052EE6A /* FTSLogo.png */; };
+		DFF70C4F1039DA0A0052EE6A /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFF70C4C1039DA0A0052EE6A /* MainWindow.xib */; };
+		DFF70C511039DA0A0052EE6A /* UnitTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DFF70C4B1039DA0A0052EE6A /* UnitTests-Info.plist */; };
+		DFF70C521039DA0A0052EE6A /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFF70C4C1039DA0A0052EE6A /* MainWindow.xib */; };
+		DFF70C531039DA0A0052EE6A /* CA360-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DFF70C4D1039DA0A0052EE6A /* CA360-Info.plist */; };
+		DFF70C9E1039DE170052EE6A /* Ben.png in Resources */ = {isa = PBXBuildFile; fileRef = DFF70C9C1039DE170052EE6A /* Ben.png */; };
+		DFF70C9F1039DE170052EE6A /* Steve.png in Resources */ = {isa = PBXBuildFile; fileRef = DFF70C9D1039DE170052EE6A /* Steve.png */; };
+		DFF70CA01039DE170052EE6A /* Ben.png in Resources */ = {isa = PBXBuildFile; fileRef = DFF70C9C1039DE170052EE6A /* Ben.png */; };
+		DFF70CA11039DE170052EE6A /* Steve.png in Resources */ = {isa = PBXBuildFile; fileRef = DFF70C9D1039DE170052EE6A /* Steve.png */; };
 		DFF7F28D103601FE0067ED5B /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF7F28C103601FE0067ED5B /* OCMock.framework */; };
 		DFF7F2F5103602470067ED5B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF7F2F4103602470067ED5B /* QuartzCore.framework */; };
 		DFF7F2F6103602470067ED5B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF7F2F4103602470067ED5B /* QuartzCore.framework */; };
@@ -70,19 +81,24 @@
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		28A0AAE50D9B0CCF005BE974 /* CA360_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CA360_Prefix.pch; sourceTree = "<group>"; };
-		28AD735F0D9D9599002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		28C286DF0D94DF7D0034E888 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		28C286E00D94DF7D0034E888 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		8D1107310486CEB800E47090 /* CA360-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CA360-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		DF80136B10377A1200B48250 /* GradientLayers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GradientLayers.h; path = Classes/Samples/GradientLayers.h; sourceTree = "<group>"; };
 		DF80136C10377A1200B48250 /* GradientLayers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GradientLayers.m; path = Classes/Samples/GradientLayers.m; sourceTree = "<group>"; };
 		DF8014A01038D12900B48250 /* CALayer+FTDebugDrawing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CALayer+FTDebugDrawing.h"; path = "Classes/CALayer+FTDebugDrawing.h"; sourceTree = "<group>"; };
 		DF8014A11038D12900B48250 /* CALayer+FTDebugDrawing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CALayer+FTDebugDrawing.m"; path = "Classes/CALayer+FTDebugDrawing.m"; sourceTree = "<group>"; };
 		DF8015601038E1C400B48250 /* LayerTransforms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LayerTransforms.h; path = Classes/Samples/LayerTransforms.h; sourceTree = "<group>"; };
 		DF8015611038E1C400B48250 /* LayerTransforms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LayerTransforms.m; path = Classes/Samples/LayerTransforms.m; sourceTree = "<group>"; };
+		DFF70C301039D8BC0052EE6A /* ImageContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageContent.h; path = Classes/Samples/ImageContent.h; sourceTree = "<group>"; };
+		DFF70C311039D8BC0052EE6A /* ImageContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageContent.m; path = Classes/Samples/ImageContent.m; sourceTree = "<group>"; };
+		DFF70C451039D9E60052EE6A /* FTSLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FTSLogo.png; sourceTree = "<group>"; };
+		DFF70C4B1039DA0A0052EE6A /* UnitTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
+		DFF70C4C1039DA0A0052EE6A /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		DFF70C4D1039DA0A0052EE6A /* CA360-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = "CA360-Info.plist"; sourceTree = "<group>"; };
+		DFF70C9C1039DE170052EE6A /* Ben.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ben.png; sourceTree = "<group>"; };
+		DFF70C9D1039DE170052EE6A /* Steve.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Steve.png; sourceTree = "<group>"; };
 		DFF7F25D103601B20067ED5B /* UnitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DFF7F25E103601B20067ED5B /* UnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
 		DFF7F28C103601FE0067ED5B /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OCMock.framework; sourceTree = "<group>"; };
 		DFF7F2F4103602470067ED5B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		DFF7F30B1036025B0067ED5B /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Developer/Library/Frameworks/SenTestingKit.framework; sourceTree = SDKROOT; };
@@ -162,11 +178,10 @@
 				080E96DDFE201D6D7F000001 /* Core App Classes */,
 				DFF7F257103601A50067ED5B /* Tests */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
-				29B97317FDCFA39411CA2CEA /* Resources */,
+				DFF70C441039D9E60052EE6A /* Resources */,
 				DFF7F28B103601FE0067ED5B /* Support */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				DFF7F25E103601B20067ED5B /* UnitTests-Info.plist */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -180,15 +195,6 @@
 			name = "Other Sources";
 			sourceTree = "<group>";
 		};
-		29B97317FDCFA39411CA2CEA /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
-				8D1107310486CEB800E47090 /* CA360-Info.plist */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +204,19 @@
 				DFF7F2F4103602470067ED5B /* QuartzCore.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DFF70C441039D9E60052EE6A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DFF70C451039D9E60052EE6A /* FTSLogo.png */,
+				DFF70C9C1039DE170052EE6A /* Ben.png */,
+				DFF70C9D1039DE170052EE6A /* Steve.png */,
+				DFF70C4B1039DA0A0052EE6A /* UnitTests-Info.plist */,
+				DFF70C4C1039DA0A0052EE6A /* MainWindow.xib */,
+				DFF70C4D1039DA0A0052EE6A /* CA360-Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		DFF7F257103601A50067ED5B /* Tests */ = {
@@ -224,7 +243,7 @@
 			children = (
 				DFF7F65C103635380067ED5B /* Geometry & Transforms */,
 				DFF7F65D1036354F0067ED5B /* Layer Hierarchy */,
-				DFF7F65E103635690067ED5B /* Drawing & Style Properties */,
+				DFF7F65E103635690067ED5B /* Content & Style Properties */,
 				DFF7F657103634AB0067ED5B /* Animation */,
 				DFF7F65F103635840067ED5B /* Special Layer Types */,
 				DFF7F3F4103606580067ED5B /* SynthesizeSingleton.h */,
@@ -267,13 +286,15 @@
 			name = "Layer Hierarchy";
 			sourceTree = "<group>";
 		};
-		DFF7F65E103635690067ED5B /* Drawing & Style Properties */ = {
+		DFF7F65E103635690067ED5B /* Content & Style Properties */ = {
 			isa = PBXGroup;
 			children = (
+				DFF70C301039D8BC0052EE6A /* ImageContent.h */,
+				DFF70C311039D8BC0052EE6A /* ImageContent.m */,
 				DFF7F610103632570067ED5B /* LayerDrawing.h */,
 				DFF7F611103632570067ED5B /* LayerDrawing.m */,
 			);
-			name = "Drawing & Style Properties";
+			name = "Content & Style Properties";
 			sourceTree = "<group>";
 		};
 		DFF7F65F103635840067ED5B /* Special Layer Types */ = {
@@ -356,7 +377,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */,
+				DFF70C461039D9E60052EE6A /* FTSLogo.png in Resources */,
+				DFF70C4F1039DA0A0052EE6A /* MainWindow.xib in Resources */,
+				DFF70C9E1039DE170052EE6A /* Ben.png in Resources */,
+				DFF70C9F1039DE170052EE6A /* Steve.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +388,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFF70C471039D9E60052EE6A /* FTSLogo.png in Resources */,
+				DFF70C511039DA0A0052EE6A /* UnitTests-Info.plist in Resources */,
+				DFF70C521039DA0A0052EE6A /* MainWindow.xib in Resources */,
+				DFF70C531039DA0A0052EE6A /* CA360-Info.plist in Resources */,
+				DFF70CA01039DE170052EE6A /* Ben.png in Resources */,
+				DFF70CA11039DE170052EE6A /* Steve.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,6 +434,7 @@
 				DF80136E10377A1200B48250 /* GradientLayers.m in Sources */,
 				DF8014A31038D12900B48250 /* CALayer+FTDebugDrawing.m in Sources */,
 				DF8015631038E1C400B48250 /* LayerTransforms.m in Sources */,
+				DFF70C321039D8BC0052EE6A /* ImageContent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +455,7 @@
 				DF80136D10377A1200B48250 /* GradientLayers.m in Sources */,
 				DF8014A21038D12900B48250 /* CALayer+FTDebugDrawing.m in Sources */,
 				DF8015621038E1C400B48250 /* LayerTransforms.m in Sources */,
+				DFF70C331039D8BC0052EE6A /* ImageContent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,7 +472,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = CA360_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
-				INFOPLIST_FILE = "CA360-Info.plist";
+				INFOPLIST_FILE = "Resources/CA360-Info.plist";
 				PRODUCT_NAME = CA360;
 			};
 			name = Debug;
@@ -498,7 +530,7 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREFIX_HEADER = CA360_Prefix.pch;
-				INFOPLIST_FILE = "UnitTests-Info.plist";
+				INFOPLIST_FILE = "Resources/UnitTests-Info.plist";
 				OTHER_LDFLAGS = (
 					"-framework",
 					Foundation,

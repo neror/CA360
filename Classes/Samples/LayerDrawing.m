@@ -23,12 +23,12 @@
 */
 
 #import "LayerDrawing.h"
-
+#import <QuartzCore/QuartzCore.h>
 
 @implementation LayerDrawing
 
 + (NSString *)friendlyName {
-  return @"Layer Drawing";
+  return @"Draw Your Own Content";
 }
 
 #pragma mark init and dealloc
@@ -41,6 +41,7 @@
 }
 
 - (void)dealloc {
+  FTRELEASE(drawingLayer_);
   [super dealloc];
 }
 
@@ -48,19 +49,43 @@
 
 - (void)loadView {
   UIView *myView = [[[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-  myView.backgroundColor = [UIColor blackColor];
+  myView.backgroundColor = [UIColor grayColor];
+
+  drawingLayer_ = [[CALayer layer] retain];
+  
+  [myView.layer addSublayer:drawingLayer_];
   self.view = myView;
 }
 
 - (void)viewDidUnload {
+  FTRELEASE(drawingLayer_);
 }
 
 #pragma mark View drawing
 
 - (void)viewWillAppear:(BOOL)animated {
+  drawingLayer_.backgroundColor = [[UIColor clearColor] CGColor];
+  drawingLayer_.bounds = CGRectMake(0.f, 0.f, 300.f, 300.f);
+  drawingLayer_.position = self.view.center;
+  drawingLayer_.delegate = self;
+  [drawingLayer_ setNeedsDisplay];
 }
 
-- (void)viewDidAppear:(BOOL)animated {
+- (void)viewWillDisappear:(BOOL)animated {
+  drawingLayer_.delegate = nil;
+}
+
+- (void)drawLayer:(CALayer *)layer inContext:(CGContextRef)context {
+  CGContextAddEllipseInRect(context, CGRectInset(layer.bounds, 4.f, 4.f));
+  
+  CGContextSetLineWidth(context, 2.f);
+  const CGFloat lineDashLengths[2] = { 6.f, 2.f };
+  CGContextSetLineDash(context, 0.f, lineDashLengths, 2);
+  
+  CGContextSetFillColorWithColor(context, [[UIColor greenColor] CGColor]);
+  CGContextSetStrokeColorWithColor(context, [[UIColor blackColor] CGColor]);
+  
+  CGContextDrawPath(context, kCGPathFillStroke);
 }
 
 @end

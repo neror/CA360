@@ -68,7 +68,7 @@
   [myView addSubview:movePositionButton_];
   
   propertiesTextView_ = [[UITextView alloc] initWithFrame:CGRectMake(0.f, 60.f, 320.f, 44.f)];
-  propertiesTextView_.backgroundColor = UIColorFromRGBA(0xFFFFFF, 0.f);
+  propertiesTextView_.backgroundColor = [UIColor clearColor];
   propertiesTextView_.editable = NO;
   propertiesTextView_.textAlignment = UITextAlignmentCenter;
   propertiesTextView_.font = [UIFont systemFontOfSize:12.f];

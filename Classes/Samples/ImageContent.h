@@ -24,9 +24,11 @@
 
 #import <UIKit/UIKit.h>
 
-
-@interface LayerDrawing : UIViewController {
-  CALayer *drawingLayer_;
+@interface ImageContent : UIViewController {
+  CALayer *simpleLayer_;
+  CALayer *moneyLayer_;
+  
+  UIButton *magicButton_;
 }
 
 @end
