@@ -2,3 +2,6 @@ build
 *.svn
 *.o
 *.DS_Store
+*.mode1v3
+*.pbxuser
+*.perspectivev3
