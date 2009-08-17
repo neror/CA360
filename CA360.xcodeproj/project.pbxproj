@@ -14,6 +14,10 @@
 		2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
 		28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
 		28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
+		DF80136D10377A1200B48250 /* GradientLayers.m in Sources */ = {isa = PBXBuildFile; fileRef = DF80136C10377A1200B48250 /* GradientLayers.m */; };
+		DF80136E10377A1200B48250 /* GradientLayers.m in Sources */ = {isa = PBXBuildFile; fileRef = DF80136C10377A1200B48250 /* GradientLayers.m */; };
+		DF8014A21038D12900B48250 /* CALayer+FTDebugDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8014A11038D12900B48250 /* CALayer+FTDebugDrawing.m */; };
+		DF8014A31038D12900B48250 /* CALayer+FTDebugDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8014A11038D12900B48250 /* CALayer+FTDebugDrawing.m */; };
 		DFF7F28D103601FE0067ED5B /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF7F28C103601FE0067ED5B /* OCMock.framework */; };
 		DFF7F2F5103602470067ED5B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF7F2F4103602470067ED5B /* QuartzCore.framework */; };
 		DFF7F2F6103602470067ED5B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF7F2F4103602470067ED5B /* QuartzCore.framework */; };
@@ -69,6 +73,10 @@
 		28C286E00D94DF7D0034E888 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* CA360-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CA360-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		DF80136B10377A1200B48250 /* GradientLayers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GradientLayers.h; path = Classes/Samples/GradientLayers.h; sourceTree = "<group>"; };
+		DF80136C10377A1200B48250 /* GradientLayers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GradientLayers.m; path = Classes/Samples/GradientLayers.m; sourceTree = "<group>"; };
+		DF8014A01038D12900B48250 /* CALayer+FTDebugDrawing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CALayer+FTDebugDrawing.h"; path = "Classes/CALayer+FTDebugDrawing.h"; sourceTree = "<group>"; };
+		DF8014A11038D12900B48250 /* CALayer+FTDebugDrawing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CALayer+FTDebugDrawing.m"; path = "Classes/CALayer+FTDebugDrawing.m"; sourceTree = "<group>"; };
 		DFF7F25D103601B20067ED5B /* UnitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFF7F25E103601B20067ED5B /* UnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
 		DFF7F28C103601FE0067ED5B /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OCMock.framework; sourceTree = "<group>"; };
@@ -218,6 +226,8 @@
 				DFF7F3F4103606580067ED5B /* SynthesizeSingleton.h */,
 				DFF7F3B2103605C80067ED5B /* SampleManager.h */,
 				DFF7F3B3103605C80067ED5B /* SampleManager.m */,
+				DF8014A01038D12900B48250 /* CALayer+FTDebugDrawing.h */,
+				DF8014A11038D12900B48250 /* CALayer+FTDebugDrawing.m */,
 			);
 			name = Samples;
 			sourceTree = "<group>";
@@ -265,6 +275,8 @@
 			children = (
 				DFF7F583103623ED0067ED5B /* ShapeLayers.h */,
 				DFF7F584103623ED0067ED5B /* ShapeLayers.m */,
+				DF80136B10377A1200B48250 /* GradientLayers.h */,
+				DF80136C10377A1200B48250 /* GradientLayers.m */,
 			);
 			name = "Special Layer Types";
 			sourceTree = "<group>";
@@ -383,6 +395,8 @@
 				DFF7F613103632570067ED5B /* LayerDrawing.m in Sources */,
 				DFF7F616103632A90067ED5B /* SimpleAnimation.m in Sources */,
 				DFF7F65B103634C70067ED5B /* KeyframeAnimation.m in Sources */,
+				DF80136E10377A1200B48250 /* GradientLayers.m in Sources */,
+				DF8014A31038D12900B48250 /* CALayer+FTDebugDrawing.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +414,8 @@
 				DFF7F612103632570067ED5B /* LayerDrawing.m in Sources */,
 				DFF7F617103632A90067ED5B /* SimpleAnimation.m in Sources */,
 				DFF7F65A103634C70067ED5B /* KeyframeAnimation.m in Sources */,
+				DF80136D10377A1200B48250 /* GradientLayers.m in Sources */,
+				DF8014A21038D12900B48250 /* CALayer+FTDebugDrawing.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

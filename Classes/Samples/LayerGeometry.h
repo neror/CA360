@@ -26,7 +26,7 @@
 
 
 @interface LayerGeometry : UIViewController {
-
+  CALayer *simpleLayer_;
 }
 
 @end

@@ -24,6 +24,7 @@
 
 #import "LayerTree.h"
 #import <QuartzCore/QuartzCore.h>
+#import "CALayer+FTDebugDrawing.h"
 
 @implementation LayerTree
 
@@ -44,6 +45,10 @@
   FTRELEASE(containerLayer_);
   FTRELEASE(redLayer_);
   FTRELEASE(blueLayer_);
+  FTRELEASE(purpleLayer_);
+  FTRELEASE(maskRootButton_);
+  FTRELEASE(maskBlueButton_);
+  FTRELEASE(movePurlpleButton_);
   [super dealloc];
 }
 
@@ -51,15 +56,35 @@
 
 - (void)loadView {
   UIView *myView = [[[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-  myView.backgroundColor = [UIColor blackColor];
+  myView.backgroundColor = [UIColor grayColor];
+
+  maskBlueButton_ = [[UIButton buttonWithType:UIButtonTypeRoundedRect] retain];
+  maskBlueButton_.frame = CGRectMake(10.f, 10.f, 145.f, 44.f);
+  [maskBlueButton_ setTitle:@"Toggle Blue" forState:UIControlStateNormal];
+  [maskBlueButton_ addTarget:self action:@selector(toggleBlueMask:) forControlEvents:UIControlEventTouchUpInside];
+  [myView addSubview:maskBlueButton_];
+  
+  maskRootButton_ = [[UIButton buttonWithType:UIButtonTypeRoundedRect] retain];
+  maskRootButton_.frame = CGRectMake(165.f, 10.f, 145.f, 44.f);
+  [maskRootButton_ setTitle:@"Toggle Root" forState:UIControlStateNormal];
+  [maskRootButton_ addTarget:self action:@selector(toggleRootMask:) forControlEvents:UIControlEventTouchUpInside];
+  [myView addSubview:maskRootButton_];
+  
+  movePurlpleButton_ = [[UIButton buttonWithType:UIButtonTypeRoundedRect] retain];
+  movePurlpleButton_.frame = CGRectMake(70.f, 60.f, 180.f, 44.f);
+  [movePurlpleButton_ setTitle:@"Move Purple" forState:UIControlStateNormal];
+  [movePurlpleButton_ addTarget:self action:@selector(moveYellowLayer:) forControlEvents:UIControlEventTouchUpInside];
+  [myView addSubview:movePurlpleButton_];
   
   containerLayer_ = [[CALayer layer] retain];
   redLayer_ = [[CALayer layer] retain];
   blueLayer_ = [[CALayer layer] retain];
+  purpleLayer_ = [[CALayer layer] retain];
   
   [myView.layer addSublayer:containerLayer_];
   [containerLayer_ addSublayer:redLayer_];
   [containerLayer_ addSublayer:blueLayer_];
+  [blueLayer_ addSublayer:purpleLayer_];
   
   self.view = myView;
 }
@@ -68,25 +93,67 @@
   FTRELEASE(containerLayer_);
   FTRELEASE(redLayer_);
   FTRELEASE(blueLayer_);
+  FTRELEASE(maskBlueButton_);
+  FTRELEASE(maskRootButton_);
+  FTRELEASE(movePurlpleButton_);
 }
 
 #pragma mark View drawing
 
 - (void)viewWillAppear:(BOOL)animated {
-  containerLayer_.backgroundColor = [[UIColor colorWithRed:1.f green:1.f blue:1.f alpha:1.f] CGColor];
-  containerLayer_.cornerRadius = 20.f;
-  containerLayer_.frame = self.view.layer.bounds;
-  containerLayer_.position = CGPointZero;
+  containerLayer_.backgroundColor = [[UIColor whiteColor] CGColor];
+  containerLayer_.bounds = CGRectMake(0.f, 0.f, 200.f, 200.f);
+  containerLayer_.position = self.view.center;
+  
+  CGRect rect = CGRectMake(0.f, 0.f, 100.f, 100.f);
+
+  redLayer_.backgroundColor = [UIColorFromRGBA(0xFF0000, .75f) CGColor];
+  redLayer_.bounds = rect;
+  redLayer_.position = CGPointMake(0.f, 200.f);
+  redLayer_.delegate = self;
+  [redLayer_ setNeedsDisplay];
+  
+  blueLayer_.backgroundColor = [UIColorFromRGBA(0x0000FF, .75f) CGColor];
+  blueLayer_.bounds = rect;
+  blueLayer_.position = CGPointMake(200.f, 200.f);
+  blueLayer_.delegate = self;
+  [blueLayer_ setNeedsDisplay];
+
+  purpleLayer_.backgroundColor = [UIColorFromRGBA(0xFF00FF, .75f) CGColor];
+  purpleLayer_.bounds = rect;
+  purpleLayer_.position = CGPointMake(25.f, 25.f);
+  purpleLayer_.delegate = self;
+  [purpleLayer_ setNeedsDisplay];
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-  CABasicAnimation *anim = [CABasicAnimation animationWithKeyPath:@"position"];
-  anim.toValue = [NSValue valueWithCGPoint:CGPointMake(320.f, 480.f)];
-  anim.repeatCount = FLT_MAX;
-  anim.duration = 1.f;
-  anim.autoreverses = YES;
-  anim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
-  [containerLayer_ addAnimation:anim forKey:@"grow"];  
+
+- (void)viewWillDisappear:(BOOL)animated {
+  redLayer_.delegate = nil;
+  blueLayer_.delegate = nil;
+  purpleLayer_.delegate = nil;
 }
 
+- (void)drawLayer:(CALayer *)layer inContext:(CGContextRef)context {
+  [layer debugDrawAnchorPointInContext:context withSize:CGSizeMake(4.f, 4.f) color:[UIColor blackColor]];
+}
+
+#pragma mark Event Handlers
+
+- (void)toggleBlueMask:(id)sender {
+  blueLayer_.masksToBounds = !blueLayer_.masksToBounds;
+}
+
+- (void)toggleRootMask:(id)sender {
+  containerLayer_.masksToBounds = !containerLayer_.masksToBounds;
+}
+
+- (void)moveYellowLayer:(id)sender {
+  BOOL isChildOfRoot = (purpleLayer_.superlayer == containerLayer_);
+  [purpleLayer_ removeFromSuperlayer];
+  if(isChildOfRoot) {
+    [blueLayer_ addSublayer:purpleLayer_];
+  } else {
+    [containerLayer_ addSublayer:purpleLayer_];
+  }
+}
 @end

@@ -25,15 +25,8 @@
 #import <UIKit/UIKit.h>
 
 
-@interface LayerTree : UIViewController {
-  CALayer *containerLayer_;
-  CALayer *redLayer_;
-  CALayer *blueLayer_;
-  CALayer *purpleLayer_;
-  
-  UIButton *maskRootButton_;
-  UIButton *maskBlueButton_;
-  UIButton *movePurlpleButton_;
+@interface GradientLayers : UIViewController {
+
 }
 
 @end

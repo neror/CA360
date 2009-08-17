@@ -22,18 +22,29 @@
  THE SOFTWARE.
 */
 
-#import <UIKit/UIKit.h>
+#import "CALayer+FTDebugDrawing.h"
 
 
-@interface LayerTree : UIViewController {
-  CALayer *containerLayer_;
-  CALayer *redLayer_;
-  CALayer *blueLayer_;
-  CALayer *purpleLayer_;
-  
-  UIButton *maskRootButton_;
-  UIButton *maskBlueButton_;
-  UIButton *movePurlpleButton_;
+@implementation CALayer (FTDebugDrawing)
+
+- (void)debugDrawPoint:(CGPoint)point inContext:(CGContextRef)context withSize:(CGSize)size color:(UIColor *)color {
+  CGRect rect = CGRectMake(point.x - (size.width / 2), point.y - (size.height / 2), size.width, size.height);
+  CGContextAddEllipseInRect(context, rect);
+  CGContextSetFillColorWithColor(context, [color CGColor]);
+  CGContextDrawPath(context, kCGPathFill);
+}
+
+- (void)debugDrawAnchorPointInContext:(CGContextRef)context withSize:(CGSize)size color:(UIColor *)color {
+  CGSize layerSize = self.bounds.size;
+  CGPoint realAnchorPoint = CGPointMake(layerSize.width * self.anchorPoint.x, layerSize.height * self.anchorPoint.y);
+  [self debugDrawPoint:realAnchorPoint inContext:context withSize:size color:color];
+}
+
+- (void)debugDrawBoundingBoxInContext:(CGContextRef)context withLineWidth:(CGFloat)lineWidth color:(UIColor *)color {
+  CGContextAddRect(context, self.bounds);
+  CGContextSetStrokeColorWithColor(context, [color CGColor]);
+  CGContextSetLineWidth(context, lineWidth);
+  CGContextDrawPath(context, kCGPathStroke);
 }
 
 @end

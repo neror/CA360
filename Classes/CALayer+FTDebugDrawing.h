@@ -22,18 +22,12 @@
  THE SOFTWARE.
 */
 
-#import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 
+@interface CALayer (FTDebugDrawing)
 
-@interface LayerTree : UIViewController {
-  CALayer *containerLayer_;
-  CALayer *redLayer_;
-  CALayer *blueLayer_;
-  CALayer *purpleLayer_;
-  
-  UIButton *maskRootButton_;
-  UIButton *maskBlueButton_;
-  UIButton *movePurlpleButton_;
-}
+- (void)debugDrawPoint:(CGPoint)point inContext:(CGContextRef)context withSize:(CGSize)size color:(UIColor *)color;
+- (void)debugDrawAnchorPointInContext:(CGContextRef)context withSize:(CGSize)size color:(UIColor *)color;
+- (void)debugDrawBoundingBoxInContext:(CGContextRef)context withLineWidth:(CGFloat)lineWidth color:(UIColor *)color;
 
 @end

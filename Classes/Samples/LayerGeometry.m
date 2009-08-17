@@ -23,6 +23,8 @@
 */
 
 #import "LayerGeometry.h"
+#import <QuartzCore/QuartzCore.h>
+#import "CALayer+FTDebugDrawing.h"
 
 @implementation LayerGeometry
 
@@ -40,6 +42,7 @@
 }
 
 - (void)dealloc {
+  FTRELEASE(simpleLayer_);
   [super dealloc];
 }
 
@@ -47,19 +50,33 @@
 
 - (void)loadView {
   UIView *myView = [[[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-  myView.backgroundColor = [UIColor blackColor];
+  myView.backgroundColor = [UIColor grayColor];
+  
+  simpleLayer_ = [[CALayer layer] retain];
+  [myView.layer addSublayer:simpleLayer_];
   self.view = myView;
 }
 
 - (void)viewDidUnload {
+  FTRELEASE(simpleLayer_);
 }
 
 #pragma mark View drawing
 
 - (void)viewWillAppear:(BOOL)animated {
+  simpleLayer_.backgroundColor = [[UIColor whiteColor] CGColor];
+  simpleLayer_.bounds = CGRectMake(0.f, 0.f, 200.f, 200.f);
+  simpleLayer_.position = self.view.center;
+  simpleLayer_.delegate = self;
+  [simpleLayer_ setNeedsDisplay];
 }
 
-- (void)viewDidAppear:(BOOL)animated {
+- (void)viewWillDisappear:(BOOL)animated {
+  simpleLayer_.delegate = nil;
+}
+
+- (void)drawLayer:(CALayer *)layer inContext:(CGContextRef)context {
+  [layer debugDrawAnchorPointInContext:context withSize:CGSizeMake(8.f, 8.f) color:[UIColor redColor]];
 }
 
 @end
