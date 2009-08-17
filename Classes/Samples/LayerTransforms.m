@@ -22,14 +22,14 @@
  THE SOFTWARE.
 */
 
-#import "LayerGeometry.h"
+#import "LayerTransforms.h"
 #import <QuartzCore/QuartzCore.h>
 #import "CALayer+FTDebugDrawing.h"
 
-@implementation LayerGeometry
+@implementation LayerTransforms
 
 + (NSString *)friendlyName {
-  return @"Layer Geometry";
+  return @"Layer Transforms";
 }
 
 #pragma mark init and dealloc
@@ -64,7 +64,7 @@
 #pragma mark View drawing
 
 - (void)viewWillAppear:(BOOL)animated {
-  simpleLayer_.backgroundColor = [[UIColor whiteColor] CGColor];
+  simpleLayer_.backgroundColor = [UIColorFromRGBA(0xFFFFFF, .85f) CGColor];
   simpleLayer_.bounds = CGRectMake(0.f, 0.f, 200.f, 200.f);
   simpleLayer_.position = self.view.center;
   simpleLayer_.delegate = self;

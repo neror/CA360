@@ -36,7 +36,9 @@
 
 - (void)debugDrawAnchorPointInContext:(CGContextRef)context withSize:(CGSize)size color:(UIColor *)color {
   CGSize layerSize = self.bounds.size;
-  CGPoint realAnchorPoint = CGPointMake(layerSize.width * self.anchorPoint.x, layerSize.height * self.anchorPoint.y);
+  CGPoint layerOrigin = self.bounds.origin;
+  CGPoint realAnchorPoint = CGPointMake(layerOrigin.x + (layerSize.width * self.anchorPoint.x),
+                                        layerOrigin.y + (layerSize.height * self.anchorPoint.y));
   [self debugDrawPoint:realAnchorPoint inContext:context withSize:size color:color];
 }
 

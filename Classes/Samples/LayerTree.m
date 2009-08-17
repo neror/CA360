@@ -46,9 +46,9 @@
   FTRELEASE(redLayer_);
   FTRELEASE(blueLayer_);
   FTRELEASE(purpleLayer_);
-  FTRELEASE(maskRootButton_);
+  FTRELEASE(maskContainerButton_);
   FTRELEASE(maskBlueButton_);
-  FTRELEASE(movePurlpleButton_);
+  FTRELEASE(reparentPurpleButton_);
   [super dealloc];
 }
 
@@ -60,21 +60,21 @@
 
   maskBlueButton_ = [[UIButton buttonWithType:UIButtonTypeRoundedRect] retain];
   maskBlueButton_.frame = CGRectMake(10.f, 10.f, 145.f, 44.f);
-  [maskBlueButton_ setTitle:@"Toggle Blue" forState:UIControlStateNormal];
+  [maskBlueButton_ setTitle:@"Mask Blue" forState:UIControlStateNormal];
   [maskBlueButton_ addTarget:self action:@selector(toggleBlueMask:) forControlEvents:UIControlEventTouchUpInside];
   [myView addSubview:maskBlueButton_];
   
-  maskRootButton_ = [[UIButton buttonWithType:UIButtonTypeRoundedRect] retain];
-  maskRootButton_.frame = CGRectMake(165.f, 10.f, 145.f, 44.f);
-  [maskRootButton_ setTitle:@"Toggle Root" forState:UIControlStateNormal];
-  [maskRootButton_ addTarget:self action:@selector(toggleRootMask:) forControlEvents:UIControlEventTouchUpInside];
-  [myView addSubview:maskRootButton_];
+  maskContainerButton_ = [[UIButton buttonWithType:UIButtonTypeRoundedRect] retain];
+  maskContainerButton_.frame = CGRectMake(165.f, 10.f, 145.f, 44.f);
+  [maskContainerButton_ setTitle:@"Mask Container" forState:UIControlStateNormal];
+  [maskContainerButton_ addTarget:self action:@selector(toggleContainerMask:) forControlEvents:UIControlEventTouchUpInside];
+  [myView addSubview:maskContainerButton_];
   
-  movePurlpleButton_ = [[UIButton buttonWithType:UIButtonTypeRoundedRect] retain];
-  movePurlpleButton_.frame = CGRectMake(70.f, 60.f, 180.f, 44.f);
-  [movePurlpleButton_ setTitle:@"Move Purple" forState:UIControlStateNormal];
-  [movePurlpleButton_ addTarget:self action:@selector(moveYellowLayer:) forControlEvents:UIControlEventTouchUpInside];
-  [myView addSubview:movePurlpleButton_];
+  reparentPurpleButton_ = [[UIButton buttonWithType:UIButtonTypeRoundedRect] retain];
+  reparentPurpleButton_.frame = CGRectMake(70.f, 60.f, 180.f, 44.f);
+  [reparentPurpleButton_ setTitle:@"Reparent Purple" forState:UIControlStateNormal];
+  [reparentPurpleButton_ addTarget:self action:@selector(reparentPurpleLayer:) forControlEvents:UIControlEventTouchUpInside];
+  [myView addSubview:reparentPurpleButton_];
   
   containerLayer_ = [[CALayer layer] retain];
   redLayer_ = [[CALayer layer] retain];
@@ -94,8 +94,8 @@
   FTRELEASE(redLayer_);
   FTRELEASE(blueLayer_);
   FTRELEASE(maskBlueButton_);
-  FTRELEASE(maskRootButton_);
-  FTRELEASE(movePurlpleButton_);
+  FTRELEASE(maskContainerButton_);
+  FTRELEASE(reparentPurpleButton_);
 }
 
 #pragma mark View drawing
@@ -134,7 +134,7 @@
 }
 
 - (void)drawLayer:(CALayer *)layer inContext:(CGContextRef)context {
-  [layer debugDrawAnchorPointInContext:context withSize:CGSizeMake(4.f, 4.f) color:[UIColor blackColor]];
+  [layer debugDrawAnchorPointInContext:context withSize:CGSizeMake(5.f, 5.f) color:[UIColor blackColor]];
 }
 
 #pragma mark Event Handlers
@@ -143,11 +143,11 @@
   blueLayer_.masksToBounds = !blueLayer_.masksToBounds;
 }
 
-- (void)toggleRootMask:(id)sender {
+- (void)toggleContainerMask:(id)sender {
   containerLayer_.masksToBounds = !containerLayer_.masksToBounds;
 }
 
-- (void)moveYellowLayer:(id)sender {
+- (void)reparentPurpleLayer:(id)sender {
   BOOL isChildOfRoot = (purpleLayer_.superlayer == containerLayer_);
   [purpleLayer_ removeFromSuperlayer];
   if(isChildOfRoot) {

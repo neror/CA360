@@ -25,7 +25,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface LayerGeometry : UIViewController {
+@interface LayerTransforms : UIViewController {
   CALayer *simpleLayer_;
 }
 

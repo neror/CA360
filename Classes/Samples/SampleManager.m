@@ -27,11 +27,12 @@
 #import "SynthesizeSingleton.h"
 #import "LayerTree.h"
 #import "ShapeLayers.h"
-#import "LayerGeometry.h"
+#import "GeometryProperties.h"
 #import "LayerDrawing.h"
 #import "SimpleAnimation.h"
 #import "KeyframeAnimation.h"
 #import "GradientLayers.h"
+#import "LayerTransforms.h"
 
 @interface SampleManager (Private)
 
@@ -53,7 +54,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(SampleManager);
 - (id)init {
   self = [super init];
   if (self != nil) {
-    NSArray *geom = [NSArray arrayWithObjects:[LayerGeometry class], nil];
+    NSArray *geom = [NSArray arrayWithObjects:[GeometryProperties class], [LayerTransforms class], nil];
     NSArray *hier = [NSArray arrayWithObjects:[LayerTree class], nil];
     NSArray *drawing = [NSArray arrayWithObjects:[LayerDrawing class], nil];
     NSArray *animation = [NSArray arrayWithObjects:[SimpleAnimation class], [KeyframeAnimation class], nil];

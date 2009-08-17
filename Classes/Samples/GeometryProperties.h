@@ -25,15 +25,12 @@
 #import <UIKit/UIKit.h>
 
 
-@interface LayerTree : UIViewController {
-  CALayer *containerLayer_;
-  CALayer *redLayer_;
-  CALayer *blueLayer_;
-  CALayer *purpleLayer_;
+@interface GeometryProperties : UIViewController {
+  CALayer *simpleLayer_;
   
-  UIButton *maskContainerButton_;
-  UIButton *maskBlueButton_;
-  UIButton *reparentPurpleButton_;
+  UITextView *propertiesTextView_;
+  UIButton *moveAnchorPointButton_;
+  UIButton *movePositionButton_;
 }
 
 @end

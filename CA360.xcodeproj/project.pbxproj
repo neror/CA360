@@ -18,6 +18,8 @@
 		DF80136E10377A1200B48250 /* GradientLayers.m in Sources */ = {isa = PBXBuildFile; fileRef = DF80136C10377A1200B48250 /* GradientLayers.m */; };
 		DF8014A21038D12900B48250 /* CALayer+FTDebugDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8014A11038D12900B48250 /* CALayer+FTDebugDrawing.m */; };
 		DF8014A31038D12900B48250 /* CALayer+FTDebugDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8014A11038D12900B48250 /* CALayer+FTDebugDrawing.m */; };
+		DF8015621038E1C400B48250 /* LayerTransforms.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8015611038E1C400B48250 /* LayerTransforms.m */; };
+		DF8015631038E1C400B48250 /* LayerTransforms.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8015611038E1C400B48250 /* LayerTransforms.m */; };
 		DFF7F28D103601FE0067ED5B /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF7F28C103601FE0067ED5B /* OCMock.framework */; };
 		DFF7F2F5103602470067ED5B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF7F2F4103602470067ED5B /* QuartzCore.framework */; };
 		DFF7F2F6103602470067ED5B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF7F2F4103602470067ED5B /* QuartzCore.framework */; };
@@ -36,8 +38,8 @@
 		DFF7F52410361CB60067ED5B /* FTAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF7F52110361CB60067ED5B /* FTAnimationManager.m */; };
 		DFF7F585103623ED0067ED5B /* ShapeLayers.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF7F584103623ED0067ED5B /* ShapeLayers.m */; };
 		DFF7F586103623ED0067ED5B /* ShapeLayers.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF7F584103623ED0067ED5B /* ShapeLayers.m */; };
-		DFF7F5C5103626750067ED5B /* LayerGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF7F5C4103626750067ED5B /* LayerGeometry.m */; };
-		DFF7F5C6103626750067ED5B /* LayerGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF7F5C4103626750067ED5B /* LayerGeometry.m */; };
+		DFF7F5C5103626750067ED5B /* GeometryProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF7F5C4103626750067ED5B /* GeometryProperties.m */; };
+		DFF7F5C6103626750067ED5B /* GeometryProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF7F5C4103626750067ED5B /* GeometryProperties.m */; };
 		DFF7F612103632570067ED5B /* LayerDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF7F611103632570067ED5B /* LayerDrawing.m */; };
 		DFF7F613103632570067ED5B /* LayerDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF7F611103632570067ED5B /* LayerDrawing.m */; };
 		DFF7F616103632A90067ED5B /* SimpleAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF7F615103632A90067ED5B /* SimpleAnimation.m */; };
@@ -77,6 +79,8 @@
 		DF80136C10377A1200B48250 /* GradientLayers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GradientLayers.m; path = Classes/Samples/GradientLayers.m; sourceTree = "<group>"; };
 		DF8014A01038D12900B48250 /* CALayer+FTDebugDrawing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CALayer+FTDebugDrawing.h"; path = "Classes/CALayer+FTDebugDrawing.h"; sourceTree = "<group>"; };
 		DF8014A11038D12900B48250 /* CALayer+FTDebugDrawing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CALayer+FTDebugDrawing.m"; path = "Classes/CALayer+FTDebugDrawing.m"; sourceTree = "<group>"; };
+		DF8015601038E1C400B48250 /* LayerTransforms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LayerTransforms.h; path = Classes/Samples/LayerTransforms.h; sourceTree = "<group>"; };
+		DF8015611038E1C400B48250 /* LayerTransforms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LayerTransforms.m; path = Classes/Samples/LayerTransforms.m; sourceTree = "<group>"; };
 		DFF7F25D103601B20067ED5B /* UnitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFF7F25E103601B20067ED5B /* UnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
 		DFF7F28C103601FE0067ED5B /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OCMock.framework; sourceTree = "<group>"; };
@@ -92,8 +96,8 @@
 		DFF7F52210361CB60067ED5B /* FTMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTMacros.h; sourceTree = "<group>"; };
 		DFF7F583103623ED0067ED5B /* ShapeLayers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShapeLayers.h; path = Classes/Samples/ShapeLayers.h; sourceTree = "<group>"; };
 		DFF7F584103623ED0067ED5B /* ShapeLayers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShapeLayers.m; path = Classes/Samples/ShapeLayers.m; sourceTree = "<group>"; };
-		DFF7F5C3103626750067ED5B /* LayerGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LayerGeometry.h; path = Classes/Samples/LayerGeometry.h; sourceTree = "<group>"; };
-		DFF7F5C4103626750067ED5B /* LayerGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LayerGeometry.m; path = Classes/Samples/LayerGeometry.m; sourceTree = "<group>"; };
+		DFF7F5C3103626750067ED5B /* GeometryProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GeometryProperties.h; path = Classes/Samples/GeometryProperties.h; sourceTree = "<group>"; };
+		DFF7F5C4103626750067ED5B /* GeometryProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GeometryProperties.m; path = Classes/Samples/GeometryProperties.m; sourceTree = "<group>"; };
 		DFF7F610103632570067ED5B /* LayerDrawing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LayerDrawing.h; path = Classes/Samples/LayerDrawing.h; sourceTree = "<group>"; };
 		DFF7F611103632570067ED5B /* LayerDrawing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LayerDrawing.m; path = Classes/Samples/LayerDrawing.m; sourceTree = "<group>"; };
 		DFF7F614103632A90067ED5B /* SimpleAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SimpleAnimation.h; path = Classes/Samples/SimpleAnimation.h; sourceTree = "<group>"; };
@@ -246,8 +250,10 @@
 		DFF7F65C103635380067ED5B /* Geometry & Transforms */ = {
 			isa = PBXGroup;
 			children = (
-				DFF7F5C3103626750067ED5B /* LayerGeometry.h */,
-				DFF7F5C4103626750067ED5B /* LayerGeometry.m */,
+				DFF7F5C3103626750067ED5B /* GeometryProperties.h */,
+				DFF7F5C4103626750067ED5B /* GeometryProperties.m */,
+				DF8015601038E1C400B48250 /* LayerTransforms.h */,
+				DF8015611038E1C400B48250 /* LayerTransforms.m */,
 			);
 			name = "Geometry & Transforms";
 			sourceTree = "<group>";
@@ -391,12 +397,13 @@
 				DFF7F3B5103605C80067ED5B /* SampleManager.m in Sources */,
 				DFF7F52410361CB60067ED5B /* FTAnimationManager.m in Sources */,
 				DFF7F585103623ED0067ED5B /* ShapeLayers.m in Sources */,
-				DFF7F5C6103626750067ED5B /* LayerGeometry.m in Sources */,
+				DFF7F5C6103626750067ED5B /* GeometryProperties.m in Sources */,
 				DFF7F613103632570067ED5B /* LayerDrawing.m in Sources */,
 				DFF7F616103632A90067ED5B /* SimpleAnimation.m in Sources */,
 				DFF7F65B103634C70067ED5B /* KeyframeAnimation.m in Sources */,
 				DF80136E10377A1200B48250 /* GradientLayers.m in Sources */,
 				DF8014A31038D12900B48250 /* CALayer+FTDebugDrawing.m in Sources */,
+				DF8015631038E1C400B48250 /* LayerTransforms.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,12 +417,13 @@
 				DFF7F3B4103605C80067ED5B /* SampleManager.m in Sources */,
 				DFF7F52310361CB60067ED5B /* FTAnimationManager.m in Sources */,
 				DFF7F586103623ED0067ED5B /* ShapeLayers.m in Sources */,
-				DFF7F5C5103626750067ED5B /* LayerGeometry.m in Sources */,
+				DFF7F5C5103626750067ED5B /* GeometryProperties.m in Sources */,
 				DFF7F612103632570067ED5B /* LayerDrawing.m in Sources */,
 				DFF7F617103632A90067ED5B /* SimpleAnimation.m in Sources */,
 				DFF7F65A103634C70067ED5B /* KeyframeAnimation.m in Sources */,
 				DF80136D10377A1200B48250 /* GradientLayers.m in Sources */,
 				DF8014A21038D12900B48250 /* CALayer+FTDebugDrawing.m in Sources */,
+				DF8015621038E1C400B48250 /* LayerTransforms.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
