@@ -34,6 +34,7 @@
 #import "GradientLayers.h"
 #import "LayerTransforms.h"
 #import "ImageContent.h"
+#import "StyleProperties.h"
 
 @interface SampleManager (Private)
 
@@ -57,7 +58,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(SampleManager);
   if (self != nil) {
     NSArray *geom = [NSArray arrayWithObjects:[GeometryProperties class], [LayerTransforms class], nil];
     NSArray *hier = [NSArray arrayWithObjects:[LayerTree class], nil];
-    NSArray *drawing = [NSArray arrayWithObjects:[ImageContent class], [LayerDrawing class], nil];
+    NSArray *drawing = [NSArray arrayWithObjects:[ImageContent class], [LayerDrawing class], [StyleProperties class], nil];
     NSArray *animation = [NSArray arrayWithObjects:[SimpleAnimation class], [KeyframeAnimation class], nil];
     NSArray *special = [NSArray arrayWithObjects:[ShapeLayers class], [GradientLayers class], nil];
     

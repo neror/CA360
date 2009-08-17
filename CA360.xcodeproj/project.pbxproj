@@ -31,6 +31,10 @@
 		DFF70C9F1039DE170052EE6A /* Steve.png in Resources */ = {isa = PBXBuildFile; fileRef = DFF70C9D1039DE170052EE6A /* Steve.png */; };
 		DFF70CA01039DE170052EE6A /* Ben.png in Resources */ = {isa = PBXBuildFile; fileRef = DFF70C9C1039DE170052EE6A /* Ben.png */; };
 		DFF70CA11039DE170052EE6A /* Steve.png in Resources */ = {isa = PBXBuildFile; fileRef = DFF70C9D1039DE170052EE6A /* Steve.png */; };
+		DFF70D151039F83E0052EE6A /* StyleProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF70D141039F83E0052EE6A /* StyleProperties.m */; };
+		DFF70D161039F83E0052EE6A /* StyleProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF70D141039F83E0052EE6A /* StyleProperties.m */; };
+		DFF70D78103A0BB40052EE6A /* StarMask.png in Resources */ = {isa = PBXBuildFile; fileRef = DFF70D77103A0BB40052EE6A /* StarMask.png */; };
+		DFF70D79103A0BB40052EE6A /* StarMask.png in Resources */ = {isa = PBXBuildFile; fileRef = DFF70D77103A0BB40052EE6A /* StarMask.png */; };
 		DFF7F28D103601FE0067ED5B /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF7F28C103601FE0067ED5B /* OCMock.framework */; };
 		DFF7F2F5103602470067ED5B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF7F2F4103602470067ED5B /* QuartzCore.framework */; };
 		DFF7F2F6103602470067ED5B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF7F2F4103602470067ED5B /* QuartzCore.framework */; };
@@ -98,6 +102,9 @@
 		DFF70C4D1039DA0A0052EE6A /* CA360-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = "CA360-Info.plist"; sourceTree = "<group>"; };
 		DFF70C9C1039DE170052EE6A /* Ben.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ben.png; sourceTree = "<group>"; };
 		DFF70C9D1039DE170052EE6A /* Steve.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Steve.png; sourceTree = "<group>"; };
+		DFF70D131039F83E0052EE6A /* StyleProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StyleProperties.h; path = Classes/Samples/StyleProperties.h; sourceTree = "<group>"; };
+		DFF70D141039F83E0052EE6A /* StyleProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StyleProperties.m; path = Classes/Samples/StyleProperties.m; sourceTree = "<group>"; };
+		DFF70D77103A0BB40052EE6A /* StarMask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StarMask.png; sourceTree = "<group>"; };
 		DFF7F25D103601B20067ED5B /* UnitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFF7F28C103601FE0067ED5B /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OCMock.framework; sourceTree = "<group>"; };
 		DFF7F2F4103602470067ED5B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -212,6 +219,7 @@
 				DFF70C451039D9E60052EE6A /* FTSLogo.png */,
 				DFF70C9C1039DE170052EE6A /* Ben.png */,
 				DFF70C9D1039DE170052EE6A /* Steve.png */,
+				DFF70D77103A0BB40052EE6A /* StarMask.png */,
 				DFF70C4B1039DA0A0052EE6A /* UnitTests-Info.plist */,
 				DFF70C4C1039DA0A0052EE6A /* MainWindow.xib */,
 				DFF70C4D1039DA0A0052EE6A /* CA360-Info.plist */,
@@ -293,6 +301,8 @@
 				DFF70C311039D8BC0052EE6A /* ImageContent.m */,
 				DFF7F610103632570067ED5B /* LayerDrawing.h */,
 				DFF7F611103632570067ED5B /* LayerDrawing.m */,
+				DFF70D131039F83E0052EE6A /* StyleProperties.h */,
+				DFF70D141039F83E0052EE6A /* StyleProperties.m */,
 			);
 			name = "Content & Style Properties";
 			sourceTree = "<group>";
@@ -381,6 +391,7 @@
 				DFF70C4F1039DA0A0052EE6A /* MainWindow.xib in Resources */,
 				DFF70C9E1039DE170052EE6A /* Ben.png in Resources */,
 				DFF70C9F1039DE170052EE6A /* Steve.png in Resources */,
+				DFF70D78103A0BB40052EE6A /* StarMask.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +405,7 @@
 				DFF70C531039DA0A0052EE6A /* CA360-Info.plist in Resources */,
 				DFF70CA01039DE170052EE6A /* Ben.png in Resources */,
 				DFF70CA11039DE170052EE6A /* Steve.png in Resources */,
+				DFF70D79103A0BB40052EE6A /* StarMask.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +447,7 @@
 				DF8014A31038D12900B48250 /* CALayer+FTDebugDrawing.m in Sources */,
 				DF8015631038E1C400B48250 /* LayerTransforms.m in Sources */,
 				DFF70C321039D8BC0052EE6A /* ImageContent.m in Sources */,
+				DFF70D151039F83E0052EE6A /* StyleProperties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +469,7 @@
 				DF8014A21038D12900B48250 /* CALayer+FTDebugDrawing.m in Sources */,
 				DF8015621038E1C400B48250 /* LayerTransforms.m in Sources */,
 				DFF70C331039D8BC0052EE6A /* ImageContent.m in Sources */,
+				DFF70D161039F83E0052EE6A /* StyleProperties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
