@@ -22,11 +22,47 @@
  THE SOFTWARE.
 */
 
-#import <UIKit/UIKit.h>
+#import "BasicAnimation.h"
+#import <QuartzCore/QuartzCore.h>
 
+@implementation BasicAnimation
 
-@interface SimpleAnimation : UIViewController {
-  
++ (NSString *)friendlyName {
+  return @"Basic Animation";
+}
+
+#pragma mark init and dealloc
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+  if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
+    self.title = [[self class] friendlyName];
+  }
+  return self;
+}
+
+- (void)dealloc {
+  [super dealloc];
+}
+
+#pragma mark Load and unload the view
+
+- (void)loadView {
+  UIView *myView = [[[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+  myView.backgroundColor = [UIColor blackColor];
+  self.view = myView;
+}
+
+- (void)viewDidUnload {
+}
+
+#pragma mark View drawing
+
+- (void)viewWillAppear:(BOOL)animated {
+}
+
+- (void)viewDidAppear:(BOOL)animated {
 }
 
 @end
+
+

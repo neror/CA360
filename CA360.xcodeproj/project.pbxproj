@@ -35,6 +35,12 @@
 		DFF70D161039F83E0052EE6A /* StyleProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF70D141039F83E0052EE6A /* StyleProperties.m */; };
 		DFF70D78103A0BB40052EE6A /* StarMask.png in Resources */ = {isa = PBXBuildFile; fileRef = DFF70D77103A0BB40052EE6A /* StarMask.png */; };
 		DFF70D79103A0BB40052EE6A /* StarMask.png in Resources */ = {isa = PBXBuildFile; fileRef = DFF70D77103A0BB40052EE6A /* StarMask.png */; };
+		DFF70D9E103A104C0052EE6A /* LayerActions.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF70D9D103A104C0052EE6A /* LayerActions.m */; };
+		DFF70D9F103A104C0052EE6A /* LayerActions.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF70D9D103A104C0052EE6A /* LayerActions.m */; };
+		DFF70DA2103A10870052EE6A /* AnimationTransactions.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF70DA1103A10870052EE6A /* AnimationTransactions.m */; };
+		DFF70DA3103A10870052EE6A /* AnimationTransactions.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF70DA1103A10870052EE6A /* AnimationTransactions.m */; };
+		DFF70DC0103A11DF0052EE6A /* AnimationGroups.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF70DBF103A11DF0052EE6A /* AnimationGroups.m */; };
+		DFF70DC1103A11DF0052EE6A /* AnimationGroups.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF70DBF103A11DF0052EE6A /* AnimationGroups.m */; };
 		DFF7F28D103601FE0067ED5B /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF7F28C103601FE0067ED5B /* OCMock.framework */; };
 		DFF7F2F5103602470067ED5B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF7F2F4103602470067ED5B /* QuartzCore.framework */; };
 		DFF7F2F6103602470067ED5B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF7F2F4103602470067ED5B /* QuartzCore.framework */; };
@@ -57,8 +63,8 @@
 		DFF7F5C6103626750067ED5B /* GeometryProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF7F5C4103626750067ED5B /* GeometryProperties.m */; };
 		DFF7F612103632570067ED5B /* LayerDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF7F611103632570067ED5B /* LayerDrawing.m */; };
 		DFF7F613103632570067ED5B /* LayerDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF7F611103632570067ED5B /* LayerDrawing.m */; };
-		DFF7F616103632A90067ED5B /* SimpleAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF7F615103632A90067ED5B /* SimpleAnimation.m */; };
-		DFF7F617103632A90067ED5B /* SimpleAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF7F615103632A90067ED5B /* SimpleAnimation.m */; };
+		DFF7F616103632A90067ED5B /* BasicAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF7F615103632A90067ED5B /* BasicAnimation.m */; };
+		DFF7F617103632A90067ED5B /* BasicAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF7F615103632A90067ED5B /* BasicAnimation.m */; };
 		DFF7F65A103634C70067ED5B /* KeyframeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF7F659103634C70067ED5B /* KeyframeAnimation.m */; };
 		DFF7F65B103634C70067ED5B /* KeyframeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF7F659103634C70067ED5B /* KeyframeAnimation.m */; };
 /* End PBXBuildFile section */
@@ -105,6 +111,12 @@
 		DFF70D131039F83E0052EE6A /* StyleProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StyleProperties.h; path = Classes/Samples/StyleProperties.h; sourceTree = "<group>"; };
 		DFF70D141039F83E0052EE6A /* StyleProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StyleProperties.m; path = Classes/Samples/StyleProperties.m; sourceTree = "<group>"; };
 		DFF70D77103A0BB40052EE6A /* StarMask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StarMask.png; sourceTree = "<group>"; };
+		DFF70D9C103A104C0052EE6A /* LayerActions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LayerActions.h; path = Classes/Samples/LayerActions.h; sourceTree = "<group>"; };
+		DFF70D9D103A104C0052EE6A /* LayerActions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LayerActions.m; path = Classes/Samples/LayerActions.m; sourceTree = "<group>"; };
+		DFF70DA0103A10870052EE6A /* AnimationTransactions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnimationTransactions.h; path = Classes/Samples/AnimationTransactions.h; sourceTree = "<group>"; };
+		DFF70DA1103A10870052EE6A /* AnimationTransactions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AnimationTransactions.m; path = Classes/Samples/AnimationTransactions.m; sourceTree = "<group>"; };
+		DFF70DBE103A11DF0052EE6A /* AnimationGroups.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnimationGroups.h; path = Classes/Samples/AnimationGroups.h; sourceTree = "<group>"; };
+		DFF70DBF103A11DF0052EE6A /* AnimationGroups.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AnimationGroups.m; path = Classes/Samples/AnimationGroups.m; sourceTree = "<group>"; };
 		DFF7F25D103601B20067ED5B /* UnitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFF7F28C103601FE0067ED5B /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OCMock.framework; sourceTree = "<group>"; };
 		DFF7F2F4103602470067ED5B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -123,8 +135,8 @@
 		DFF7F5C4103626750067ED5B /* GeometryProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GeometryProperties.m; path = Classes/Samples/GeometryProperties.m; sourceTree = "<group>"; };
 		DFF7F610103632570067ED5B /* LayerDrawing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LayerDrawing.h; path = Classes/Samples/LayerDrawing.h; sourceTree = "<group>"; };
 		DFF7F611103632570067ED5B /* LayerDrawing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LayerDrawing.m; path = Classes/Samples/LayerDrawing.m; sourceTree = "<group>"; };
-		DFF7F614103632A90067ED5B /* SimpleAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SimpleAnimation.h; path = Classes/Samples/SimpleAnimation.h; sourceTree = "<group>"; };
-		DFF7F615103632A90067ED5B /* SimpleAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SimpleAnimation.m; path = Classes/Samples/SimpleAnimation.m; sourceTree = "<group>"; };
+		DFF7F614103632A90067ED5B /* BasicAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicAnimation.h; path = Classes/Samples/BasicAnimation.h; sourceTree = "<group>"; };
+		DFF7F615103632A90067ED5B /* BasicAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicAnimation.m; path = Classes/Samples/BasicAnimation.m; sourceTree = "<group>"; };
 		DFF7F658103634C70067ED5B /* KeyframeAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KeyframeAnimation.h; path = Classes/Samples/KeyframeAnimation.h; sourceTree = "<group>"; };
 		DFF7F659103634C70067ED5B /* KeyframeAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KeyframeAnimation.m; path = Classes/Samples/KeyframeAnimation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -266,10 +278,16 @@
 		DFF7F657103634AB0067ED5B /* Animation */ = {
 			isa = PBXGroup;
 			children = (
-				DFF7F614103632A90067ED5B /* SimpleAnimation.h */,
-				DFF7F615103632A90067ED5B /* SimpleAnimation.m */,
+				DFF7F614103632A90067ED5B /* BasicAnimation.h */,
+				DFF7F615103632A90067ED5B /* BasicAnimation.m */,
+				DFF70DBE103A11DF0052EE6A /* AnimationGroups.h */,
+				DFF70DBF103A11DF0052EE6A /* AnimationGroups.m */,
+				DFF70DA0103A10870052EE6A /* AnimationTransactions.h */,
+				DFF70DA1103A10870052EE6A /* AnimationTransactions.m */,
 				DFF7F658103634C70067ED5B /* KeyframeAnimation.h */,
 				DFF7F659103634C70067ED5B /* KeyframeAnimation.m */,
+				DFF70D9C103A104C0052EE6A /* LayerActions.h */,
+				DFF70D9D103A104C0052EE6A /* LayerActions.m */,
 			);
 			name = Animation;
 			sourceTree = "<group>";
@@ -441,13 +459,16 @@
 				DFF7F585103623ED0067ED5B /* ShapeLayers.m in Sources */,
 				DFF7F5C6103626750067ED5B /* GeometryProperties.m in Sources */,
 				DFF7F613103632570067ED5B /* LayerDrawing.m in Sources */,
-				DFF7F616103632A90067ED5B /* SimpleAnimation.m in Sources */,
+				DFF7F616103632A90067ED5B /* BasicAnimation.m in Sources */,
 				DFF7F65B103634C70067ED5B /* KeyframeAnimation.m in Sources */,
 				DF80136E10377A1200B48250 /* GradientLayers.m in Sources */,
 				DF8014A31038D12900B48250 /* CALayer+FTDebugDrawing.m in Sources */,
 				DF8015631038E1C400B48250 /* LayerTransforms.m in Sources */,
 				DFF70C321039D8BC0052EE6A /* ImageContent.m in Sources */,
 				DFF70D151039F83E0052EE6A /* StyleProperties.m in Sources */,
+				DFF70D9E103A104C0052EE6A /* LayerActions.m in Sources */,
+				DFF70DA2103A10870052EE6A /* AnimationTransactions.m in Sources */,
+				DFF70DC0103A11DF0052EE6A /* AnimationGroups.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,13 +484,16 @@
 				DFF7F586103623ED0067ED5B /* ShapeLayers.m in Sources */,
 				DFF7F5C5103626750067ED5B /* GeometryProperties.m in Sources */,
 				DFF7F612103632570067ED5B /* LayerDrawing.m in Sources */,
-				DFF7F617103632A90067ED5B /* SimpleAnimation.m in Sources */,
+				DFF7F617103632A90067ED5B /* BasicAnimation.m in Sources */,
 				DFF7F65A103634C70067ED5B /* KeyframeAnimation.m in Sources */,
 				DF80136D10377A1200B48250 /* GradientLayers.m in Sources */,
 				DF8014A21038D12900B48250 /* CALayer+FTDebugDrawing.m in Sources */,
 				DF8015621038E1C400B48250 /* LayerTransforms.m in Sources */,
 				DFF70C331039D8BC0052EE6A /* ImageContent.m in Sources */,
 				DFF70D161039F83E0052EE6A /* StyleProperties.m in Sources */,
+				DFF70D9F103A104C0052EE6A /* LayerActions.m in Sources */,
+				DFF70DA3103A10870052EE6A /* AnimationTransactions.m in Sources */,
+				DFF70DC1103A11DF0052EE6A /* AnimationGroups.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
