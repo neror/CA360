@@ -30,10 +30,12 @@
   CALayer *redLayer_;
   CALayer *blueLayer_;
   CALayer *purpleLayer_;
+  CALayer *yellowLayer_;
   
   UIButton *maskContainerButton_;
   UIButton *maskBlueButton_;
   UIButton *reparentPurpleButton_;
+  UIButton *addRemoveYellowButton_;
 }
 
 @end
