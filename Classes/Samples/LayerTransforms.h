@@ -27,6 +27,17 @@
 
 @interface LayerTransforms : UIViewController {
   CALayer *simpleLayer_;
+  BOOL cumulative_;
+  
+  UITextView *propertiesTextView_;
+  UIButton *moveAnchorPointButton_;
+  UIButton *rotateButton_;
+  UIButton *scaleButton_;
+  UIButton *translateButton_;
+  UIButton *resetButton_;
+  UISwitch *cumulativeSwitch_;
 }
+
+@property(assign) BOOL cumulative;
 
 @end
