@@ -24,7 +24,6 @@
 
 #import "SampleManager.h"
 #import <objc/runtime.h>
-#import "SynthesizeSingleton.h"
 #import "LayerTree.h"
 #import "ShapeLayers.h"
 #import "GeometryProperties.h"
@@ -39,7 +38,7 @@
 #import "AnimationTransactions.h"
 #import "AnimationGroups.h"
 
-@interface SampleManager (Private)
+@interface SampleManager ()
 
 + (SampleManager *)sharedSampleManager;
 
@@ -51,10 +50,21 @@
 
 @end
 
-
 @implementation SampleManager
 
-SYNTHESIZE_SINGLETON_FOR_CLASS(SampleManager);
+#pragma mark -
+#pragma mark Singleton Management
+
+static SampleManager *sharedSampleManager = nil;
+
++ (SampleManager *)sharedSampleManager {
+  @synchronized(self) {
+    if (sharedSampleManager == nil) {
+      sharedSampleManager = [[self alloc] init];
+    }
+  }
+  return sharedSampleManager;
+}
 
 - (id)init {
   self = [super init];
@@ -78,6 +88,9 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(SampleManager);
   }
   return self;
 }
+
+#pragma mark -
+#pragma mark Public class methods
 
 + (NSUInteger)groupCount {
   SampleManager *SELF = [SampleManager sharedSampleManager];

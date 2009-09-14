@@ -125,7 +125,6 @@
 		DFF7F3AB103604580067ED5B /* LayerTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LayerTree.m; path = Classes/Samples/LayerTree.m; sourceTree = "<group>"; };
 		DFF7F3B2103605C80067ED5B /* SampleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SampleManager.h; path = Classes/Samples/SampleManager.h; sourceTree = "<group>"; };
 		DFF7F3B3103605C80067ED5B /* SampleManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SampleManager.m; path = Classes/Samples/SampleManager.m; sourceTree = "<group>"; };
-		DFF7F3F4103606580067ED5B /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SynthesizeSingleton.h; path = "../../../../Downloads/OGLGame Tutorial 10/SynthesizeSingleton.h"; sourceTree = SOURCE_ROOT; };
 		DFF7F52010361CB60067ED5B /* FTAnimationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTAnimationManager.h; sourceTree = "<group>"; };
 		DFF7F52110361CB60067ED5B /* FTAnimationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTAnimationManager.m; sourceTree = "<group>"; };
 		DFF7F52210361CB60067ED5B /* FTMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTMacros.h; sourceTree = "<group>"; };
@@ -266,7 +265,6 @@
 				DFF7F65E103635690067ED5B /* Content & Style Properties */,
 				DFF7F657103634AB0067ED5B /* Animation */,
 				DFF7F65F103635840067ED5B /* Special Layer Types */,
-				DFF7F3F4103606580067ED5B /* SynthesizeSingleton.h */,
 				DFF7F3B2103605C80067ED5B /* SampleManager.h */,
 				DFF7F3B3103605C80067ED5B /* SampleManager.m */,
 				DF8014A01038D12900B48250 /* CALayer+FTDebugDrawing.h */,
