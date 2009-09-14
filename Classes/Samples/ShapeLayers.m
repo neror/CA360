@@ -47,7 +47,7 @@
 
 - (void)loadView {
   UIView *myView = [[[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-  myView.backgroundColor = [UIColor blackColor];
+  myView.backgroundColor = [UIColor grayColor];
   self.view = myView;
 }
 
