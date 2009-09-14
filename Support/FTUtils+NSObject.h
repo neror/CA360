@@ -21,15 +21,15 @@
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  THE SOFTWARE.
 */
-#import <Availability.h>
 
-#ifndef __IPHONE_3_0
-#warning "This project uses features only available in iPhone SDK 3.0 and later."
-#endif
+#import <Foundation/Foundation.h>
 
+@interface NSObject (FTUtilsAdditions)
 
-#ifdef __OBJC__
-    #import <Foundation/Foundation.h>
-    #import <UIKit/UIKit.h>
-    #import "FTUtils.h"
-#endif
+- (void)performSelector:(SEL)selector andReturnTo:(void *)returnData withArguments:(void **)arguments;
+- (void)performSelector:(SEL)selector withArguments:(void **)arguments;
+- (void)performSelectorIfExists:(SEL)selector andReturnTo:(void *)returnData withArguments:(void **)arguments;
+- (void)performSelectorIfExists:(SEL)selector withArguments:(void **)arguments;
+
+@end
+

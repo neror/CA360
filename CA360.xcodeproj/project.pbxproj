@@ -13,77 +13,30 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
 		28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
-		DF80136D10377A1200B48250 /* GradientLayers.m in Sources */ = {isa = PBXBuildFile; fileRef = DF80136C10377A1200B48250 /* GradientLayers.m */; };
 		DF80136E10377A1200B48250 /* GradientLayers.m in Sources */ = {isa = PBXBuildFile; fileRef = DF80136C10377A1200B48250 /* GradientLayers.m */; };
-		DF8014A21038D12900B48250 /* CALayer+FTDebugDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8014A11038D12900B48250 /* CALayer+FTDebugDrawing.m */; };
 		DF8014A31038D12900B48250 /* CALayer+FTDebugDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8014A11038D12900B48250 /* CALayer+FTDebugDrawing.m */; };
-		DF8015621038E1C400B48250 /* LayerTransforms.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8015611038E1C400B48250 /* LayerTransforms.m */; };
 		DF8015631038E1C400B48250 /* LayerTransforms.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8015611038E1C400B48250 /* LayerTransforms.m */; };
 		DFAFBACF105EFF4200AE6FF1 /* LayerTransitions.m in Sources */ = {isa = PBXBuildFile; fileRef = DFAFBACE105EFF4200AE6FF1 /* LayerTransitions.m */; };
-		DFAFBAD0105EFF4200AE6FF1 /* LayerTransitions.m in Sources */ = {isa = PBXBuildFile; fileRef = DFAFBACE105EFF4200AE6FF1 /* LayerTransitions.m */; };
+		DFAFBB8D105F0DD800AE6FF1 /* FTUtils+NSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DFAFBB8C105F0DD800AE6FF1 /* FTUtils+NSObject.m */; };
 		DFF70C321039D8BC0052EE6A /* ImageContent.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF70C311039D8BC0052EE6A /* ImageContent.m */; };
-		DFF70C331039D8BC0052EE6A /* ImageContent.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF70C311039D8BC0052EE6A /* ImageContent.m */; };
 		DFF70C461039D9E60052EE6A /* FTSLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = DFF70C451039D9E60052EE6A /* FTSLogo.png */; };
-		DFF70C471039D9E60052EE6A /* FTSLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = DFF70C451039D9E60052EE6A /* FTSLogo.png */; };
 		DFF70C4F1039DA0A0052EE6A /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFF70C4C1039DA0A0052EE6A /* MainWindow.xib */; };
-		DFF70C511039DA0A0052EE6A /* UnitTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DFF70C4B1039DA0A0052EE6A /* UnitTests-Info.plist */; };
-		DFF70C521039DA0A0052EE6A /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFF70C4C1039DA0A0052EE6A /* MainWindow.xib */; };
-		DFF70C531039DA0A0052EE6A /* CA360-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DFF70C4D1039DA0A0052EE6A /* CA360-Info.plist */; };
 		DFF70C9E1039DE170052EE6A /* Ben.png in Resources */ = {isa = PBXBuildFile; fileRef = DFF70C9C1039DE170052EE6A /* Ben.png */; };
 		DFF70C9F1039DE170052EE6A /* Steve.png in Resources */ = {isa = PBXBuildFile; fileRef = DFF70C9D1039DE170052EE6A /* Steve.png */; };
-		DFF70CA01039DE170052EE6A /* Ben.png in Resources */ = {isa = PBXBuildFile; fileRef = DFF70C9C1039DE170052EE6A /* Ben.png */; };
-		DFF70CA11039DE170052EE6A /* Steve.png in Resources */ = {isa = PBXBuildFile; fileRef = DFF70C9D1039DE170052EE6A /* Steve.png */; };
 		DFF70D151039F83E0052EE6A /* StyleProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF70D141039F83E0052EE6A /* StyleProperties.m */; };
-		DFF70D161039F83E0052EE6A /* StyleProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF70D141039F83E0052EE6A /* StyleProperties.m */; };
 		DFF70D78103A0BB40052EE6A /* StarMask.png in Resources */ = {isa = PBXBuildFile; fileRef = DFF70D77103A0BB40052EE6A /* StarMask.png */; };
-		DFF70D79103A0BB40052EE6A /* StarMask.png in Resources */ = {isa = PBXBuildFile; fileRef = DFF70D77103A0BB40052EE6A /* StarMask.png */; };
 		DFF70D9E103A104C0052EE6A /* LayerActions.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF70D9D103A104C0052EE6A /* LayerActions.m */; };
-		DFF70D9F103A104C0052EE6A /* LayerActions.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF70D9D103A104C0052EE6A /* LayerActions.m */; };
 		DFF70DA2103A10870052EE6A /* AnimationTransactions.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF70DA1103A10870052EE6A /* AnimationTransactions.m */; };
-		DFF70DA3103A10870052EE6A /* AnimationTransactions.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF70DA1103A10870052EE6A /* AnimationTransactions.m */; };
 		DFF70DC0103A11DF0052EE6A /* AnimationGroups.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF70DBF103A11DF0052EE6A /* AnimationGroups.m */; };
-		DFF70DC1103A11DF0052EE6A /* AnimationGroups.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF70DBF103A11DF0052EE6A /* AnimationGroups.m */; };
-		DFF7F28D103601FE0067ED5B /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF7F28C103601FE0067ED5B /* OCMock.framework */; };
-		DFF7F2F5103602470067ED5B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF7F2F4103602470067ED5B /* QuartzCore.framework */; };
 		DFF7F2F6103602470067ED5B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF7F2F4103602470067ED5B /* QuartzCore.framework */; };
-		DFF7F30C1036025B0067ED5B /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF7F30B1036025B0067ED5B /* SenTestingKit.framework */; };
-		DFF7F36F103602690067ED5B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
-		DFF7F370103602690067ED5B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
-		DFF7F371103602690067ED5B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
-		DFF7F3721036027D0067ED5B /* CA360AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* CA360AppDelegate.m */; };
-		DFF7F3731036027D0067ED5B /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
-		DFF7F3761036029F0067ED5B /* OCMock.framework in Copy OCMock */ = {isa = PBXBuildFile; fileRef = DFF7F28C103601FE0067ED5B /* OCMock.framework */; };
-		DFF7F3AC103604580067ED5B /* LayerTree.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF7F3AB103604580067ED5B /* LayerTree.m */; };
 		DFF7F3AD103604580067ED5B /* LayerTree.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF7F3AB103604580067ED5B /* LayerTree.m */; };
-		DFF7F3B4103605C80067ED5B /* SampleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF7F3B3103605C80067ED5B /* SampleManager.m */; };
 		DFF7F3B5103605C80067ED5B /* SampleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF7F3B3103605C80067ED5B /* SampleManager.m */; };
-		DFF7F52310361CB60067ED5B /* FTAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF7F52110361CB60067ED5B /* FTAnimationManager.m */; };
-		DFF7F52410361CB60067ED5B /* FTAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF7F52110361CB60067ED5B /* FTAnimationManager.m */; };
 		DFF7F585103623ED0067ED5B /* ShapeLayers.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF7F584103623ED0067ED5B /* ShapeLayers.m */; };
-		DFF7F586103623ED0067ED5B /* ShapeLayers.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF7F584103623ED0067ED5B /* ShapeLayers.m */; };
-		DFF7F5C5103626750067ED5B /* GeometryProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF7F5C4103626750067ED5B /* GeometryProperties.m */; };
 		DFF7F5C6103626750067ED5B /* GeometryProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF7F5C4103626750067ED5B /* GeometryProperties.m */; };
-		DFF7F612103632570067ED5B /* LayerDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF7F611103632570067ED5B /* LayerDrawing.m */; };
 		DFF7F613103632570067ED5B /* LayerDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF7F611103632570067ED5B /* LayerDrawing.m */; };
 		DFF7F616103632A90067ED5B /* BasicAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF7F615103632A90067ED5B /* BasicAnimation.m */; };
-		DFF7F617103632A90067ED5B /* BasicAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF7F615103632A90067ED5B /* BasicAnimation.m */; };
-		DFF7F65A103634C70067ED5B /* KeyframeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF7F659103634C70067ED5B /* KeyframeAnimation.m */; };
 		DFF7F65B103634C70067ED5B /* KeyframeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF7F659103634C70067ED5B /* KeyframeAnimation.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		DFF7F37E1036031B0067ED5B /* Copy OCMock */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "$(BUILT_PRODUCTS_DIR)";
-			dstSubfolderSpec = 0;
-			files = (
-				DFF7F3761036029F0067ED5B /* OCMock.framework in Copy OCMock */,
-			);
-			name = "Copy OCMock";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -104,6 +57,9 @@
 		DF8015611038E1C400B48250 /* LayerTransforms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LayerTransforms.m; path = Classes/Samples/LayerTransforms.m; sourceTree = "<group>"; };
 		DFAFBACD105EFF4200AE6FF1 /* LayerTransitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LayerTransitions.h; path = Classes/Samples/LayerTransitions.h; sourceTree = "<group>"; };
 		DFAFBACE105EFF4200AE6FF1 /* LayerTransitions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LayerTransitions.m; path = Classes/Samples/LayerTransitions.m; sourceTree = "<group>"; };
+		DFAFBB8A105F0DD700AE6FF1 /* FTUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTUtils.h; sourceTree = "<group>"; };
+		DFAFBB8B105F0DD800AE6FF1 /* FTUtils+NSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FTUtils+NSObject.h"; sourceTree = "<group>"; };
+		DFAFBB8C105F0DD800AE6FF1 /* FTUtils+NSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FTUtils+NSObject.m"; sourceTree = "<group>"; };
 		DFF70C301039D8BC0052EE6A /* ImageContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageContent.h; path = Classes/Samples/ImageContent.h; sourceTree = "<group>"; };
 		DFF70C311039D8BC0052EE6A /* ImageContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageContent.m; path = Classes/Samples/ImageContent.m; sourceTree = "<group>"; };
 		DFF70C451039D9E60052EE6A /* FTSLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FTSLogo.png; sourceTree = "<group>"; };
@@ -121,17 +77,11 @@
 		DFF70DA1103A10870052EE6A /* AnimationTransactions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AnimationTransactions.m; path = Classes/Samples/AnimationTransactions.m; sourceTree = "<group>"; };
 		DFF70DBE103A11DF0052EE6A /* AnimationGroups.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnimationGroups.h; path = Classes/Samples/AnimationGroups.h; sourceTree = "<group>"; };
 		DFF70DBF103A11DF0052EE6A /* AnimationGroups.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AnimationGroups.m; path = Classes/Samples/AnimationGroups.m; sourceTree = "<group>"; };
-		DFF7F25D103601B20067ED5B /* UnitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DFF7F28C103601FE0067ED5B /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OCMock.framework; sourceTree = "<group>"; };
 		DFF7F2F4103602470067ED5B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		DFF7F30B1036025B0067ED5B /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Developer/Library/Frameworks/SenTestingKit.framework; sourceTree = SDKROOT; };
 		DFF7F3AA103604580067ED5B /* LayerTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LayerTree.h; path = Classes/Samples/LayerTree.h; sourceTree = "<group>"; };
 		DFF7F3AB103604580067ED5B /* LayerTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LayerTree.m; path = Classes/Samples/LayerTree.m; sourceTree = "<group>"; };
 		DFF7F3B2103605C80067ED5B /* SampleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SampleManager.h; path = Classes/Samples/SampleManager.h; sourceTree = "<group>"; };
 		DFF7F3B3103605C80067ED5B /* SampleManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SampleManager.m; path = Classes/Samples/SampleManager.m; sourceTree = "<group>"; };
-		DFF7F52010361CB60067ED5B /* FTAnimationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTAnimationManager.h; sourceTree = "<group>"; };
-		DFF7F52110361CB60067ED5B /* FTAnimationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTAnimationManager.m; sourceTree = "<group>"; };
-		DFF7F52210361CB60067ED5B /* FTMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTMacros.h; sourceTree = "<group>"; };
 		DFF7F583103623ED0067ED5B /* ShapeLayers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShapeLayers.h; path = Classes/Samples/ShapeLayers.h; sourceTree = "<group>"; };
 		DFF7F584103623ED0067ED5B /* ShapeLayers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShapeLayers.m; path = Classes/Samples/ShapeLayers.m; sourceTree = "<group>"; };
 		DFF7F5C3103626750067ED5B /* GeometryProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GeometryProperties.h; path = Classes/Samples/GeometryProperties.h; sourceTree = "<group>"; };
@@ -156,19 +106,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DFF7F25A103601B20067ED5B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DFF7F28D103601FE0067ED5B /* OCMock.framework in Frameworks */,
-				DFF7F36F103602690067ED5B /* UIKit.framework in Frameworks */,
-				DFF7F370103602690067ED5B /* Foundation.framework in Frameworks */,
-				DFF7F371103602690067ED5B /* CoreGraphics.framework in Frameworks */,
-				DFF7F2F5103602470067ED5B /* QuartzCore.framework in Frameworks */,
-				DFF7F30C1036025B0067ED5B /* SenTestingKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -188,7 +125,6 @@
 			isa = PBXGroup;
 			children = (
 				1D6058910D05DD3D006BFB54 /* CA360.app */,
-				DFF7F25D103601B20067ED5B /* UnitTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -198,7 +134,6 @@
 			children = (
 				DFF7F3A9103603A50067ED5B /* Samples */,
 				080E96DDFE201D6D7F000001 /* Core App Classes */,
-				DFF7F257103601A50067ED5B /* Tests */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				DFF70C441039D9E60052EE6A /* Resources */,
 				DFF7F28B103601FE0067ED5B /* Support */,
@@ -242,21 +177,12 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		DFF7F257103601A50067ED5B /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
 		DFF7F28B103601FE0067ED5B /* Support */ = {
 			isa = PBXGroup;
 			children = (
-				DFF7F52210361CB60067ED5B /* FTMacros.h */,
-				DFF7F52010361CB60067ED5B /* FTAnimationManager.h */,
-				DFF7F52110361CB60067ED5B /* FTAnimationManager.m */,
-				DFF7F30B1036025B0067ED5B /* SenTestingKit.framework */,
-				DFF7F28C103601FE0067ED5B /* OCMock.framework */,
+				DFAFBB8A105F0DD700AE6FF1 /* FTUtils.h */,
+				DFAFBB8B105F0DD800AE6FF1 /* FTUtils+NSObject.h */,
+				DFAFBB8C105F0DD800AE6FF1 /* FTUtils+NSObject.m */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -360,25 +286,6 @@
 			productReference = 1D6058910D05DD3D006BFB54 /* CA360.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DFF7F25C103601B20067ED5B /* UnitTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DFF7F261103601B30067ED5B /* Build configuration list for PBXNativeTarget "UnitTests" */;
-			buildPhases = (
-				DFF7F258103601B20067ED5B /* Resources */,
-				DFF7F259103601B20067ED5B /* Sources */,
-				DFF7F37E1036031B0067ED5B /* Copy OCMock */,
-				DFF7F25A103601B20067ED5B /* Frameworks */,
-				DFF7F25B103601B20067ED5B /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = UnitTests;
-			productName = UnitTests;
-			productReference = DFF7F25D103601B20067ED5B /* UnitTests.octest */;
-			productType = "com.apple.product-type.bundle";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -399,7 +306,6 @@
 			projectRoot = "";
 			targets = (
 				1D6058900D05DD3D006BFB54 /* CA360 */,
-				DFF7F25C103601B20067ED5B /* UnitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -417,37 +323,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DFF7F258103601B20067ED5B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DFF70C471039D9E60052EE6A /* FTSLogo.png in Resources */,
-				DFF70C511039DA0A0052EE6A /* UnitTests-Info.plist in Resources */,
-				DFF70C521039DA0A0052EE6A /* MainWindow.xib in Resources */,
-				DFF70C531039DA0A0052EE6A /* CA360-Info.plist in Resources */,
-				DFF70CA01039DE170052EE6A /* Ben.png in Resources */,
-				DFF70CA11039DE170052EE6A /* Steve.png in Resources */,
-				DFF70D79103A0BB40052EE6A /* StarMask.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		DFF7F25B103601B20067ED5B /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1D60588E0D05DD3D006BFB54 /* Sources */ = {
@@ -459,7 +335,6 @@
 				28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */,
 				DFF7F3AD103604580067ED5B /* LayerTree.m in Sources */,
 				DFF7F3B5103605C80067ED5B /* SampleManager.m in Sources */,
-				DFF7F52410361CB60067ED5B /* FTAnimationManager.m in Sources */,
 				DFF7F585103623ED0067ED5B /* ShapeLayers.m in Sources */,
 				DFF7F5C6103626750067ED5B /* GeometryProperties.m in Sources */,
 				DFF7F613103632570067ED5B /* LayerDrawing.m in Sources */,
@@ -474,32 +349,7 @@
 				DFF70DA2103A10870052EE6A /* AnimationTransactions.m in Sources */,
 				DFF70DC0103A11DF0052EE6A /* AnimationGroups.m in Sources */,
 				DFAFBACF105EFF4200AE6FF1 /* LayerTransitions.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DFF7F259103601B20067ED5B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DFF7F3721036027D0067ED5B /* CA360AppDelegate.m in Sources */,
-				DFF7F3731036027D0067ED5B /* RootViewController.m in Sources */,
-				DFF7F3AC103604580067ED5B /* LayerTree.m in Sources */,
-				DFF7F3B4103605C80067ED5B /* SampleManager.m in Sources */,
-				DFF7F52310361CB60067ED5B /* FTAnimationManager.m in Sources */,
-				DFF7F586103623ED0067ED5B /* ShapeLayers.m in Sources */,
-				DFF7F5C5103626750067ED5B /* GeometryProperties.m in Sources */,
-				DFF7F612103632570067ED5B /* LayerDrawing.m in Sources */,
-				DFF7F617103632A90067ED5B /* BasicAnimation.m in Sources */,
-				DFF7F65A103634C70067ED5B /* KeyframeAnimation.m in Sources */,
-				DF80136D10377A1200B48250 /* GradientLayers.m in Sources */,
-				DF8014A21038D12900B48250 /* CALayer+FTDebugDrawing.m in Sources */,
-				DF8015621038E1C400B48250 /* LayerTransforms.m in Sources */,
-				DFF70C331039D8BC0052EE6A /* ImageContent.m in Sources */,
-				DFF70D161039F83E0052EE6A /* StyleProperties.m in Sources */,
-				DFF70D9F103A104C0052EE6A /* LayerActions.m in Sources */,
-				DFF70DA3103A10870052EE6A /* AnimationTransactions.m in Sources */,
-				DFF70DC1103A11DF0052EE6A /* AnimationGroups.m in Sources */,
-				DFAFBAD0105EFF4200AE6FF1 /* LayerTransitions.m in Sources */,
+				DFAFBB8D105F0DD800AE6FF1 /* FTUtils+NSObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,66 +409,6 @@
 			};
 			name = Release;
 		};
-		DFF7F25F103601B30067ED5B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
-					"\"$(SRCROOT)/Support\"",
-					"\"$(SDKROOT)$(DEVELOPER_FRAMEWORKS_DIR)\"",
-				);
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREFIX_HEADER = CA360_Prefix.pch;
-				INFOPLIST_FILE = "Resources/UnitTests-Info.plist";
-				OTHER_LDFLAGS = (
-					"-framework",
-					Foundation,
-					"-framework",
-					SenTestingKit,
-					"-framework",
-					UIKit,
-				);
-				PREBINDING = NO;
-				PRODUCT_NAME = UnitTests;
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		DFF7F260103601B30067ED5B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
-					"\"$(SRCROOT)/Support\"",
-					"\"$(SDKROOT)$(DEVELOPER_FRAMEWORKS_DIR)\"",
-				);
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_PREFIX_HEADER = CA360_Prefix.pch;
-				INFOPLIST_FILE = "UnitTests-Info.plist";
-				OTHER_LDFLAGS = (
-					"-framework",
-					Foundation,
-					"-framework",
-					SenTestingKit,
-					"-framework",
-					UIKit,
-				);
-				PREBINDING = NO;
-				PRODUCT_NAME = UnitTests;
-				WRAPPER_EXTENSION = octest;
-				ZERO_LINK = NO;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -636,15 +426,6 @@
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
 				C01FCF5008A954540054247B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DFF7F261103601B30067ED5B /* Build configuration list for PBXNativeTarget "UnitTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DFF7F25F103601B30067ED5B /* Debug */,
-				DFF7F260103601B30067ED5B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

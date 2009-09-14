@@ -20,11 +20,8 @@
  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  THE SOFTWARE.
-*/ 
+*/
 #pragma mark -
-#pragma mark Macros
-#pragma mark -
-
 #pragma mark Logging
 // FTLOGEXT logging macro from: http://iphoneincubator.com/blog/debugging/the-evolution-of-a-replacement-for-nslog
 #ifdef DEBUG
@@ -35,16 +32,19 @@
   #define FTLOGEXT(...) /* */
 #endif
 
+#pragma mark -
 #pragma mark Memory Management
 
 #define FTRELEASE(_obj) [_obj release], _obj = nil
 #define FTFREE(_ptr) if(_ptr != NULL) { free(_ptr); _ptr = NULL; }
 
+#pragma mark -
 #pragma mark Math
 
 #define DEGREES_TO_RADIANS(d) (d * M_PI / 180)
 #define RADIANS_TO_DEGREES(r) (r * 180 / M_PI)
 
+#pragma mark -
 #pragma mark Color Def Macros
 
 #define RGBCOLOR(r,g,b) [UIColor colorWithRed:r/256.f green:g/256.f blue:b/256.f alpha:1.f]
@@ -60,31 +60,34 @@
                                      blue:((float)(rgbValue & 0x0000FF))/255.0 \
                                      alpha:alphaValue]
 
-#pragma mark Delegates
+#pragma mark -
+#pragma mark Delegate Helpers
 
 #define FT_CALL_DELEGATE(_delegate, _selector) \
-id _theDelegate = _delegate; \
-if(_theDelegate != nil && [_theDelegate respondsToSelector:_selector]) { \
-  [_theDelegate performSelector:_selector]; \
-}
+do { \
+  id _theDelegate = _delegate; \
+  if(_theDelegate != nil && [_theDelegate respondsToSelector:_selector]) { \
+    [_theDelegate performSelector:_selector]; \
+  } \
+} while(0);
 
 #define FT_CALL_DELEGATE_WITH_ARG(_delegate, _selector, _argument) \
-id _theDelegate = _delegate; \
-if(_theDelegate != nil && [_theDelegate respondsToSelector:_selector]) { \
-  [_theDelegate performSelector:_selector withObject:_argument]; \
-}
+do { \
+  id _theDelegate = _delegate; \
+  if(_theDelegate != nil && [_theDelegate respondsToSelector:_selector]) { \
+    [_theDelegate performSelector:_selector withObject:_argument]; \
+  } \
+} while(0);
 
 #define FT_CALL_DELEGATE_WITH_ARGS(_delegate, _selector, _arg1, _arg2) \
-id _theDelegate = _delegate; \
-if(_theDelegate != nil && [_theDelegate respondsToSelector:_selector]) { \
-  [_theDelegate performSelector:_selector withObject:_arg1 withObject:_arg2]; \
-}
-
+do { \
+  id _theDelegate = _delegate; \
+  if(_theDelegate != nil && [_theDelegate respondsToSelector:_selector]) { \
+    [_theDelegate performSelector:_selector withObject:_arg1 withObject:_arg2]; \
+  } \
+} while(0);
 
 #pragma mark -
-#pragma mark Inline Functions
-#pragma mark -
-
 #pragma mark File System Helpers
 
 static inline NSString *FTPathForFileInDocumentsDirectory(NSString *filename) {
@@ -93,3 +96,4 @@ static inline NSString *FTPathForFileInDocumentsDirectory(NSString *filename) {
   NSString *path = [documentsDirectory stringByAppendingPathComponent:filename];
   return path;
 }
+
