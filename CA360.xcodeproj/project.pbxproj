@@ -19,6 +19,8 @@
 		DF8014A31038D12900B48250 /* CALayer+FTDebugDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8014A11038D12900B48250 /* CALayer+FTDebugDrawing.m */; };
 		DF8015621038E1C400B48250 /* LayerTransforms.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8015611038E1C400B48250 /* LayerTransforms.m */; };
 		DF8015631038E1C400B48250 /* LayerTransforms.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8015611038E1C400B48250 /* LayerTransforms.m */; };
+		DFAFBACF105EFF4200AE6FF1 /* LayerTransitions.m in Sources */ = {isa = PBXBuildFile; fileRef = DFAFBACE105EFF4200AE6FF1 /* LayerTransitions.m */; };
+		DFAFBAD0105EFF4200AE6FF1 /* LayerTransitions.m in Sources */ = {isa = PBXBuildFile; fileRef = DFAFBACE105EFF4200AE6FF1 /* LayerTransitions.m */; };
 		DFF70C321039D8BC0052EE6A /* ImageContent.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF70C311039D8BC0052EE6A /* ImageContent.m */; };
 		DFF70C331039D8BC0052EE6A /* ImageContent.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF70C311039D8BC0052EE6A /* ImageContent.m */; };
 		DFF70C461039D9E60052EE6A /* FTSLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = DFF70C451039D9E60052EE6A /* FTSLogo.png */; };
@@ -100,6 +102,8 @@
 		DF8014A11038D12900B48250 /* CALayer+FTDebugDrawing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CALayer+FTDebugDrawing.m"; path = "Classes/CALayer+FTDebugDrawing.m"; sourceTree = "<group>"; };
 		DF8015601038E1C400B48250 /* LayerTransforms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LayerTransforms.h; path = Classes/Samples/LayerTransforms.h; sourceTree = "<group>"; };
 		DF8015611038E1C400B48250 /* LayerTransforms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LayerTransforms.m; path = Classes/Samples/LayerTransforms.m; sourceTree = "<group>"; };
+		DFAFBACD105EFF4200AE6FF1 /* LayerTransitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LayerTransitions.h; path = Classes/Samples/LayerTransitions.h; sourceTree = "<group>"; };
+		DFAFBACE105EFF4200AE6FF1 /* LayerTransitions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LayerTransitions.m; path = Classes/Samples/LayerTransitions.m; sourceTree = "<group>"; };
 		DFF70C301039D8BC0052EE6A /* ImageContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageContent.h; path = Classes/Samples/ImageContent.h; sourceTree = "<group>"; };
 		DFF70C311039D8BC0052EE6A /* ImageContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageContent.m; path = Classes/Samples/ImageContent.m; sourceTree = "<group>"; };
 		DFF70C451039D9E60052EE6A /* FTSLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FTSLogo.png; sourceTree = "<group>"; };
@@ -286,6 +290,8 @@
 				DFF7F659103634C70067ED5B /* KeyframeAnimation.m */,
 				DFF70D9C103A104C0052EE6A /* LayerActions.h */,
 				DFF70D9D103A104C0052EE6A /* LayerActions.m */,
+				DFAFBACD105EFF4200AE6FF1 /* LayerTransitions.h */,
+				DFAFBACE105EFF4200AE6FF1 /* LayerTransitions.m */,
 			);
 			name = Animation;
 			sourceTree = "<group>";
@@ -467,6 +473,7 @@
 				DFF70D9E103A104C0052EE6A /* LayerActions.m in Sources */,
 				DFF70DA2103A10870052EE6A /* AnimationTransactions.m in Sources */,
 				DFF70DC0103A11DF0052EE6A /* AnimationGroups.m in Sources */,
+				DFAFBACF105EFF4200AE6FF1 /* LayerTransitions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,6 +499,7 @@
 				DFF70D9F103A104C0052EE6A /* LayerActions.m in Sources */,
 				DFF70DA3103A10870052EE6A /* AnimationTransactions.m in Sources */,
 				DFF70DC1103A11DF0052EE6A /* AnimationGroups.m in Sources */,
+				DFAFBAD0105EFF4200AE6FF1 /* LayerTransitions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

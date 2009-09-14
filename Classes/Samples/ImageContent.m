@@ -43,6 +43,7 @@
 - (void)dealloc {
   FTRELEASE(simpleLayer_);
   FTRELEASE(moneyLayer_);
+  FTRELEASE(magicButton_);
   [super dealloc];
 }
 
@@ -70,6 +71,7 @@
 - (void)viewDidUnload {
   FTRELEASE(simpleLayer_);
   FTRELEASE(moneyLayer_);
+  FTRELEASE(magicButton_);
 }
 
 #pragma mark View drawing

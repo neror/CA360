@@ -37,6 +37,7 @@
 #import "LayerActions.h"
 #import "AnimationTransactions.h"
 #import "AnimationGroups.h"
+#import "LayerTransitions.h"
 
 @interface SampleManager ()
 
@@ -73,7 +74,8 @@ static SampleManager *sharedSampleManager = nil;
     NSArray *hier = [NSArray arrayWithObjects:[LayerTree class], nil];
     NSArray *drawing = [NSArray arrayWithObjects:[ImageContent class], [LayerDrawing class], [StyleProperties class], nil];
     NSArray *animation = [NSArray arrayWithObjects:[BasicAnimation class], [AnimationGroups class], 
-                          [AnimationTransactions class], [KeyframeAnimation class], [LayerActions class], nil];
+                          [AnimationTransactions class], [KeyframeAnimation class], [LayerActions class], 
+                          [LayerTransitions class], nil];
     NSArray *special = [NSArray arrayWithObjects:[ShapeLayers class], [GradientLayers class], nil];
     
     
