@@ -116,44 +116,18 @@
   [blueLayer_ setNeedsDisplay];
 }
 
-//- (void)viewDidAppear:(BOOL)animated {
-//  
-//}
-
 #pragma mark Button Event Handlers
 
 - (void)toggleTransition:(id)sender {
   CATransition *transition = [CATransition animation];
   transition.duration = .5f;
   transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-  switch(typeSelectControl_.selectedSegmentIndex) {
-    case 0:
-      transition.type = kCATransitionPush;
-      break;
-    case 1:
-      transition.type = kCATransitionMoveIn;
-      break;
-    case 2:
-      transition.type = kCATransitionReveal;
-      break;
-    case 3:
-      transition.type = kCATransitionFade;
-      break;
-  }
-  switch(subtypeSelectControl_.selectedSegmentIndex) {
-    case 0:
-      transition.subtype = kCATransitionFromRight;
-      break;
-    case 1:
-      transition.subtype = kCATransitionFromLeft;
-      break;
-    case 2:
-      transition.subtype = kCATransitionFromTop;
-      break;
-    case 3:
-      transition.subtype = kCATransitionFromBottom;
-      break;
-  }  
+  
+  NSString *transitionTypes[4] = { kCATransitionPush, kCATransitionMoveIn, kCATransitionReveal, kCATransitionFade };
+  transition.type = transitionTypes[typeSelectControl_.selectedSegmentIndex];
+  
+  NSString *transitionSubtypes[4] = { kCATransitionFromRight, kCATransitionFromLeft, kCATransitionFromTop, kCATransitionFromBottom };
+  transition.subtype = transitionSubtypes[subtypeSelectControl_.selectedSegmentIndex];
   
   [containerLayer_ addAnimation:transition forKey:nil];
   blueLayer_.hidden = !blueLayer_.hidden;
