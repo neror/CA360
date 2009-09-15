@@ -23,10 +23,9 @@
 */
 
 #import <UIKit/UIKit.h>
-#import <QuartzCore/QuartzCore.h>
 
 @interface AnimationGroups : UIViewController {
-
+  CALayer *pulseLayer_;
 }
 
 @end

@@ -41,6 +41,7 @@
 }
 
 - (void)dealloc {
+  FTRELEASE(pulseLayer_);
   [super dealloc];
 }
 
@@ -49,18 +50,36 @@
 - (void)loadView {
   UIView *myView = [[[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
   myView.backgroundColor = [UIColor grayColor];
+  
+  pulseLayer_ = [[CALayer layer] retain];
+  [myView.layer addSublayer:pulseLayer_];
+  
   self.view = myView;
 }
 
 - (void)viewDidUnload {
+  FTRELEASE(pulseLayer_);
 }
 
 #pragma mark View drawing
 
 - (void)viewWillAppear:(BOOL)animated {
+  pulseLayer_.backgroundColor = [UIColorFromRGBA(0x000000, .75f) CGColor];
+  pulseLayer_.bounds = CGRectMake(0.f, 0.f, 260.f, 260.f);
+  pulseLayer_.cornerRadius = 12.f;
+  pulseLayer_.position = self.view.center;
+  [pulseLayer_ setNeedsDisplay];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
+  CABasicAnimation *pulseAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+  pulseAnimation.duration = .5f;
+  pulseAnimation.toValue = [NSNumber numberWithFloat:1.1f];
+  pulseAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+  pulseAnimation.autoreverses = YES;
+  pulseAnimation.repeatCount = FLT_MAX;
+  
+  [pulseLayer_ addAnimation:pulseAnimation forKey:nil];
 }
 
 @end

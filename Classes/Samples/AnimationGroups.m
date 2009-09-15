@@ -23,7 +23,7 @@
 */
 
 #import "AnimationGroups.h"
-
+#import <QuartzCore/QuartzCore.h>
 
 @implementation AnimationGroups
 
@@ -41,6 +41,7 @@
 }
 
 - (void)dealloc {
+  FTRELEASE(pulseLayer_);
   [super dealloc];
 }
 
@@ -49,18 +50,51 @@
 - (void)loadView {
   UIView *myView = [[[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
   myView.backgroundColor = [UIColor grayColor];
+  
+  pulseLayer_ = [[CALayer layer] retain];
+  [myView.layer addSublayer:pulseLayer_];
+  
   self.view = myView;
 }
 
 - (void)viewDidUnload {
+  FTRELEASE(pulseLayer_);
 }
 
 #pragma mark View drawing
 
 - (void)viewWillAppear:(BOOL)animated {
+  pulseLayer_.backgroundColor = [UIColorFromRGBA(0x000000, .75f) CGColor];
+  pulseLayer_.bounds = CGRectMake(0.f, 0.f, 200.f, 200.f);
+  pulseLayer_.cornerRadius = 12.f;
+  pulseLayer_.position = self.view.center;
+  [pulseLayer_ setNeedsDisplay];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
+  CABasicAnimation *pulseAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+  pulseAnimation.duration = 1.f;
+  pulseAnimation.toValue = [NSNumber numberWithFloat:1.15f];
+  
+  CABasicAnimation *pulseColorAnimation = [CABasicAnimation animationWithKeyPath:@"backgroundColor"];
+  pulseColorAnimation.duration = .5f;
+  pulseColorAnimation.fillMode = kCAFillModeForwards;
+  pulseColorAnimation.toValue = (id)[UIColorFromRGBA(0xFF0000, .75f) CGColor];
+  
+  CABasicAnimation *rotateLayerAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
+  rotateLayerAnimation.duration = .25f;
+  rotateLayerAnimation.beginTime = .25f;
+  rotateLayerAnimation.fillMode = kCAFillModeBoth;
+  rotateLayerAnimation.toValue = [NSNumber numberWithFloat:DEGREES_TO_RADIANS(45.f)];
+  
+  CAAnimationGroup *group = [CAAnimationGroup animation];
+  group.animations = [NSArray arrayWithObjects:pulseAnimation, pulseColorAnimation, rotateLayerAnimation, nil];
+  group.duration = 1.f;
+  group.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+  group.autoreverses = YES;
+  group.repeatCount = FLT_MAX;
+  
+  [pulseLayer_ addAnimation:group forKey:nil];
 }
 
 @end

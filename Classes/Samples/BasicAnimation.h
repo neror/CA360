@@ -26,7 +26,7 @@
 
 
 @interface BasicAnimation : UIViewController {
-  
+  CALayer *pulseLayer_;
 }
 
 @end
