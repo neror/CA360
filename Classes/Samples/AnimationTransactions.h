@@ -26,7 +26,10 @@
 
 
 @interface AnimationTransactions : UIViewController {
-
+  CALayer *blueLayer_;
+  CALayer *redLayer_;
+  
+  UIButton *runButton_;
 }
 
 @end

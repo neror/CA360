@@ -41,6 +41,9 @@
 }
 
 - (void)dealloc {
+  FTRELEASE(blueLayer_);
+  FTRELEASE(redLayer_);
+  FTRELEASE(runButton_);
   [super dealloc];
 }
 
@@ -49,18 +52,75 @@
 - (void)loadView {
   UIView *myView = [[[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
   myView.backgroundColor = [UIColor grayColor];
+  
+  runButton_ = [[UIButton buttonWithType:UIButtonTypeRoundedRect] retain];
+  runButton_.frame = CGRectMake(10.f, 10.f, 300.f, 44.f);
+  [runButton_ setTitle:@"Run Animation" forState:UIControlStateNormal];
+  [runButton_ addTarget:self action:@selector(toggleRun:) forControlEvents:UIControlEventTouchUpInside];
+  [myView addSubview:runButton_];
+  
+  blueLayer_ = [[CALayer layer] retain];
+  redLayer_ = [[CALayer layer] retain];
+  
+  [myView.layer addSublayer:blueLayer_];
+  [myView.layer addSublayer:redLayer_];
   self.view = myView;
 }
 
 - (void)viewDidUnload {
+  FTRELEASE(blueLayer_);
+  FTRELEASE(redLayer_);
+  FTRELEASE(runButton_);
 }
 
 #pragma mark View drawing
 
 - (void)viewWillAppear:(BOOL)animated {
+  CGRect rect = CGRectMake(0.f, 0.f, 100.f, 100.f);
+  blueLayer_.backgroundColor = [UIColorFromRGBA(0x0000FF, .75f) CGColor];
+  blueLayer_.bounds = rect;
+  blueLayer_.position = CGPointMake(50.f, 50.f);
+  blueLayer_.cornerRadius = 10.f;
+  [blueLayer_ setNeedsDisplay];
+  
+  redLayer_.backgroundColor = [UIColorFromRGBA(0xFF0000, .75f) CGColor];
+  redLayer_.bounds = rect;
+  CGSize viewSize = self.view.bounds.size;
+  redLayer_.position = CGPointMake(viewSize.width - 50.f, viewSize.height - 50.f);
+  redLayer_.cornerRadius = 10.f;
+  [redLayer_ setNeedsDisplay];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
+}
+
+#pragma mark Event Handlers
+
+- (void)toggleRun:(id)sender {
+  [redLayer_ removeAnimationForKey:@"changePosition"];
+  [blueLayer_ removeAnimationForKey:@"changePosition"];
+  [CATransaction begin];
+  {
+    [CATransaction setAnimationDuration:1.f];
+    [CATransaction setAnimationTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut]];
+    
+    CABasicAnimation *moveRed = [CABasicAnimation animationWithKeyPath:@"position"];
+    moveRed.toValue = [NSValue valueWithCGPoint:CGPointMake(75.f, self.view.center.y)];
+    [redLayer_ addAnimation:moveRed forKey:@"changePosition"];
+    
+    [CATransaction begin];
+    {
+      [CATransaction setAnimationDuration:2.f];
+      [CATransaction setAnimationTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn]];
+      CABasicAnimation *moveBlue = [CABasicAnimation animationWithKeyPath:@"position"];
+      CGSize viewSize = self.view.bounds.size;
+      moveBlue.toValue = [NSValue valueWithCGPoint:CGPointMake(viewSize.width - 75.f, self.view.center.y)];
+      [blueLayer_ addAnimation:moveBlue forKey:@"changePosition"];
+    }
+    [CATransaction commit];
+    
+  }
+  [CATransaction commit];
 }
 
 @end
