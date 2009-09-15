@@ -26,7 +26,10 @@
 
 
 @interface KeyframeAnimation : UIViewController {
-
+  CALayer *platformLayer_;
+  CALayer *marioLayer_;
+  
+  UIButton *jumpButton_;
 }
 
 @end
