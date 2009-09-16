@@ -54,7 +54,7 @@
 
 - (void)loadView {
   UIView *myView = [[[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-  myView.backgroundColor = [UIColor grayColor];
+  myView.backgroundColor = [UIColor whiteColor];
   
   NSArray *typeItems = [NSArray arrayWithObjects:@"Push", @"Move In", @"Reveal", @"Fade", nil];
   typeSelectControl_ = [[UISegmentedControl alloc] initWithItems:typeItems];

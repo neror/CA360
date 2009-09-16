@@ -54,7 +54,7 @@ static const CGRect kMarioJumpingSpriteCoords = { 0.f, 0.f, .5f, 1.f };
 
 - (void)loadView {
   UIView *myView = [[[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-  myView.backgroundColor = [UIColor grayColor];
+  myView.backgroundColor = [UIColor whiteColor];
   
   jumpButton_ = [[UIButton buttonWithType:UIButtonTypeRoundedRect] retain];
   jumpButton_.frame = CGRectMake(10.f, 10.f, 300.f, 44.f);

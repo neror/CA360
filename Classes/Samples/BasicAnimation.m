@@ -49,7 +49,7 @@
 
 - (void)loadView {
   UIView *myView = [[[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-  myView.backgroundColor = [UIColor grayColor];
+  myView.backgroundColor = [UIColor whiteColor];
   
   pulseLayer_ = [[CALayer layer] retain];
   [myView.layer addSublayer:pulseLayer_];

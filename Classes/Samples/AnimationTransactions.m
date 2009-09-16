@@ -51,7 +51,7 @@
 
 - (void)loadView {
   UIView *myView = [[[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-  myView.backgroundColor = [UIColor grayColor];
+  myView.backgroundColor = [UIColor whiteColor];
   
   runButton_ = [[UIButton buttonWithType:UIButtonTypeRoundedRect] retain];
   runButton_.frame = CGRectMake(10.f, 10.f, 300.f, 44.f);

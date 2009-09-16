@@ -53,7 +53,7 @@
 
 - (void)loadView {
   UIView *myView = [[[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-  myView.backgroundColor = [UIColor grayColor];
+  myView.backgroundColor = [UIColor whiteColor];
   
   moveAnchorPointButton_ = [[UIButton buttonWithType:UIButtonTypeRoundedRect] retain];
   moveAnchorPointButton_.frame = CGRectMake(10.f, 10.f, 145.f, 44.f);
@@ -97,7 +97,7 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-  simpleLayer_.backgroundColor = [UIColorFromRGBA(0xFFFFFF, .85f) CGColor];
+  simpleLayer_.backgroundColor = [UIColorFromRGBA(0x00FF00, .85f) CGColor];
   simpleLayer_.bounds = CGRectMake(0.f, 0.f, 200.f, 200.f);
   simpleLayer_.position = self.view.center;
   simpleLayer_.delegate = self;

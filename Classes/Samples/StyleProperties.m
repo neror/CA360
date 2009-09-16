@@ -55,7 +55,7 @@
 
 - (void)loadView {
   UIView *myView = [[[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-  myView.backgroundColor = [UIColor grayColor];
+  myView.backgroundColor = [UIColor whiteColor];
   
   roundCornersButton_ = [[UIButton buttonWithType:UIButtonTypeRoundedRect] retain];
   roundCornersButton_.frame = CGRectMake(10.f, 10.f, 145.f, 44.f);
@@ -99,7 +99,7 @@
 #pragma mark View drawing
 
 - (void)viewWillAppear:(BOOL)animated {
-  simpleLayer_.backgroundColor = [[UIColor whiteColor] CGColor];
+  simpleLayer_.backgroundColor = [[UIColor greenColor] CGColor];
   simpleLayer_.bounds = CGRectMake(0.f, 0.f, 200.f, 200.f);
   simpleLayer_.position = CGPointMake(160.f, 250.f);
   [simpleLayer_ setNeedsDisplay];

@@ -62,7 +62,7 @@ const static CGPoint kSimpleLayerStartPosition = { 160.f, 310.f };
 
 - (void)loadView {
   UIView *myView = [[[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-  myView.backgroundColor = [UIColor grayColor];
+  myView.backgroundColor = [UIColor whiteColor];
   
   moveAnchorPointButton_ = [[UIButton buttonWithType:UIButtonTypeRoundedRect] retain];
   moveAnchorPointButton_.frame = CGRectMake(10.f, 10.f, 145.f, 44.f);
@@ -137,7 +137,7 @@ const static CGPoint kSimpleLayerStartPosition = { 160.f, 310.f };
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-  simpleLayer_.backgroundColor = [UIColorFromRGBA(0xFFFFFF, .85f) CGColor];
+  simpleLayer_.backgroundColor = [UIColorFromRGBA(0x00FF00, .85f) CGColor];
   simpleLayer_.bounds = CGRectMake(0.f, 0.f, 200.f, 200.f);
   simpleLayer_.position = kSimpleLayerStartPosition;
   simpleLayer_.transform = CATransform3DIdentity;
@@ -198,7 +198,11 @@ const static CGPoint kSimpleLayerStartPosition = { 160.f, 310.f };
     CATransform3D currentTransform = simpleLayer_.transform;
     translated = CATransform3DTranslate(currentTransform, 20.f, 20.f, 0.f);
   } else {
-    translated = CATransform3DMakeTranslation(50.f, 50.f, 0.f);
+    // The following is equvalent to:
+    // translated = CATransform3DMakeTranslation(50.f, 50.f, 0.f);
+    translated = CATransform3DIdentity;
+    translated.m41 = 50.f;
+    translated.m42 = 50.f;
   }
   simpleLayer_.transform = translated;
   [simpleLayer_ setNeedsDisplay];

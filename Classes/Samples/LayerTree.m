@@ -58,7 +58,7 @@
 
 - (void)loadView {
   UIView *myView = [[[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-  myView.backgroundColor = [UIColor grayColor];
+  myView.backgroundColor = [UIColor whiteColor];
 
   maskBlueButton_ = [[UIButton buttonWithType:UIButtonTypeRoundedRect] retain];
   maskBlueButton_.frame = CGRectMake(10.f, 10.f, 145.f, 44.f);
@@ -113,7 +113,7 @@
 #pragma mark View drawing
 
 - (void)viewWillAppear:(BOOL)animated {
-  containerLayer_.backgroundColor = [[UIColor whiteColor] CGColor];
+  containerLayer_.backgroundColor = [[UIColor greenColor] CGColor];
   containerLayer_.bounds = CGRectMake(0.f, 0.f, 200.f, 200.f);
   containerLayer_.delegate = self;
   containerLayer_.position = self.view.center;
