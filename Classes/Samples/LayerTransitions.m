@@ -85,15 +85,6 @@
   self.view = myView;
 }
 
-- (void)viewDidUnload {
-  FTRELEASE(containerLayer_);
-  FTRELEASE(blueLayer_);
-  FTRELEASE(redLayer_);
-  FTRELEASE(transitionButton_);
-  FTRELEASE(typeSelectControl_);
-  FTRELEASE(subtypeSelectControl_);
-}
-
 #pragma mark View drawing
 
 - (void)viewWillAppear:(BOOL)animated {

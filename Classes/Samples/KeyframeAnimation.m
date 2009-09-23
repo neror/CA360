@@ -70,12 +70,6 @@ static const CGRect kMarioJumpingSpriteCoords = { 0.f, 0.f, .5f, 1.f };
   self.view = myView;
 }
 
-- (void)viewDidUnload {
-  FTRELEASE(platformLayer_);
-  FTRELEASE(marioLayer_);
-  FTRELEASE(jumpButton_);
-}
-
 #pragma mark View drawing
 
 - (void)viewWillAppear:(BOOL)animated {

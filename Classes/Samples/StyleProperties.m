@@ -87,15 +87,6 @@
   self.view = myView;
 }
 
-- (void)viewDidUnload {
-  FTRELEASE(simpleLayer_);
-  FTRELEASE(maskLayer_);
-  FTRELEASE(roundCornersButton_);
-  FTRELEASE(toggleBorderButton_);
-  FTRELEASE(toggleOpacityButton_);
-  FTRELEASE(toggleMaskButton_);
-}
-
 #pragma mark View drawing
 
 - (void)viewWillAppear:(BOOL)animated {

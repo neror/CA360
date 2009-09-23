@@ -68,12 +68,6 @@
   self.view = myView;
 }
 
-- (void)viewDidUnload {
-  FTRELEASE(simpleLayer_);
-  FTRELEASE(moneyLayer_);
-  FTRELEASE(magicButton_);
-}
-
 #pragma mark View drawing
 
 - (void)viewWillAppear:(BOOL)animated {

@@ -115,17 +115,6 @@ const static CGPoint kSimpleLayerStartPosition = { 160.f, 310.f };
   self.view = myView;
 }
 
-- (void)viewDidUnload {
-  FTRELEASE(simpleLayer_);
-  FTRELEASE(moveAnchorPointButton_);
-  FTRELEASE(rotateButton_);
-  FTRELEASE(scaleButton_);
-  FTRELEASE(translateButton_);
-  FTRELEASE(propertiesTextView_);
-  FTRELEASE(resetButton_);
-  FTRELEASE(cumulativeSwitch_);
-}
-
 #pragma mark View drawing
 
 - (void)updatePropertiesLabel {

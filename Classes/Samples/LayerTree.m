@@ -47,8 +47,8 @@
   FTRELEASE(blueLayer_);
   FTRELEASE(purpleLayer_);
   FTRELEASE(yellowLayer_);
-  FTRELEASE(maskContainerButton_);
   FTRELEASE(maskBlueButton_);
+  FTRELEASE(maskContainerButton_);
   FTRELEASE(reparentPurpleButton_);
   FTRELEASE(addRemoveYellowButton_);
   [super dealloc];
@@ -96,18 +96,6 @@
   [blueLayer_ addSublayer:purpleLayer_];
   
   self.view = myView;
-}
-
-- (void)viewDidUnload {
-  FTRELEASE(containerLayer_);
-  FTRELEASE(redLayer_);
-  FTRELEASE(blueLayer_);
-  FTRELEASE(purpleLayer_);
-  FTRELEASE(yellowLayer_);
-  FTRELEASE(maskBlueButton_);
-  FTRELEASE(maskContainerButton_);
-  FTRELEASE(reparentPurpleButton_);
-  FTRELEASE(addRemoveYellowButton_);
 }
 
 #pragma mark View drawing

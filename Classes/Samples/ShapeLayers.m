@@ -51,9 +51,6 @@
   self.view = myView;
 }
 
-- (void)viewDidUnload {
-}
-
 #pragma mark View drawing
 
 - (void)viewWillAppear:(BOOL)animated {

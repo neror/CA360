@@ -57,10 +57,6 @@
   self.view = myView;
 }
 
-- (void)viewDidUnload {
-  FTRELEASE(drawingLayer_);
-}
-
 #pragma mark View drawing
 
 - (void)viewWillAppear:(BOOL)animated {

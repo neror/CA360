@@ -79,13 +79,6 @@
   self.view = myView;
 }
 
-- (void)viewDidUnload {
-  FTRELEASE(simpleLayer_);
-  FTRELEASE(moveAnchorPointButton_);
-  FTRELEASE(movePositionButton_);
-  FTRELEASE(propertiesTextView_);
-}
-
 #pragma mark View drawing
 
 - (void)updatePropertiesLabel {
