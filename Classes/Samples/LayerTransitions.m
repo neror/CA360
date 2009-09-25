@@ -58,18 +58,18 @@
   
   NSArray *typeItems = [NSArray arrayWithObjects:@"Push", @"Move In", @"Reveal", @"Fade", nil];
   typeSelectControl_ = [[UISegmentedControl alloc] initWithItems:typeItems];
-  typeSelectControl_.frame = CGRectMake(10.f, 10.f, 300.f, 44.f);
+  typeSelectControl_.frame = CGRectMake(10., 10., 300., 44.);
   typeSelectControl_.selectedSegmentIndex = 0;
   [myView addSubview:typeSelectControl_];
   
   NSArray *subtypeItems = [NSArray arrayWithObjects:@"Right", @"Left", @"Top", @"Bottom", nil];
   subtypeSelectControl_ = [[UISegmentedControl alloc] initWithItems:subtypeItems];
-  subtypeSelectControl_.frame = CGRectMake(10.f, 60.f, 300.f, 44.f);
+  subtypeSelectControl_.frame = CGRectMake(10., 60., 300., 44.);
   subtypeSelectControl_.selectedSegmentIndex = 0;
   [myView addSubview:subtypeSelectControl_];
   
   transitionButton_ = [[UIButton buttonWithType:UIButtonTypeRoundedRect] retain];
-  transitionButton_.frame = CGRectMake(10.f, 110.f, 300.f, 44.f);
+  transitionButton_.frame = CGRectMake(10., 110., 300., 44.);
   [transitionButton_ setTitle:@"Start Transition" forState:UIControlStateNormal];
   [transitionButton_ addTarget:self action:@selector(toggleTransition:) forControlEvents:UIControlEventTouchUpInside];
   [myView addSubview:transitionButton_];
@@ -88,22 +88,22 @@
 #pragma mark View drawing
 
 - (void)viewWillAppear:(BOOL)animated {
-  CGRect rect = CGRectMake(0.f, 0.f, 240.f, 240.f);
+  CGRect rect = CGRectMake(0., 0., 240., 240.);
   
   containerLayer_.backgroundColor = [[UIColor clearColor] CGColor];
   containerLayer_.bounds = rect;
-  containerLayer_.position = CGPointMake(160.f, 280.f);
+  containerLayer_.position = CGPointMake(160., 280.);
   [containerLayer_ setNeedsDisplay];
   
-  redLayer_.backgroundColor = [UIColorFromRGBA(0xFF0000, .75f) CGColor];
+  redLayer_.backgroundColor = [UIColorFromRGBA(0xFF0000, .75) CGColor];
   redLayer_.bounds = rect;
-  redLayer_.position = CGPointMake(120.f, 120.f);
+  redLayer_.position = CGPointMake(120., 120.);
   redLayer_.hidden = YES;
   [redLayer_ setNeedsDisplay];
   
-  blueLayer_.backgroundColor = [UIColorFromRGBA(0x0000FF, .75f) CGColor];
+  blueLayer_.backgroundColor = [UIColorFromRGBA(0x0000FF, .75) CGColor];
   blueLayer_.bounds = rect;
-  blueLayer_.position = CGPointMake(120.f, 120.f);
+  blueLayer_.position = CGPointMake(120., 120.);
   [blueLayer_ setNeedsDisplay];
 }
 
@@ -111,7 +111,7 @@
 
 - (void)toggleTransition:(id)sender {
   CATransition *transition = [CATransition animation];
-  transition.duration = .5f;
+  transition.duration = .5;
   transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
   
   NSString *transitionTypes[4] = { kCATransitionPush, kCATransitionMoveIn, kCATransitionReveal, kCATransitionFade };

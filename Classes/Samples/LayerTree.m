@@ -61,25 +61,25 @@
   myView.backgroundColor = [UIColor whiteColor];
 
   maskBlueButton_ = [[UIButton buttonWithType:UIButtonTypeRoundedRect] retain];
-  maskBlueButton_.frame = CGRectMake(10.f, 10.f, 145.f, 44.f);
+  maskBlueButton_.frame = CGRectMake(10., 10., 145., 44.);
   [maskBlueButton_ setTitle:@"Mask Blue" forState:UIControlStateNormal];
   [maskBlueButton_ addTarget:self action:@selector(toggleBlueMask:) forControlEvents:UIControlEventTouchUpInside];
   [myView addSubview:maskBlueButton_];
   
   maskContainerButton_ = [[UIButton buttonWithType:UIButtonTypeRoundedRect] retain];
-  maskContainerButton_.frame = CGRectMake(165.f, 10.f, 145.f, 44.f);
+  maskContainerButton_.frame = CGRectMake(165., 10., 145., 44.);
   [maskContainerButton_ setTitle:@"Mask Container" forState:UIControlStateNormal];
   [maskContainerButton_ addTarget:self action:@selector(toggleContainerMask:) forControlEvents:UIControlEventTouchUpInside];
   [myView addSubview:maskContainerButton_];
   
   reparentPurpleButton_ = [[UIButton buttonWithType:UIButtonTypeRoundedRect] retain];
-  reparentPurpleButton_.frame = CGRectMake(10.f, 60.f, 145.f, 44.f);
+  reparentPurpleButton_.frame = CGRectMake(10., 60., 145., 44.);
   [reparentPurpleButton_ setTitle:@"Reparent Purple" forState:UIControlStateNormal];
   [reparentPurpleButton_ addTarget:self action:@selector(reparentPurpleLayer:) forControlEvents:UIControlEventTouchUpInside];
   [myView addSubview:reparentPurpleButton_];
 
   addRemoveYellowButton_ = [[UIButton buttonWithType:UIButtonTypeRoundedRect] retain];
-  addRemoveYellowButton_.frame = CGRectMake(165.f, 60.f, 145.f, 44.f);
+  addRemoveYellowButton_.frame = CGRectMake(165., 60., 145., 44.);
   [addRemoveYellowButton_ setTitle:@"Add/Remove Yellow" forState:UIControlStateNormal];
   [addRemoveYellowButton_ addTarget:self action:@selector(addRemoveYellow:) forControlEvents:UIControlEventTouchUpInside];
   [myView addSubview:addRemoveYellowButton_];
@@ -102,34 +102,34 @@
 
 - (void)viewWillAppear:(BOOL)animated {
   containerLayer_.backgroundColor = [[UIColor greenColor] CGColor];
-  containerLayer_.bounds = CGRectMake(0.f, 0.f, 200.f, 200.f);
+  containerLayer_.bounds = CGRectMake(0., 0., 200., 200.);
   containerLayer_.delegate = self;
   containerLayer_.position = self.view.center;
   [containerLayer_ setNeedsDisplay];
   
-  CGRect rect = CGRectMake(0.f, 0.f, 100.f, 100.f);
+  CGRect rect = CGRectMake(0., 0., 100., 100.);
 
-  redLayer_.backgroundColor = [UIColorFromRGBA(0xFF0000, .75f) CGColor];
+  redLayer_.backgroundColor = [UIColorFromRGBA(0xFF0000, .75) CGColor];
   redLayer_.bounds = rect;
-  redLayer_.position = CGPointMake(0.f, 200.f);
+  redLayer_.position = CGPointMake(0., 200.);
   redLayer_.delegate = self;
   [redLayer_ setNeedsDisplay];
   
-  blueLayer_.backgroundColor = [UIColorFromRGBA(0x0000FF, .75f) CGColor];
+  blueLayer_.backgroundColor = [UIColorFromRGBA(0x0000FF, .75) CGColor];
   blueLayer_.bounds = rect;
-  blueLayer_.position = CGPointMake(200.f, 200.f);
+  blueLayer_.position = CGPointMake(200., 200.);
   blueLayer_.delegate = self;
   [blueLayer_ setNeedsDisplay];
 
-  purpleLayer_.backgroundColor = [UIColorFromRGBA(0xFF00FF, .75f) CGColor];
+  purpleLayer_.backgroundColor = [UIColorFromRGBA(0xFF00FF, .75) CGColor];
   purpleLayer_.bounds = rect;
-  purpleLayer_.position = CGPointMake(25.f, 25.f);
+  purpleLayer_.position = CGPointMake(25., 25.);
   purpleLayer_.delegate = self;
   [purpleLayer_ setNeedsDisplay];
   
-  yellowLayer_.backgroundColor = [UIColorFromRGBA(0xFFFF00, .75f) CGColor];
+  yellowLayer_.backgroundColor = [UIColorFromRGBA(0xFFFF00, .75) CGColor];
   yellowLayer_.bounds = rect;
-  yellowLayer_.position = CGPointMake(0.f, 0.f);
+  yellowLayer_.position = CGPointMake(0., 0.);
   yellowLayer_.delegate = self;
   [yellowLayer_ setNeedsDisplay];
 }
@@ -144,7 +144,7 @@
 }
 
 - (void)drawLayer:(CALayer *)layer inContext:(CGContextRef)context {
-  [layer debugDrawAnchorPointInContext:context withSize:CGSizeMake(6.f, 6.f) color:[UIColor blackColor]];
+  [layer debugDrawAnchorPointInContext:context withSize:CGSizeMake(6., 6.) color:[UIColor blackColor]];
 }
 
 #pragma mark Event Handlers

@@ -58,25 +58,25 @@
   myView.backgroundColor = [UIColor whiteColor];
   
   roundCornersButton_ = [[UIButton buttonWithType:UIButtonTypeRoundedRect] retain];
-  roundCornersButton_.frame = CGRectMake(10.f, 10.f, 145.f, 44.f);
+  roundCornersButton_.frame = CGRectMake(10., 10., 145., 44.);
   [roundCornersButton_ setTitle:@"Round Corners" forState:UIControlStateNormal];
   [roundCornersButton_ addTarget:self action:@selector(roundCorners:) forControlEvents:UIControlEventTouchUpInside];
   [myView addSubview:roundCornersButton_];
 
   toggleBorderButton_ = [[UIButton buttonWithType:UIButtonTypeRoundedRect] retain];
-  toggleBorderButton_.frame = CGRectMake(165.f, 10.f, 145.f, 44.f);
+  toggleBorderButton_.frame = CGRectMake(165., 10., 145., 44.);
   [toggleBorderButton_ setTitle:@"Toggle Border" forState:UIControlStateNormal];
   [toggleBorderButton_ addTarget:self action:@selector(toggleBorder:) forControlEvents:UIControlEventTouchUpInside];
   [myView addSubview:toggleBorderButton_];
 
   toggleOpacityButton_ = [[UIButton buttonWithType:UIButtonTypeRoundedRect] retain];
-  toggleOpacityButton_.frame = CGRectMake(10.f, 60.f, 145.f, 44.f);
+  toggleOpacityButton_.frame = CGRectMake(10., 60., 145., 44.);
   [toggleOpacityButton_ setTitle:@"Toggle Opacity" forState:UIControlStateNormal];
   [toggleOpacityButton_ addTarget:self action:@selector(toggleOpacity:) forControlEvents:UIControlEventTouchUpInside];
   [myView addSubview:toggleOpacityButton_];
   
   toggleMaskButton_ = [[UIButton buttonWithType:UIButtonTypeRoundedRect] retain];
-  toggleMaskButton_.frame = CGRectMake(165.f, 60.f, 145.f, 44.f);
+  toggleMaskButton_.frame = CGRectMake(165., 60., 145., 44.);
   [toggleMaskButton_ setTitle:@"Toggle Mask Layer" forState:UIControlStateNormal];
   [toggleMaskButton_ addTarget:self action:@selector(toggleMaskLayer:) forControlEvents:UIControlEventTouchUpInside];
   [myView addSubview:toggleMaskButton_];
@@ -91,8 +91,8 @@
 
 - (void)viewWillAppear:(BOOL)animated {
   simpleLayer_.backgroundColor = [[UIColor greenColor] CGColor];
-  simpleLayer_.bounds = CGRectMake(0.f, 0.f, 200.f, 200.f);
-  simpleLayer_.position = CGPointMake(160.f, 250.f);
+  simpleLayer_.bounds = CGRectMake(0., 0., 200., 200.);
+  simpleLayer_.position = CGPointMake(160., 250.);
   [simpleLayer_ setNeedsDisplay];
   
   maskLayer_.bounds = simpleLayer_.bounds;
@@ -106,27 +106,27 @@
 #pragma mark Event Handlers
 
 - (void)roundCorners:(id)sender {
-  if(simpleLayer_.cornerRadius > 0.f) {
-    simpleLayer_.cornerRadius = 0.f;
+  if(simpleLayer_.cornerRadius > 0.) {
+    simpleLayer_.cornerRadius = 0.;
   } else {
-    simpleLayer_.cornerRadius = 25.f;
+    simpleLayer_.cornerRadius = 25.;
   }
 }
 
 - (void)toggleBorder:(id)sender {
-  if(simpleLayer_.borderWidth > 0.f) {
-    simpleLayer_.borderWidth = 0.f;
+  if(simpleLayer_.borderWidth > 0.) {
+    simpleLayer_.borderWidth = 0.;
   } else {
-    simpleLayer_.borderWidth = 4.f;
+    simpleLayer_.borderWidth = 4.;
     simpleLayer_.borderColor = [[UIColor redColor] CGColor];
   }
 }
 
 - (void)toggleOpacity:(id)sender {
-  if(simpleLayer_.opacity < 1.f) {
-    simpleLayer_.opacity = 1.f;
+  if(simpleLayer_.opacity < 1.) {
+    simpleLayer_.opacity = 1.;
   } else {
-    simpleLayer_.opacity = .25f;
+    simpleLayer_.opacity = .25;
   }
 }
 

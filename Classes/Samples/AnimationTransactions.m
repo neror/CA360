@@ -54,7 +54,7 @@
   myView.backgroundColor = [UIColor whiteColor];
   
   runButton_ = [[UIButton buttonWithType:UIButtonTypeRoundedRect] retain];
-  runButton_.frame = CGRectMake(10.f, 10.f, 300.f, 44.f);
+  runButton_.frame = CGRectMake(10., 10., 300., 44.);
   [runButton_ setTitle:@"Run Animation" forState:UIControlStateNormal];
   [runButton_ addTarget:self action:@selector(toggleRun:) forControlEvents:UIControlEventTouchUpInside];
   [myView addSubview:runButton_];
@@ -70,18 +70,18 @@
 #pragma mark View drawing
 
 - (void)viewWillAppear:(BOOL)animated {
-  CGRect rect = CGRectMake(0.f, 0.f, 100.f, 100.f);
-  blueLayer_.backgroundColor = [UIColorFromRGBA(0x0000FF, .75f) CGColor];
+  CGRect rect = CGRectMake(0., 0., 100., 100.);
+  blueLayer_.backgroundColor = [UIColorFromRGBA(0x0000FF, .75) CGColor];
   blueLayer_.bounds = rect;
-  blueLayer_.position = CGPointMake(50.f, 50.f);
-  blueLayer_.cornerRadius = 10.f;
+  blueLayer_.position = CGPointMake(50., 50.);
+  blueLayer_.cornerRadius = 10.;
   [blueLayer_ setNeedsDisplay];
   
-  redLayer_.backgroundColor = [UIColorFromRGBA(0xFF0000, .75f) CGColor];
+  redLayer_.backgroundColor = [UIColorFromRGBA(0xFF0000, .75) CGColor];
   redLayer_.bounds = rect;
   CGSize viewSize = self.view.bounds.size;
-  redLayer_.position = CGPointMake(viewSize.width - 50.f, viewSize.height - 50.f);
-  redLayer_.cornerRadius = 10.f;
+  redLayer_.position = CGPointMake(viewSize.width - 50., viewSize.height - 50.);
+  redLayer_.cornerRadius = 10.;
   [redLayer_ setNeedsDisplay];
 }
 
@@ -95,20 +95,20 @@
   [blueLayer_ removeAnimationForKey:@"changePosition"];
   [CATransaction begin];
   {
-    [CATransaction setAnimationDuration:1.f];
+    [CATransaction setAnimationDuration:1.];
     [CATransaction setAnimationTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut]];
     
     CABasicAnimation *moveRed = [CABasicAnimation animationWithKeyPath:@"position"];
-    moveRed.toValue = [NSValue valueWithCGPoint:CGPointMake(75.f, self.view.center.y)];
+    moveRed.toValue = [NSValue valueWithCGPoint:CGPointMake(75., self.view.center.y)];
     [redLayer_ addAnimation:moveRed forKey:@"changePosition"];
     
     [CATransaction begin];
     {
-      [CATransaction setAnimationDuration:2.f];
+      [CATransaction setAnimationDuration:2.];
       [CATransaction setAnimationTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn]];
       CABasicAnimation *moveBlue = [CABasicAnimation animationWithKeyPath:@"position"];
       CGSize viewSize = self.view.bounds.size;
-      moveBlue.toValue = [NSValue valueWithCGPoint:CGPointMake(viewSize.width - 75.f, self.view.center.y)];
+      moveBlue.toValue = [NSValue valueWithCGPoint:CGPointMake(viewSize.width - 75., self.view.center.y)];
       [blueLayer_ addAnimation:moveBlue forKey:@"changePosition"];
     }
     [CATransaction commit];

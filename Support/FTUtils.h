@@ -47,8 +47,8 @@
 #pragma mark -
 #pragma mark Color Def Macros
 
-#define RGBCOLOR(r,g,b) [UIColor colorWithRed:r/256.f green:g/256.f blue:b/256.f alpha:1.f]
-#define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:r/256.f green:g/256.f blue:b/256.f alpha:a]
+#define RGBCOLOR(r,g,b) [UIColor colorWithRed:r/256. green:g/256. blue:b/256. alpha:1.]
+#define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:r/256. green:g/256. blue:b/256. alpha:a]
 #define UIColorFromRGB(rgbValue) [UIColor \
                                    colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
                                    green:((float)((rgbValue & 0x00FF00) >> 8))/255.0 \

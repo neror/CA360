@@ -26,7 +26,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "CALayer+FTDebugDrawing.h"
 
-const static CGPoint kSimpleLayerStartPosition = { 160.f, 310.f };
+const static CGPoint kSimpleLayerStartPosition = { 160., 310. };
 
 @implementation LayerTransforms
 
@@ -65,49 +65,49 @@ const static CGPoint kSimpleLayerStartPosition = { 160.f, 310.f };
   myView.backgroundColor = [UIColor whiteColor];
   
   moveAnchorPointButton_ = [[UIButton buttonWithType:UIButtonTypeRoundedRect] retain];
-  moveAnchorPointButton_.frame = CGRectMake(10.f, 10.f, 145.f, 44.f);
+  moveAnchorPointButton_.frame = CGRectMake(10., 10., 145., 44.);
   [moveAnchorPointButton_ setTitle:@"Move Anchor Point" forState:UIControlStateNormal];
   [moveAnchorPointButton_ addTarget:self action:@selector(moveAnchorPoint:) forControlEvents:UIControlEventTouchUpInside];
   [myView addSubview:moveAnchorPointButton_];
   
   rotateButton_ = [[UIButton buttonWithType:UIButtonTypeRoundedRect] retain];
-  rotateButton_.frame = CGRectMake(165.f, 10.f, 145.f, 44.f);
+  rotateButton_.frame = CGRectMake(165., 10., 145., 44.);
   [rotateButton_ setTitle:@"Rotate" forState:UIControlStateNormal];
   [rotateButton_ addTarget:self action:@selector(rotate:) forControlEvents:UIControlEventTouchUpInside];
   [myView addSubview:rotateButton_];
   
 
   scaleButton_ = [[UIButton buttonWithType:UIButtonTypeRoundedRect] retain];
-  scaleButton_.frame = CGRectMake(10.f, 60.f, 145.f, 44.f);
+  scaleButton_.frame = CGRectMake(10., 60., 145., 44.);
   [scaleButton_ setTitle:@"Scale" forState:UIControlStateNormal];
   [scaleButton_ addTarget:self action:@selector(scale:) forControlEvents:UIControlEventTouchUpInside];
   [myView addSubview:scaleButton_];
   
   translateButton_ = [[UIButton buttonWithType:UIButtonTypeRoundedRect] retain];
-  translateButton_.frame = CGRectMake(165.f, 60.f, 145.f, 44.f);
+  translateButton_.frame = CGRectMake(165., 60., 145., 44.);
   [translateButton_ setTitle:@"Tanslate" forState:UIControlStateNormal];
   [translateButton_ addTarget:self action:@selector(translate:) forControlEvents:UIControlEventTouchUpInside];
   [myView addSubview:translateButton_];
 
   resetButton_ = [[UIButton buttonWithType:UIButtonTypeRoundedRect] retain];
-  resetButton_.frame = CGRectMake(10.f, 110.f, 145.f, 44.f);
+  resetButton_.frame = CGRectMake(10., 110., 145., 44.);
   [resetButton_ setTitle:@"Reset" forState:UIControlStateNormal];
   [resetButton_ addTarget:self action:@selector(reset:) forControlEvents:UIControlEventTouchUpInside];
   [myView addSubview:resetButton_];
   
   cumulativeSwitch_ = [[UISwitch alloc] initWithFrame:CGRectZero];
-  CGRect rect = CGRectMake(165.f, 110.f, 145.f, 44.f);
+  CGRect rect = CGRectMake(165., 110., 145., 44.);
   CGPoint center = CGPointMake(CGRectGetMidX(rect), CGRectGetMidY(rect));
   cumulativeSwitch_.center = center;
   cumulativeSwitch_.on = self.cumulative;
   [cumulativeSwitch_ addTarget:self action:@selector(toggleCumulative:) forControlEvents:UIControlEventValueChanged];
   [myView addSubview:cumulativeSwitch_];
   
-  propertiesTextView_ = [[UITextView alloc] initWithFrame:CGRectMake(0.f, 160.f, 320.f, 44.f)];
+  propertiesTextView_ = [[UITextView alloc] initWithFrame:CGRectMake(0., 160., 320., 44.)];
   propertiesTextView_.backgroundColor = [UIColor clearColor];
   propertiesTextView_.editable = NO;
   propertiesTextView_.textAlignment = UITextAlignmentCenter;
-  propertiesTextView_.font = [UIFont systemFontOfSize:12.f];
+  propertiesTextView_.font = [UIFont systemFontOfSize:12.];
   [myView addSubview:propertiesTextView_];
   
   simpleLayer_ = [[CALayer layer] retain];
@@ -126,8 +126,8 @@ const static CGPoint kSimpleLayerStartPosition = { 160.f, 310.f };
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-  simpleLayer_.backgroundColor = [UIColorFromRGBA(0x00FF00, .85f) CGColor];
-  simpleLayer_.bounds = CGRectMake(0.f, 0.f, 200.f, 200.f);
+  simpleLayer_.backgroundColor = [UIColorFromRGBA(0x00FF00, .85) CGColor];
+  simpleLayer_.bounds = CGRectMake(0., 0., 200., 200.);
   simpleLayer_.position = kSimpleLayerStartPosition;
   simpleLayer_.transform = CATransform3DIdentity;
   simpleLayer_.delegate = self;
@@ -140,14 +140,14 @@ const static CGPoint kSimpleLayerStartPosition = { 160.f, 310.f };
 }
 
 - (void)drawLayer:(CALayer *)layer inContext:(CGContextRef)context {
-  [layer debugDrawAnchorPointInContext:context withSize:CGSizeMake(8.f, 8.f) color:[UIColor redColor]];
+  [layer debugDrawAnchorPointInContext:context withSize:CGSizeMake(8., 8.) color:[UIColor redColor]];
 }
 
 #pragma mark Button Event Handlers
 
 - (void)moveAnchorPoint:(id)sender {
   if(CGPointEqualToPoint(simpleLayer_.anchorPoint, CGPointZero)) {
-    simpleLayer_.anchorPoint = CGPointMake(.5f, .5f);
+    simpleLayer_.anchorPoint = CGPointMake(.5, .5);
   } else {
     simpleLayer_.anchorPoint = CGPointZero;
   }
@@ -158,11 +158,11 @@ const static CGPoint kSimpleLayerStartPosition = { 160.f, 310.f };
 - (void)rotate:(id)sender {
   if(self.cumulative) {
     CATransform3D currentTransform = simpleLayer_.transform;
-    CATransform3D rotated = CATransform3DRotate(currentTransform, 45.f, 0.f, 0.f, 1.f);
+    CATransform3D rotated = CATransform3DRotate(currentTransform, 45., 0., 0., 1.);
     simpleLayer_.transform = rotated;
   } else {
     simpleLayer_.transform = CATransform3DIdentity;
-    [simpleLayer_ setValue:[NSNumber numberWithFloat:45.f] forKeyPath:@"transform.rotation.z"];
+    [simpleLayer_ setValue:[NSNumber numberWithFloat:45.] forKeyPath:@"transform.rotation.z"];
   }
   [simpleLayer_ setNeedsDisplay];
   [self updatePropertiesLabel];
@@ -171,11 +171,11 @@ const static CGPoint kSimpleLayerStartPosition = { 160.f, 310.f };
 - (void)scale:(id)sender {
   if(self.cumulative) {
     CATransform3D currentTransform = simpleLayer_.transform;
-    CATransform3D scaled = CATransform3DScale(currentTransform, 1.5f, 1.5f, 1.5f);
+    CATransform3D scaled = CATransform3DScale(currentTransform, 1.5, 1.5, 1.5);
     simpleLayer_.transform = scaled;
   } else {
     simpleLayer_.transform = CATransform3DIdentity;
-    [simpleLayer_ setValue:[NSNumber numberWithFloat:1.5f] forKeyPath:@"transform.scale"];
+    [simpleLayer_ setValue:[NSNumber numberWithFloat:1.5] forKeyPath:@"transform.scale"];
   }
   [simpleLayer_ setNeedsDisplay];
   [self updatePropertiesLabel];
@@ -185,13 +185,13 @@ const static CGPoint kSimpleLayerStartPosition = { 160.f, 310.f };
   CATransform3D translated;
   if(self.cumulative) {
     CATransform3D currentTransform = simpleLayer_.transform;
-    translated = CATransform3DTranslate(currentTransform, 20.f, 20.f, 0.f);
+    translated = CATransform3DTranslate(currentTransform, 20., 20., 0.);
   } else {
     // The following is equvalent to:
-    // translated = CATransform3DMakeTranslation(50.f, 50.f, 0.f);
+    // translated = CATransform3DMakeTranslation(50., 50., 0.);
     translated = CATransform3DIdentity;
-    translated.m41 = 50.f;
-    translated.m42 = 50.f;
+    translated.m41 = 50.;
+    translated.m42 = 50.;
   }
   simpleLayer_.transform = translated;
   [simpleLayer_ setNeedsDisplay];

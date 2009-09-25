@@ -61,7 +61,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
   drawingLayer_.backgroundColor = [[UIColor clearColor] CGColor];
-  drawingLayer_.bounds = CGRectMake(0.f, 0.f, 300.f, 300.f);
+  drawingLayer_.bounds = CGRectMake(0., 0., 300., 300.);
   drawingLayer_.position = self.view.center;
   drawingLayer_.delegate = self;
   [drawingLayer_ setNeedsDisplay];
@@ -72,11 +72,11 @@
 }
 
 - (void)drawLayer:(CALayer *)layer inContext:(CGContextRef)context {
-  CGContextAddEllipseInRect(context, CGRectInset(layer.bounds, 4.f, 4.f));
+  CGContextAddEllipseInRect(context, CGRectInset(layer.bounds, 4., 4.));
   
-  CGContextSetLineWidth(context, 2.f);
-  const CGFloat lineDashLengths[2] = { 6.f, 2.f };
-  CGContextSetLineDash(context, 0.f, lineDashLengths, 2);
+  CGContextSetLineWidth(context, 2.);
+  const CGFloat lineDashLengths[2] = { 6., 2. };
+  CGContextSetLineDash(context, 0., lineDashLengths, 2);
   
   CGContextSetFillColorWithColor(context, [[UIColor greenColor] CGColor]);
   CGContextSetStrokeColorWithColor(context, [[UIColor blackColor] CGColor]);

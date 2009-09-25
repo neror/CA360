@@ -25,8 +25,8 @@
 #import "KeyframeAnimation.h"
 #import <QuartzCore/QuartzCore.h>
 
-static const CGRect kMarioStandingSpriteCoords = { .5f, 0.f, .5f, 1.f };
-static const CGRect kMarioJumpingSpriteCoords = { 0.f, 0.f, .5f, 1.f };
+static const CGRect kMarioStandingSpriteCoords = { .5, 0., .5, 1. };
+static const CGRect kMarioJumpingSpriteCoords = { 0., 0., .5, 1. };
 
 @implementation KeyframeAnimation
 
@@ -57,7 +57,7 @@ static const CGRect kMarioJumpingSpriteCoords = { 0.f, 0.f, .5f, 1.f };
   myView.backgroundColor = [UIColor whiteColor];
   
   jumpButton_ = [[UIButton buttonWithType:UIButtonTypeRoundedRect] retain];
-  jumpButton_.frame = CGRectMake(10.f, 10.f, 300.f, 44.f);
+  jumpButton_.frame = CGRectMake(10., 10., 300., 44.);
   [jumpButton_ setTitle:@"Jump!" forState:UIControlStateNormal];
   [jumpButton_ addTarget:self action:@selector(jump:) forControlEvents:UIControlEventTouchUpInside];
   [myView addSubview:jumpButton_];
@@ -76,17 +76,17 @@ static const CGRect kMarioJumpingSpriteCoords = { 0.f, 0.f, .5f, 1.f };
   CGSize viewSize = self.view.bounds.size;
   
   marioLayer_.backgroundColor = [[UIColor clearColor] CGColor];
-  marioLayer_.anchorPoint = CGPointMake(0.f, 1.f);
-  marioLayer_.bounds = CGRectMake(0.f, 0.f, 32.f, 64.f);
-  marioLayer_.position = CGPointMake(0.f, viewSize.height);
+  marioLayer_.anchorPoint = CGPointMake(0., 1.);
+  marioLayer_.bounds = CGRectMake(0., 0., 32., 64.);
+  marioLayer_.position = CGPointMake(0., viewSize.height);
   marioLayer_.contents = (id)[[UIImage imageNamed:@"Mario.png"] CGImage];
   marioLayer_.contentsGravity = kCAGravityResizeAspect;
   marioLayer_.contentsRect = kMarioStandingSpriteCoords;
   
   platformLayer_.backgroundColor = [[UIColor brownColor] CGColor];
   platformLayer_.anchorPoint = CGPointZero;
-  platformLayer_.frame = CGRectMake(160.f, 200.f, 160.f, 20.f);
-  platformLayer_.cornerRadius = 4.f;
+  platformLayer_.frame = CGRectMake(160., 200., 160., 20.);
+  platformLayer_.cornerRadius = 4.;
   [platformLayer_ setNeedsDisplay];
   [platformLayer_ setNeedsDisplay];
 }
@@ -101,12 +101,12 @@ static const CGRect kMarioJumpingSpriteCoords = { 0.f, 0.f, .5f, 1.f };
   [marioLayer_ removeAnimationForKey:@"marioJump"];
   
   CGMutablePathRef jumpPath = CGPathCreateMutable();
-  CGPathMoveToPoint(jumpPath, NULL, 0.f, viewSize.height);
-  CGPathAddCurveToPoint(jumpPath, NULL, 30.f, 140.f, 170.f, 140.f, 170.f, 200.f);
+  CGPathMoveToPoint(jumpPath, NULL, 0., viewSize.height);
+  CGPathAddCurveToPoint(jumpPath, NULL, 30., 140., 170., 140., 170., 200.);
 
   CAKeyframeAnimation *jumpAnimation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
   jumpAnimation.path = jumpPath;
-  jumpAnimation.duration = 1.f;
+  jumpAnimation.duration = 1.;
   jumpAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
   jumpAnimation.delegate = self;
 
@@ -133,7 +133,7 @@ static const CGRect kMarioJumpingSpriteCoords = { 0.f, 0.f, .5f, 1.f };
     [CATransaction setDisableActions:YES];
     marioLayer_.contentsRect = kMarioStandingSpriteCoords;
     if(finished) {
-      marioLayer_.position = CGPointMake(170.f, 200.f);
+      marioLayer_.position = CGPointMake(170., 200.);
     }
   }
   [CATransaction commit];

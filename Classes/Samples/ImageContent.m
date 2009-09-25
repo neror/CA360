@@ -54,7 +54,7 @@
   myView.backgroundColor = [UIColor whiteColor];
   
   magicButton_ = [[UIButton buttonWithType:UIButtonTypeRoundedRect] retain];
-  magicButton_.frame = CGRectMake(10.f, 10.f, 300.f, 44.f);
+  magicButton_.frame = CGRectMake(10., 10., 300., 44.);
   [magicButton_ setTitle:@"Invoke Magic!" forState:UIControlStateNormal];
   [magicButton_ addTarget:self action:@selector(toggleMoney:) forControlEvents:UIControlEventTouchUpInside];
   [myView addSubview:magicButton_];
@@ -72,13 +72,13 @@
 
 - (void)viewWillAppear:(BOOL)animated {
   simpleLayer_.backgroundColor = [[UIColor clearColor] CGColor];
-  simpleLayer_.bounds = CGRectMake(0.f, 0.f, 240.f, 90.f);
-  simpleLayer_.position = CGPointMake(160.f, 150.f);
+  simpleLayer_.bounds = CGRectMake(0., 0., 240., 90.);
+  simpleLayer_.position = CGPointMake(160., 150.);
   simpleLayer_.contents = (id)[[UIImage imageNamed:@"FTSLogo.png"] CGImage];
 
   moneyLayer_.backgroundColor = [[UIColor clearColor] CGColor];
-  moneyLayer_.bounds = CGRectMake(0.f, 0.f, 290.f, 125.f);
-  moneyLayer_.position = CGPointMake(160.f, 265.f);
+  moneyLayer_.bounds = CGRectMake(0., 0., 290., 125.);
+  moneyLayer_.position = CGPointMake(160., 265.);
   moneyLayer_.delegate = self;
   [moneyLayer_ setValue:[NSNumber numberWithBool:YES] forKey:@"moneyImageIsBen"];
   [moneyLayer_ setNeedsDisplay];

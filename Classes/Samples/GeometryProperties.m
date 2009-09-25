@@ -56,22 +56,22 @@
   myView.backgroundColor = [UIColor whiteColor];
   
   moveAnchorPointButton_ = [[UIButton buttonWithType:UIButtonTypeRoundedRect] retain];
-  moveAnchorPointButton_.frame = CGRectMake(10.f, 10.f, 145.f, 44.f);
+  moveAnchorPointButton_.frame = CGRectMake(10., 10., 145., 44.);
   [moveAnchorPointButton_ setTitle:@"Move Anchor Point" forState:UIControlStateNormal];
   [moveAnchorPointButton_ addTarget:self action:@selector(moveAnchorPoint:) forControlEvents:UIControlEventTouchUpInside];
   [myView addSubview:moveAnchorPointButton_];
   
   movePositionButton_ = [[UIButton buttonWithType:UIButtonTypeRoundedRect] retain];
-  movePositionButton_.frame = CGRectMake(165.f, 10.f, 145.f, 44.f);
+  movePositionButton_.frame = CGRectMake(165., 10., 145., 44.);
   [movePositionButton_ setTitle:@"Move Position" forState:UIControlStateNormal];
   [movePositionButton_ addTarget:self action:@selector(movePosition:) forControlEvents:UIControlEventTouchUpInside];
   [myView addSubview:movePositionButton_];
   
-  propertiesTextView_ = [[UITextView alloc] initWithFrame:CGRectMake(0.f, 60.f, 320.f, 44.f)];
+  propertiesTextView_ = [[UITextView alloc] initWithFrame:CGRectMake(0., 60., 320., 44.)];
   propertiesTextView_.backgroundColor = [UIColor clearColor];
   propertiesTextView_.editable = NO;
   propertiesTextView_.textAlignment = UITextAlignmentCenter;
-  propertiesTextView_.font = [UIFont systemFontOfSize:12.f];
+  propertiesTextView_.font = [UIFont systemFontOfSize:12.];
   [myView addSubview:propertiesTextView_];
   
   simpleLayer_ = [[CALayer layer] retain];
@@ -90,8 +90,8 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-  simpleLayer_.backgroundColor = [UIColorFromRGBA(0x00FF00, .85f) CGColor];
-  simpleLayer_.bounds = CGRectMake(0.f, 0.f, 200.f, 200.f);
+  simpleLayer_.backgroundColor = [UIColorFromRGBA(0x00FF00, .85) CGColor];
+  simpleLayer_.bounds = CGRectMake(0., 0., 200., 200.);
   simpleLayer_.position = self.view.center;
   simpleLayer_.delegate = self;
   [simpleLayer_ setNeedsDisplay];
@@ -103,14 +103,14 @@
 }
 
 - (void)drawLayer:(CALayer *)layer inContext:(CGContextRef)context {
-  [layer debugDrawAnchorPointInContext:context withSize:CGSizeMake(8.f, 8.f) color:[UIColor redColor]];
+  [layer debugDrawAnchorPointInContext:context withSize:CGSizeMake(8., 8.) color:[UIColor redColor]];
 }
 
 #pragma mark Button Event Handlers
 
 - (void)moveAnchorPoint:(id)sender {
   if(CGPointEqualToPoint(simpleLayer_.anchorPoint, CGPointZero)) {
-    simpleLayer_.anchorPoint = CGPointMake(.5f, .5f);
+    simpleLayer_.anchorPoint = CGPointMake(.5, .5);
   } else {
     simpleLayer_.anchorPoint = CGPointZero;
   }
@@ -121,7 +121,7 @@
 - (void)movePosition:(id)sender {
   if(CGPointEqualToPoint(simpleLayer_.position, self.view.center)) {
     CGPoint newPos = self.view.center;
-    newPos.y += 100.f;
+    newPos.y += 100.;
     simpleLayer_.position = newPos;
   } else {
     simpleLayer_.position = self.view.center;
