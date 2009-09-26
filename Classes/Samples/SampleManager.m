@@ -26,7 +26,7 @@
 #import <objc/runtime.h>
 #import "LayerTree.h"
 #import "ShapeLayers.h"
-#import "GeometryProperties.h"
+#import "GeometricProperties.h"
 #import "LayerDrawing.h"
 #import "BasicAnimation.h"
 #import "KeyframeAnimation.h"
@@ -70,7 +70,7 @@ static SampleManager *sharedSampleManager = nil;
 - (id)init {
   self = [super init];
   if (self != nil) {
-    NSArray *geom = [NSArray arrayWithObjects:[GeometryProperties class], [LayerTransforms class], nil];
+    NSArray *geom = [NSArray arrayWithObjects:[GeometricProperties class], [LayerTransforms class], nil];
     NSArray *hier = [NSArray arrayWithObjects:[LayerTree class], nil];
     NSArray *drawing = [NSArray arrayWithObjects:[ImageContent class], [LayerDrawing class], [StyleProperties class], nil];
     NSArray *animation = [NSArray arrayWithObjects:[BasicAnimation class], [AnimationGroups class], 

@@ -125,7 +125,7 @@ const static CGPoint kSimpleLayerStartPosition = { 160., 310. };
                               NSStringFromCGPoint(simpleLayer_.anchorPoint)];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
+- (void)viewWillAppear:(BOOL)animated {  
   simpleLayer_.backgroundColor = [UIColorFromRGBA(0x00FF00, .85) CGColor];
   simpleLayer_.bounds = CGRectMake(0., 0., 200., 200.);
   simpleLayer_.position = kSimpleLayerStartPosition;
@@ -157,12 +157,16 @@ const static CGPoint kSimpleLayerStartPosition = { 160., 310. };
 
 - (void)rotate:(id)sender {
   if(self.cumulative) {
+//    CATransform3D perspective = CATransform3DIdentity;
+//    perspective.m34 = 1 / -2000.;
+//    self.view.layer.sublayerTransform = perspective;
     CATransform3D currentTransform = simpleLayer_.transform;
     CATransform3D rotated = CATransform3DRotate(currentTransform, 45., 0., 0., 1.);
     simpleLayer_.transform = rotated;
   } else {
+    self.view.layer.sublayerTransform = CATransform3DIdentity;
     simpleLayer_.transform = CATransform3DIdentity;
-    [simpleLayer_ setValue:[NSNumber numberWithFloat:45.] forKeyPath:@"transform.rotation.z"];
+    [simpleLayer_ setValue:[NSNumber numberWithFloat:45.] forKeyPath:@"transform.rotation.x"];
   }
   [simpleLayer_ setNeedsDisplay];
   [self updatePropertiesLabel];
@@ -185,7 +189,7 @@ const static CGPoint kSimpleLayerStartPosition = { 160., 310. };
   CATransform3D translated;
   if(self.cumulative) {
     CATransform3D currentTransform = simpleLayer_.transform;
-    translated = CATransform3DTranslate(currentTransform, 20., 20., 0.);
+    translated = CATransform3DTranslate(currentTransform, 0., 0., -20.);
   } else {
     // The following is equvalent to:
     // translated = CATransform3DMakeTranslation(50., 50., 0.);

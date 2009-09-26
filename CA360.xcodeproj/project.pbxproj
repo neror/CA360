@@ -33,7 +33,7 @@
 		DFF7F3AD103604580067ED5B /* LayerTree.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF7F3AB103604580067ED5B /* LayerTree.m */; };
 		DFF7F3B5103605C80067ED5B /* SampleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF7F3B3103605C80067ED5B /* SampleManager.m */; };
 		DFF7F585103623ED0067ED5B /* ShapeLayers.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF7F584103623ED0067ED5B /* ShapeLayers.m */; };
-		DFF7F5C6103626750067ED5B /* GeometryProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF7F5C4103626750067ED5B /* GeometryProperties.m */; };
+		DFF7F5C6103626750067ED5B /* GeometricProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF7F5C4103626750067ED5B /* GeometricProperties.m */; };
 		DFF7F613103632570067ED5B /* LayerDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF7F611103632570067ED5B /* LayerDrawing.m */; };
 		DFF7F616103632A90067ED5B /* BasicAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF7F615103632A90067ED5B /* BasicAnimation.m */; };
 		DFF7F65B103634C70067ED5B /* KeyframeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF7F659103634C70067ED5B /* KeyframeAnimation.m */; };
@@ -65,7 +65,6 @@
 		DFF70C301039D8BC0052EE6A /* ImageContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageContent.h; path = Classes/Samples/ImageContent.h; sourceTree = "<group>"; };
 		DFF70C311039D8BC0052EE6A /* ImageContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageContent.m; path = Classes/Samples/ImageContent.m; sourceTree = "<group>"; };
 		DFF70C451039D9E60052EE6A /* FTSLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FTSLogo.png; sourceTree = "<group>"; };
-		DFF70C4B1039DA0A0052EE6A /* UnitTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
 		DFF70C4C1039DA0A0052EE6A /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		DFF70C4D1039DA0A0052EE6A /* CA360-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = "CA360-Info.plist"; sourceTree = "<group>"; };
 		DFF70C9C1039DE170052EE6A /* Ben.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ben.png; sourceTree = "<group>"; };
@@ -86,8 +85,8 @@
 		DFF7F3B3103605C80067ED5B /* SampleManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SampleManager.m; path = Classes/Samples/SampleManager.m; sourceTree = "<group>"; };
 		DFF7F583103623ED0067ED5B /* ShapeLayers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShapeLayers.h; path = Classes/Samples/ShapeLayers.h; sourceTree = "<group>"; };
 		DFF7F584103623ED0067ED5B /* ShapeLayers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShapeLayers.m; path = Classes/Samples/ShapeLayers.m; sourceTree = "<group>"; };
-		DFF7F5C3103626750067ED5B /* GeometryProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GeometryProperties.h; path = Classes/Samples/GeometryProperties.h; sourceTree = "<group>"; };
-		DFF7F5C4103626750067ED5B /* GeometryProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GeometryProperties.m; path = Classes/Samples/GeometryProperties.m; sourceTree = "<group>"; };
+		DFF7F5C3103626750067ED5B /* GeometricProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GeometricProperties.h; path = Classes/Samples/GeometricProperties.h; sourceTree = "<group>"; };
+		DFF7F5C4103626750067ED5B /* GeometricProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GeometricProperties.m; path = Classes/Samples/GeometricProperties.m; sourceTree = "<group>"; };
 		DFF7F610103632570067ED5B /* LayerDrawing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LayerDrawing.h; path = Classes/Samples/LayerDrawing.h; sourceTree = "<group>"; };
 		DFF7F611103632570067ED5B /* LayerDrawing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LayerDrawing.m; path = Classes/Samples/LayerDrawing.m; sourceTree = "<group>"; };
 		DFF7F614103632A90067ED5B /* BasicAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicAnimation.h; path = Classes/Samples/BasicAnimation.h; sourceTree = "<group>"; };
@@ -173,7 +172,6 @@
 				DFF70C9C1039DE170052EE6A /* Ben.png */,
 				DFF70C9D1039DE170052EE6A /* Steve.png */,
 				DFF70D77103A0BB40052EE6A /* StarMask.png */,
-				DFF70C4B1039DA0A0052EE6A /* UnitTests-Info.plist */,
 				DFF70C4C1039DA0A0052EE6A /* MainWindow.xib */,
 				DFF70C4D1039DA0A0052EE6A /* CA360-Info.plist */,
 			);
@@ -211,16 +209,16 @@
 			children = (
 				DFF7F614103632A90067ED5B /* BasicAnimation.h */,
 				DFF7F615103632A90067ED5B /* BasicAnimation.m */,
-				DFF70DBE103A11DF0052EE6A /* AnimationGroups.h */,
-				DFF70DBF103A11DF0052EE6A /* AnimationGroups.m */,
-				DFF70DA0103A10870052EE6A /* AnimationTransactions.h */,
-				DFF70DA1103A10870052EE6A /* AnimationTransactions.m */,
 				DFF7F658103634C70067ED5B /* KeyframeAnimation.h */,
 				DFF7F659103634C70067ED5B /* KeyframeAnimation.m */,
-				DFF70D9C103A104C0052EE6A /* LayerActions.h */,
-				DFF70D9D103A104C0052EE6A /* LayerActions.m */,
+				DFF70DBE103A11DF0052EE6A /* AnimationGroups.h */,
+				DFF70DBF103A11DF0052EE6A /* AnimationGroups.m */,
 				DFAFBACD105EFF4200AE6FF1 /* LayerTransitions.h */,
 				DFAFBACE105EFF4200AE6FF1 /* LayerTransitions.m */,
+				DFF70DA0103A10870052EE6A /* AnimationTransactions.h */,
+				DFF70DA1103A10870052EE6A /* AnimationTransactions.m */,
+				DFF70D9C103A104C0052EE6A /* LayerActions.h */,
+				DFF70D9D103A104C0052EE6A /* LayerActions.m */,
 			);
 			name = Animation;
 			sourceTree = "<group>";
@@ -228,8 +226,8 @@
 		DFF7F65C103635380067ED5B /* Geometry & Transforms */ = {
 			isa = PBXGroup;
 			children = (
-				DFF7F5C3103626750067ED5B /* GeometryProperties.h */,
-				DFF7F5C4103626750067ED5B /* GeometryProperties.m */,
+				DFF7F5C3103626750067ED5B /* GeometricProperties.h */,
+				DFF7F5C4103626750067ED5B /* GeometricProperties.m */,
 				DF8015601038E1C400B48250 /* LayerTransforms.h */,
 				DF8015611038E1C400B48250 /* LayerTransforms.m */,
 			);
@@ -340,7 +338,7 @@
 				DFF7F3AD103604580067ED5B /* LayerTree.m in Sources */,
 				DFF7F3B5103605C80067ED5B /* SampleManager.m in Sources */,
 				DFF7F585103623ED0067ED5B /* ShapeLayers.m in Sources */,
-				DFF7F5C6103626750067ED5B /* GeometryProperties.m in Sources */,
+				DFF7F5C6103626750067ED5B /* GeometricProperties.m in Sources */,
 				DFF7F613103632570067ED5B /* LayerDrawing.m in Sources */,
 				DFF7F616103632A90067ED5B /* BasicAnimation.m in Sources */,
 				DFF7F65B103634C70067ED5B /* KeyframeAnimation.m in Sources */,

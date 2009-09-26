@@ -22,14 +22,14 @@
  THE SOFTWARE.
 */
 
-#import "GeometryProperties.h"
+#import "GeometricProperties.h"
 #import <QuartzCore/QuartzCore.h>
 #import "CALayer+FTDebugDrawing.h"
 
-@implementation GeometryProperties
+@implementation GeometricProperties
 
 + (NSString *)friendlyName {
-  return @"Geometry Properties";
+  return @"Geometric Properties";
 }
 
 #pragma mark init and dealloc

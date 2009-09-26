@@ -25,7 +25,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface GeometryProperties : UIViewController {
+@interface GeometricProperties : UIViewController {
   CALayer *simpleLayer_;
   
   UITextView *propertiesTextView_;
