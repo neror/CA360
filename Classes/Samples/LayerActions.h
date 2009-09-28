@@ -26,7 +26,8 @@
 
 
 @interface LayerActions : UIViewController {
-
+  CALayer *moneyLayer_;  
+  UIButton *magicButton_;  
 }
 
 @end

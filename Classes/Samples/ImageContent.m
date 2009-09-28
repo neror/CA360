@@ -72,7 +72,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
   simpleLayer_.backgroundColor = [[UIColor clearColor] CGColor];
-  simpleLayer_.bounds = CGRectMake(0., 0., 240., 90.);
+  simpleLayer_.bounds = CGRectMake(0., 0., 240., 66.);
   simpleLayer_.position = CGPointMake(160., 150.);
   simpleLayer_.contents = (id)[[UIImage imageNamed:@"FTSLogo.png"] CGImage];
 

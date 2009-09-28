@@ -41,6 +41,8 @@
 }
 
 - (void)dealloc {
+  FTRELEASE(moneyLayer_);
+  FTRELEASE(magicButton_);
   [super dealloc];
 }
 
@@ -49,15 +51,63 @@
 - (void)loadView {
   UIView *myView = [[[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
   myView.backgroundColor = [UIColor whiteColor];
+  
+  magicButton_ = [[UIButton buttonWithType:UIButtonTypeRoundedRect] retain];
+  magicButton_.frame = CGRectMake(10., 10., 300., 44.);
+  [magicButton_ setTitle:@"Invoke Magic!" forState:UIControlStateNormal];
+  [magicButton_ addTarget:self action:@selector(toggleMoney:) forControlEvents:UIControlEventTouchUpInside];
+  [myView addSubview:magicButton_];
+  
+  moneyLayer_ = [[CALayer layer] retain];
+  
+  [myView.layer addSublayer:moneyLayer_];
+  
   self.view = myView;
 }
 
 #pragma mark View drawing
 
 - (void)viewWillAppear:(BOOL)animated {
+  moneyLayer_.backgroundColor = [[UIColor clearColor] CGColor];
+  moneyLayer_.bounds = CGRectMake(0., 0., 290., 125.);
+  moneyLayer_.position = self.view.center;
+  moneyLayer_.delegate = self;
+  [moneyLayer_ setValue:[NSNumber numberWithBool:YES] forKey:@"moneyImageIsBen"];
+  [moneyLayer_ setNeedsDisplay];
 }
 
-- (void)viewDidAppear:(BOOL)animated {
+- (void)viewWillDisappear:(BOOL)animated {
+  moneyLayer_.delegate = nil;
+}
+
+- (void)displayLayer:(CALayer *)layer {
+  if(layer == moneyLayer_) {
+    if([[layer valueForKey:@"moneyImageIsBen"] boolValue]) {
+      layer.contents = (id)[[UIImage imageNamed:@"Ben.png"] CGImage];
+    } else {
+      layer.contents = (id)[[UIImage imageNamed:@"Steve.png"] CGImage];
+    }
+  }
+}
+
+- (id<CAAction>)actionForLayer:(CALayer *)layer forKey:(NSString *)event {
+  CATransition *anim = nil;
+  if ([event isEqualToString:@"contents"]) {
+    anim = [CATransition animation];
+    anim.duration = .33;
+    anim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    anim.type = kCATransitionPush;
+    anim.subtype = kCATransitionFromRight;
+  }
+  return anim;
+}
+
+#pragma mark Event Handlers
+
+- (void)toggleMoney:(id)sender {
+  BOOL isBen = [[moneyLayer_ valueForKey:@"moneyImageIsBen"] boolValue];
+  [moneyLayer_ setValue:[NSNumber numberWithBool:!isBen] forKey:@"moneyImageIsBen"];
+  [moneyLayer_ setNeedsDisplay];
 }
 
 @end
