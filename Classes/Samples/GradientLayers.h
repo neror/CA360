@@ -23,10 +23,11 @@
 */
 
 #import <UIKit/UIKit.h>
-
+#import <QuartzCore/QuartzCore.h>
 
 @interface GradientLayers : UIViewController {
-
+  CAGradientLayer *gradientLayer_;
+  UIButton *animateButton_;
 }
 
 @end

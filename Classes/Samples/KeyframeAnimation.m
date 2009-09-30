@@ -113,7 +113,6 @@ static const CGRect kMarioJumpingSpriteCoords = { 0., 0., .5, 1. };
   CGPathRelease(jumpPath);
   
   [marioLayer_ addAnimation:jumpAnimation forKey:@"marioJump"];
-    
 }
 
 #pragma mark Animation delegate methods

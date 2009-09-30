@@ -166,7 +166,7 @@ const static CGPoint kSimpleLayerStartPosition = { 160., 310. };
   } else {
     self.view.layer.sublayerTransform = CATransform3DIdentity;
     simpleLayer_.transform = CATransform3DIdentity;
-    [simpleLayer_ setValue:[NSNumber numberWithFloat:45.] forKeyPath:@"transform.rotation.x"];
+    [simpleLayer_ setValue:[NSNumber numberWithFloat:45.] forKeyPath:@"transform.rotation.z"];
   }
   [simpleLayer_ setNeedsDisplay];
   [self updatePropertiesLabel];
@@ -189,7 +189,7 @@ const static CGPoint kSimpleLayerStartPosition = { 160., 310. };
   CATransform3D translated;
   if(self.cumulative) {
     CATransform3D currentTransform = simpleLayer_.transform;
-    translated = CATransform3DTranslate(currentTransform, 0., 0., -20.);
+    translated = CATransform3DTranslate(currentTransform, 50., 50., 0.);
   } else {
     // The following is equvalent to:
     // translated = CATransform3DMakeTranslation(50., 50., 0.);

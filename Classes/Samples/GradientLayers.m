@@ -24,6 +24,12 @@
 
 #import "GradientLayers.h"
 
+@interface GradientLayers ()
+
+- (void)animateGradient:(id)sender;
+
+@end
+
 
 @implementation GradientLayers
 
@@ -41,20 +47,55 @@
 }
 
 - (void)dealloc {
+  FTRELEASE(gradientLayer_);
   [super dealloc];
+}
+
+
+- (void)animateGradient:(id)sender {
+  if([gradientLayer_ animationForKey:@"gradientAnimation"] == nil) {
+    CABasicAnimation *endPointAnim = [CABasicAnimation animationWithKeyPath:@"endPoint"];
+    endPointAnim.toValue = [NSValue valueWithCGPoint:CGPointMake(0., .1)];
+    endPointAnim.duration = 1.;
+    endPointAnim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    endPointAnim.repeatCount = FLT_MAX;
+    endPointAnim.autoreverses = YES;
+    
+    [gradientLayer_ addAnimation:endPointAnim forKey:@"gradientAnimation"];
+  } else {
+    [gradientLayer_ removeAnimationForKey:@"gradientAnimation"];
+  }
 }
 
 #pragma mark Load and unload the view
 
 - (void)loadView {
   UIView *myView = [[[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-  myView.backgroundColor = [UIColor whiteColor];
+  myView.backgroundColor = [UIColor whiteColor];  
+  
+  animateButton_ = [[UIButton buttonWithType:UIButtonTypeRoundedRect] retain];
+  animateButton_.frame = CGRectMake(10., 10., 300., 44.);
+  [animateButton_ setTitle:@"Animate!" forState:UIControlStateNormal];
+  [animateButton_ addTarget:self action:@selector(animateGradient:) forControlEvents:UIControlEventTouchUpInside];
+  [myView addSubview:animateButton_];
+  
+  gradientLayer_ = [[CAGradientLayer layer] retain];
+  [myView.layer addSublayer:gradientLayer_];
   self.view = myView;
 }
 
 #pragma mark View drawing
 
 - (void)viewWillAppear:(BOOL)animated {
+  gradientLayer_.backgroundColor = [[UIColor blackColor] CGColor];
+  gradientLayer_.bounds = CGRectMake(0., 0., 200., 200.);
+  gradientLayer_.position = self.view.center;
+  gradientLayer_.cornerRadius = 12.;
+  gradientLayer_.borderWidth = 2.;
+  gradientLayer_.borderColor = [[UIColor blackColor] CGColor];
+  gradientLayer_.startPoint = CGPointZero;
+  gradientLayer_.endPoint = CGPointMake(0., 1.);
+  gradientLayer_.colors = [NSArray arrayWithObjects:(id)[[UIColor whiteColor] CGColor], (id)[UIColorFromRGBA(0xFFFFFF, .1) CGColor], nil];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
