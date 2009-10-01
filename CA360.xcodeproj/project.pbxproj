@@ -19,6 +19,7 @@
 		DFAFBACF105EFF4200AE6FF1 /* LayerTransitions.m in Sources */ = {isa = PBXBuildFile; fileRef = DFAFBACE105EFF4200AE6FF1 /* LayerTransitions.m */; };
 		DFAFBB8D105F0DD800AE6FF1 /* FTUtils+NSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DFAFBB8C105F0DD800AE6FF1 /* FTUtils+NSObject.m */; };
 		DFB121621060279A00E7DB00 /* Mario.png in Resources */ = {isa = PBXBuildFile; fileRef = DFB121611060279A00E7DB00 /* Mario.png */; };
+		DFF3A7761073A30900141522 /* FTAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF3A7751073A30900141522 /* FTAnimationManager.m */; };
 		DFF70C321039D8BC0052EE6A /* ImageContent.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF70C311039D8BC0052EE6A /* ImageContent.m */; };
 		DFF70C461039D9E60052EE6A /* FTSLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = DFF70C451039D9E60052EE6A /* FTSLogo.png */; };
 		DFF70C4F1039DA0A0052EE6A /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFF70C4C1039DA0A0052EE6A /* MainWindow.xib */; };
@@ -62,6 +63,8 @@
 		DFAFBB8B105F0DD800AE6FF1 /* FTUtils+NSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FTUtils+NSObject.h"; sourceTree = "<group>"; };
 		DFAFBB8C105F0DD800AE6FF1 /* FTUtils+NSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FTUtils+NSObject.m"; sourceTree = "<group>"; };
 		DFB121611060279A00E7DB00 /* Mario.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mario.png; sourceTree = "<group>"; };
+		DFF3A7741073A30900141522 /* FTAnimationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTAnimationManager.h; sourceTree = "<group>"; };
+		DFF3A7751073A30900141522 /* FTAnimationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTAnimationManager.m; sourceTree = "<group>"; };
 		DFF70C301039D8BC0052EE6A /* ImageContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageContent.h; path = Classes/Samples/ImageContent.h; sourceTree = "<group>"; };
 		DFF70C311039D8BC0052EE6A /* ImageContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageContent.m; path = Classes/Samples/ImageContent.m; sourceTree = "<group>"; };
 		DFF70C451039D9E60052EE6A /* FTSLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FTSLogo.png; sourceTree = "<group>"; };
@@ -182,6 +185,8 @@
 			isa = PBXGroup;
 			children = (
 				DFAFBB8A105F0DD700AE6FF1 /* FTUtils.h */,
+				DFF3A7741073A30900141522 /* FTAnimationManager.h */,
+				DFF3A7751073A30900141522 /* FTAnimationManager.m */,
 				DFAFBB8B105F0DD800AE6FF1 /* FTUtils+NSObject.h */,
 				DFAFBB8C105F0DD800AE6FF1 /* FTUtils+NSObject.m */,
 			);
@@ -352,6 +357,7 @@
 				DFF70DC0103A11DF0052EE6A /* AnimationGroups.m in Sources */,
 				DFAFBACF105EFF4200AE6FF1 /* LayerTransitions.m in Sources */,
 				DFAFBB8D105F0DD800AE6FF1 /* FTUtils+NSObject.m in Sources */,
+				DFF3A7761073A30900141522 /* FTAnimationManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
