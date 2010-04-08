@@ -13,6 +13,7 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
 		28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
+		DF75ABFD116A8252006FF3EB /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF75ABFC116A8252006FF3EB /* MainWindow-iPad.xib */; };
 		DF80136E10377A1200B48250 /* GradientLayers.m in Sources */ = {isa = PBXBuildFile; fileRef = DF80136C10377A1200B48250 /* GradientLayers.m */; };
 		DF8014A31038D12900B48250 /* CALayer+FTDebugDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8014A11038D12900B48250 /* CALayer+FTDebugDrawing.m */; };
 		DF8015631038E1C400B48250 /* LayerTransforms.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8015611038E1C400B48250 /* LayerTransforms.m */; };
@@ -51,10 +52,11 @@
 		28C286DF0D94DF7D0034E888 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		28C286E00D94DF7D0034E888 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DF75ABFC116A8252006FF3EB /* MainWindow-iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "MainWindow-iPad.xib"; path = "Resources-iPad/Resources/MainWindow-iPad.xib"; sourceTree = "<group>"; };
 		DF80136B10377A1200B48250 /* GradientLayers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GradientLayers.h; path = Classes/Samples/GradientLayers.h; sourceTree = "<group>"; };
 		DF80136C10377A1200B48250 /* GradientLayers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GradientLayers.m; path = Classes/Samples/GradientLayers.m; sourceTree = "<group>"; };
-		DF8014A01038D12900B48250 /* CALayer+FTDebugDrawing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CALayer+FTDebugDrawing.h"; path = "Classes/CALayer+FTDebugDrawing.h"; sourceTree = "<group>"; };
-		DF8014A11038D12900B48250 /* CALayer+FTDebugDrawing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CALayer+FTDebugDrawing.m"; path = "Classes/CALayer+FTDebugDrawing.m"; sourceTree = "<group>"; };
+		DF8014A01038D12900B48250 /* CALayer+FTDebugDrawing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+FTDebugDrawing.h"; sourceTree = "<group>"; };
+		DF8014A11038D12900B48250 /* CALayer+FTDebugDrawing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+FTDebugDrawing.m"; sourceTree = "<group>"; };
 		DF8015601038E1C400B48250 /* LayerTransforms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LayerTransforms.h; path = Classes/Samples/LayerTransforms.h; sourceTree = "<group>"; };
 		DF8015611038E1C400B48250 /* LayerTransforms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LayerTransforms.m; path = Classes/Samples/LayerTransforms.m; sourceTree = "<group>"; };
 		DFAFBACD105EFF4200AE6FF1 /* LayerTransitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LayerTransitions.h; path = Classes/Samples/LayerTransitions.h; sourceTree = "<group>"; };
@@ -84,8 +86,8 @@
 		DFF7F2F4103602470067ED5B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		DFF7F3AA103604580067ED5B /* LayerTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LayerTree.h; path = Classes/Samples/LayerTree.h; sourceTree = "<group>"; };
 		DFF7F3AB103604580067ED5B /* LayerTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LayerTree.m; path = Classes/Samples/LayerTree.m; sourceTree = "<group>"; };
-		DFF7F3B2103605C80067ED5B /* SampleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SampleManager.h; path = Classes/Samples/SampleManager.h; sourceTree = "<group>"; };
-		DFF7F3B3103605C80067ED5B /* SampleManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SampleManager.m; path = Classes/Samples/SampleManager.m; sourceTree = "<group>"; };
+		DFF7F3B2103605C80067ED5B /* SampleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SampleManager.h; path = Samples/SampleManager.h; sourceTree = "<group>"; };
+		DFF7F3B3103605C80067ED5B /* SampleManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SampleManager.m; path = Samples/SampleManager.m; sourceTree = "<group>"; };
 		DFF7F583103623ED0067ED5B /* ShapeLayers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShapeLayers.h; path = Classes/Samples/ShapeLayers.h; sourceTree = "<group>"; };
 		DFF7F584103623ED0067ED5B /* ShapeLayers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShapeLayers.m; path = Classes/Samples/ShapeLayers.m; sourceTree = "<group>"; };
 		DFF7F5C3103626750067ED5B /* GeometricProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GeometricProperties.h; path = Classes/Samples/GeometricProperties.h; sourceTree = "<group>"; };
@@ -120,6 +122,10 @@
 				28C286E00D94DF7D0034E888 /* RootViewController.m */,
 				1D3623240D0F684500981E51 /* CA360AppDelegate.h */,
 				1D3623250D0F684500981E51 /* CA360AppDelegate.m */,
+				DFF7F3B2103605C80067ED5B /* SampleManager.h */,
+				DFF7F3B3103605C80067ED5B /* SampleManager.m */,
+				DF8014A01038D12900B48250 /* CALayer+FTDebugDrawing.h */,
+				DF8014A11038D12900B48250 /* CALayer+FTDebugDrawing.m */,
 			);
 			name = "Core App Classes";
 			path = Classes;
@@ -136,10 +142,12 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				DFF7F3A9103603A50067ED5B /* Samples */,
+				DFF7F3A9103603A50067ED5B /* Core Samples */,
+				DF6091CE116E7B93005321DE /* Advanced Techniques */,
 				080E96DDFE201D6D7F000001 /* Core App Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				DFF70C441039D9E60052EE6A /* Resources */,
+				DF75ABFB116A8251006FF3EB /* Resources-iPad */,
 				DFF7F28B103601FE0067ED5B /* Support */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
@@ -165,6 +173,21 @@
 				DFF7F2F4103602470067ED5B /* QuartzCore.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DF6091CE116E7B93005321DE /* Advanced Techniques */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Advanced Techniques";
+			sourceTree = "<group>";
+		};
+		DF75ABFB116A8251006FF3EB /* Resources-iPad */ = {
+			isa = PBXGroup;
+			children = (
+				DF75ABFC116A8252006FF3EB /* MainWindow-iPad.xib */,
+			);
+			name = "Resources-iPad";
 			sourceTree = "<group>";
 		};
 		DFF70C441039D9E60052EE6A /* Resources */ = {
@@ -193,7 +216,7 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
-		DFF7F3A9103603A50067ED5B /* Samples */ = {
+		DFF7F3A9103603A50067ED5B /* Core Samples */ = {
 			isa = PBXGroup;
 			children = (
 				DFF7F65C103635380067ED5B /* Geometry & Transforms */,
@@ -201,12 +224,8 @@
 				DFF7F65E103635690067ED5B /* Content & Style Properties */,
 				DFF7F657103634AB0067ED5B /* Animation */,
 				DFF7F65F103635840067ED5B /* Special Layer Types */,
-				DFF7F3B2103605C80067ED5B /* SampleManager.h */,
-				DFF7F3B3103605C80067ED5B /* SampleManager.m */,
-				DF8014A01038D12900B48250 /* CALayer+FTDebugDrawing.h */,
-				DF8014A11038D12900B48250 /* CALayer+FTDebugDrawing.m */,
 			);
-			name = Samples;
+			name = "Core Samples";
 			sourceTree = "<group>";
 		};
 		DFF7F657103634AB0067ED5B /* Animation */ = {
@@ -327,6 +346,7 @@
 				DFF70C9F1039DE170052EE6A /* Steve.png in Resources */,
 				DFF70D78103A0BB40052EE6A /* StarMask.png in Resources */,
 				DFB121621060279A00E7DB00 /* Mario.png in Resources */,
+				DF75ABFD116A8252006FF3EB /* MainWindow-iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +388,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -375,7 +397,11 @@
 				GCC_PREFIX_HEADER = CA360_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
 				INFOPLIST_FILE = "Resources/CA360-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.1.3;
 				PRODUCT_NAME = CA360;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos3.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -383,11 +409,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = CA360_Prefix.pch;
 				INFOPLIST_FILE = "CA360-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.1.3;
 				PRODUCT_NAME = CA360;
+				SDKROOT = iphoneos3.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
