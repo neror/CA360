@@ -13,14 +13,13 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
 		28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
+		DF6091FA116E7E7F005321DE /* libFTUtils.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF6091F5116E7E7A005321DE /* libFTUtils.a */; };
 		DF75ABFD116A8252006FF3EB /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF75ABFC116A8252006FF3EB /* MainWindow-iPad.xib */; };
 		DF80136E10377A1200B48250 /* GradientLayers.m in Sources */ = {isa = PBXBuildFile; fileRef = DF80136C10377A1200B48250 /* GradientLayers.m */; };
 		DF8014A31038D12900B48250 /* CALayer+FTDebugDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8014A11038D12900B48250 /* CALayer+FTDebugDrawing.m */; };
 		DF8015631038E1C400B48250 /* LayerTransforms.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8015611038E1C400B48250 /* LayerTransforms.m */; };
 		DFAFBACF105EFF4200AE6FF1 /* LayerTransitions.m in Sources */ = {isa = PBXBuildFile; fileRef = DFAFBACE105EFF4200AE6FF1 /* LayerTransitions.m */; };
-		DFAFBB8D105F0DD800AE6FF1 /* FTUtils+NSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DFAFBB8C105F0DD800AE6FF1 /* FTUtils+NSObject.m */; };
 		DFB121621060279A00E7DB00 /* Mario.png in Resources */ = {isa = PBXBuildFile; fileRef = DFB121611060279A00E7DB00 /* Mario.png */; };
-		DFF3A7761073A30900141522 /* FTAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF3A7751073A30900141522 /* FTAnimationManager.m */; };
 		DFF70C321039D8BC0052EE6A /* ImageContent.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF70C311039D8BC0052EE6A /* ImageContent.m */; };
 		DFF70C461039D9E60052EE6A /* FTSLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = DFF70C451039D9E60052EE6A /* FTSLogo.png */; };
 		DFF70C4F1039DA0A0052EE6A /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFF70C4C1039DA0A0052EE6A /* MainWindow.xib */; };
@@ -41,6 +40,37 @@
 		DFF7F65B103634C70067ED5B /* KeyframeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF7F659103634C70067ED5B /* KeyframeAnimation.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		DF6091F4116E7E7A005321DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF6091EA116E7E7A005321DE /* FTUtils.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D /* libFTUtils.a */;
+			remoteInfo = FTUtils;
+		};
+		DF6091F6116E7E7A005321DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF6091EA116E7E7A005321DE /* FTUtils.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DFE4EF0B1035CBCB006A7598 /* UnitTests.octest */;
+			remoteInfo = UnitTests;
+		};
+		DF6091F8116E7E7A005321DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF6091EA116E7E7A005321DE /* FTUtils.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DFFDB4AA10C2DA2200F7BF95 /* FTAnimationExamples.app */;
+			remoteInfo = FTAnimationExamples;
+		};
+		DF6091FB116E7E8A005321DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF6091EA116E7E7A005321DE /* FTUtils.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D /* FTUtils */;
+			remoteInfo = FTUtils;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* CA360AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CA360AppDelegate.h; sourceTree = "<group>"; };
@@ -52,6 +82,7 @@
 		28C286DF0D94DF7D0034E888 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		28C286E00D94DF7D0034E888 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DF6091EA116E7E7A005321DE /* FTUtils.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FTUtils.xcodeproj; path = FTUtils/FTUtils.xcodeproj; sourceTree = "<group>"; };
 		DF75ABFC116A8252006FF3EB /* MainWindow-iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "MainWindow-iPad.xib"; path = "Resources-iPad/Resources/MainWindow-iPad.xib"; sourceTree = "<group>"; };
 		DF80136B10377A1200B48250 /* GradientLayers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GradientLayers.h; path = Classes/Samples/GradientLayers.h; sourceTree = "<group>"; };
 		DF80136C10377A1200B48250 /* GradientLayers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GradientLayers.m; path = Classes/Samples/GradientLayers.m; sourceTree = "<group>"; };
@@ -61,12 +92,7 @@
 		DF8015611038E1C400B48250 /* LayerTransforms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LayerTransforms.m; path = Classes/Samples/LayerTransforms.m; sourceTree = "<group>"; };
 		DFAFBACD105EFF4200AE6FF1 /* LayerTransitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LayerTransitions.h; path = Classes/Samples/LayerTransitions.h; sourceTree = "<group>"; };
 		DFAFBACE105EFF4200AE6FF1 /* LayerTransitions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LayerTransitions.m; path = Classes/Samples/LayerTransitions.m; sourceTree = "<group>"; };
-		DFAFBB8A105F0DD700AE6FF1 /* FTUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTUtils.h; sourceTree = "<group>"; };
-		DFAFBB8B105F0DD800AE6FF1 /* FTUtils+NSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FTUtils+NSObject.h"; sourceTree = "<group>"; };
-		DFAFBB8C105F0DD800AE6FF1 /* FTUtils+NSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FTUtils+NSObject.m"; sourceTree = "<group>"; };
 		DFB121611060279A00E7DB00 /* Mario.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mario.png; sourceTree = "<group>"; };
-		DFF3A7741073A30900141522 /* FTAnimationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTAnimationManager.h; sourceTree = "<group>"; };
-		DFF3A7751073A30900141522 /* FTAnimationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTAnimationManager.m; sourceTree = "<group>"; };
 		DFF70C301039D8BC0052EE6A /* ImageContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageContent.h; path = Classes/Samples/ImageContent.h; sourceTree = "<group>"; };
 		DFF70C311039D8BC0052EE6A /* ImageContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageContent.m; path = Classes/Samples/ImageContent.m; sourceTree = "<group>"; };
 		DFF70C451039D9E60052EE6A /* FTSLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FTSLogo.png; sourceTree = "<group>"; };
@@ -109,6 +135,7 @@
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */,
 				DFF7F2F6103602470067ED5B /* QuartzCore.framework in Frameworks */,
+				DF6091FA116E7E7F005321DE /* libFTUtils.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +209,16 @@
 			name = "Advanced Techniques";
 			sourceTree = "<group>";
 		};
+		DF6091EB116E7E7A005321DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DF6091F5116E7E7A005321DE /* libFTUtils.a */,
+				DF6091F7116E7E7A005321DE /* UnitTests.octest */,
+				DF6091F9116E7E7A005321DE /* FTAnimationExamples.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		DF75ABFB116A8251006FF3EB /* Resources-iPad */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,11 +244,7 @@
 		DFF7F28B103601FE0067ED5B /* Support */ = {
 			isa = PBXGroup;
 			children = (
-				DFAFBB8A105F0DD700AE6FF1 /* FTUtils.h */,
-				DFF3A7741073A30900141522 /* FTAnimationManager.h */,
-				DFF3A7751073A30900141522 /* FTAnimationManager.m */,
-				DFAFBB8B105F0DD800AE6FF1 /* FTUtils+NSObject.h */,
-				DFAFBB8C105F0DD800AE6FF1 /* FTUtils+NSObject.m */,
+				DF6091EA116E7E7A005321DE /* FTUtils.xcodeproj */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -305,6 +338,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				DF6091FC116E7E8A005321DE /* PBXTargetDependency */,
 			);
 			name = CA360;
 			productName = CA360;
@@ -328,12 +362,42 @@
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = DF6091EB116E7E7A005321DE /* Products */;
+					ProjectRef = DF6091EA116E7E7A005321DE /* FTUtils.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				1D6058900D05DD3D006BFB54 /* CA360 */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		DF6091F5116E7E7A005321DE /* libFTUtils.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libFTUtils.a;
+			remoteRef = DF6091F4116E7E7A005321DE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DF6091F7116E7E7A005321DE /* UnitTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = UnitTests.octest;
+			remoteRef = DF6091F6116E7E7A005321DE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DF6091F9116E7E7A005321DE /* FTAnimationExamples.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = FTAnimationExamples.app;
+			remoteRef = DF6091F8116E7E7A005321DE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1D60588D0D05DD3D006BFB54 /* Resources */ = {
@@ -376,12 +440,18 @@
 				DFF70DA2103A10870052EE6A /* AnimationTransactions.m in Sources */,
 				DFF70DC0103A11DF0052EE6A /* AnimationGroups.m in Sources */,
 				DFAFBACF105EFF4200AE6FF1 /* LayerTransitions.m in Sources */,
-				DFAFBB8D105F0DD800AE6FF1 /* FTUtils+NSObject.m in Sources */,
-				DFF3A7761073A30900141522 /* FTAnimationManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DF6091FC116E7E8A005321DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FTUtils;
+			targetProxy = DF6091FB116E7E8A005321DE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1D6058940D05DD3E006BFB54 /* Debug */ = {
@@ -396,6 +466,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = CA360_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				HEADER_SEARCH_PATHS = Support/FTUtils/Headers;
 				INFOPLIST_FILE = "Resources/CA360-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 3.1.3;
 				PRODUCT_NAME = CA360;
@@ -413,6 +484,7 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = CA360_Prefix.pch;
+				HEADER_SEARCH_PATHS = Support/FTUtils/Headers;
 				INFOPLIST_FILE = "CA360-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 3.1.3;
 				PRODUCT_NAME = CA360;
