@@ -20,6 +20,8 @@
 		DF8015631038E1C400B48250 /* LayerTransforms.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8015611038E1C400B48250 /* LayerTransforms.m */; };
 		DFAFBACF105EFF4200AE6FF1 /* LayerTransitions.m in Sources */ = {isa = PBXBuildFile; fileRef = DFAFBACE105EFF4200AE6FF1 /* LayerTransitions.m */; };
 		DFB121621060279A00E7DB00 /* Mario.png in Resources */ = {isa = PBXBuildFile; fileRef = DFB121611060279A00E7DB00 /* Mario.png */; };
+		DFC621A0117399D700F5B5FD /* BitmapFontCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC6219F117399D700F5B5FD /* BitmapFontCounter.m */; };
+		DFC621E711745A1F00F5B5FD /* NumberStrip.png in Resources */ = {isa = PBXBuildFile; fileRef = DFC621E611745A1F00F5B5FD /* NumberStrip.png */; };
 		DFF70C321039D8BC0052EE6A /* ImageContent.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF70C311039D8BC0052EE6A /* ImageContent.m */; };
 		DFF70C461039D9E60052EE6A /* FTSLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = DFF70C451039D9E60052EE6A /* FTSLogo.png */; };
 		DFF70C4F1039DA0A0052EE6A /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFF70C4C1039DA0A0052EE6A /* MainWindow.xib */; };
@@ -45,28 +47,28 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = DF6091EA116E7E7A005321DE /* FTUtils.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = D2AAC07E0554694100DB518D /* libFTUtils.a */;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
 			remoteInfo = FTUtils;
 		};
 		DF6091F6116E7E7A005321DE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DF6091EA116E7E7A005321DE /* FTUtils.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = DFE4EF0B1035CBCB006A7598 /* UnitTests.octest */;
+			remoteGlobalIDString = DFE4EF0B1035CBCB006A7598;
 			remoteInfo = UnitTests;
 		};
 		DF6091F8116E7E7A005321DE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DF6091EA116E7E7A005321DE /* FTUtils.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = DFFDB4AA10C2DA2200F7BF95 /* FTAnimationExamples.app */;
+			remoteGlobalIDString = DFFDB4AA10C2DA2200F7BF95;
 			remoteInfo = FTAnimationExamples;
 		};
 		DF6091FB116E7E8A005321DE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DF6091EA116E7E7A005321DE /* FTUtils.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = D2AAC07D0554694100DB518D /* FTUtils */;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
 			remoteInfo = FTUtils;
 		};
 /* End PBXContainerItemProxy section */
@@ -93,6 +95,9 @@
 		DFAFBACD105EFF4200AE6FF1 /* LayerTransitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LayerTransitions.h; path = Classes/Samples/LayerTransitions.h; sourceTree = "<group>"; };
 		DFAFBACE105EFF4200AE6FF1 /* LayerTransitions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LayerTransitions.m; path = Classes/Samples/LayerTransitions.m; sourceTree = "<group>"; };
 		DFB121611060279A00E7DB00 /* Mario.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mario.png; sourceTree = "<group>"; };
+		DFC6219E117399D700F5B5FD /* BitmapFontCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BitmapFontCounter.h; path = "Classes/Fun Stuff/BitmapFontCounter.h"; sourceTree = "<group>"; };
+		DFC6219F117399D700F5B5FD /* BitmapFontCounter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BitmapFontCounter.m; path = "Classes/Fun Stuff/BitmapFontCounter.m"; sourceTree = "<group>"; };
+		DFC621E611745A1F00F5B5FD /* NumberStrip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NumberStrip.png; sourceTree = "<group>"; };
 		DFF70C301039D8BC0052EE6A /* ImageContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageContent.h; path = Classes/Samples/ImageContent.h; sourceTree = "<group>"; };
 		DFF70C311039D8BC0052EE6A /* ImageContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageContent.m; path = Classes/Samples/ImageContent.m; sourceTree = "<group>"; };
 		DFF70C451039D9E60052EE6A /* FTSLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FTSLogo.png; sourceTree = "<group>"; };
@@ -170,7 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				DFF7F3A9103603A50067ED5B /* Core Samples */,
-				DF6091CE116E7B93005321DE /* Advanced Techniques */,
+				DF6091CE116E7B93005321DE /* Fun Stuff */,
 				080E96DDFE201D6D7F000001 /* Core App Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				DFF70C441039D9E60052EE6A /* Resources */,
@@ -202,11 +207,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DF6091CE116E7B93005321DE /* Advanced Techniques */ = {
+		DF6091CE116E7B93005321DE /* Fun Stuff */ = {
 			isa = PBXGroup;
 			children = (
+				DFC6219E117399D700F5B5FD /* BitmapFontCounter.h */,
+				DFC6219F117399D700F5B5FD /* BitmapFontCounter.m */,
 			);
-			name = "Advanced Techniques";
+			name = "Fun Stuff";
 			sourceTree = "<group>";
 		};
 		DF6091EB116E7E7A005321DE /* Products */ = {
@@ -230,6 +237,7 @@
 		DFF70C441039D9E60052EE6A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DFC621E611745A1F00F5B5FD /* NumberStrip.png */,
 				DFB121611060279A00E7DB00 /* Mario.png */,
 				DFF70C451039D9E60052EE6A /* FTSLogo.png */,
 				DFF70C9C1039DE170052EE6A /* Ben.png */,
@@ -411,6 +419,7 @@
 				DFF70D78103A0BB40052EE6A /* StarMask.png in Resources */,
 				DFB121621060279A00E7DB00 /* Mario.png in Resources */,
 				DF75ABFD116A8252006FF3EB /* MainWindow-iPad.xib in Resources */,
+				DFC621E711745A1F00F5B5FD /* NumberStrip.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +449,7 @@
 				DFF70DA2103A10870052EE6A /* AnimationTransactions.m in Sources */,
 				DFF70DC0103A11DF0052EE6A /* AnimationGroups.m in Sources */,
 				DFAFBACF105EFF4200AE6FF1 /* LayerTransitions.m in Sources */,
+				DFC621A0117399D700F5B5FD /* BitmapFontCounter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

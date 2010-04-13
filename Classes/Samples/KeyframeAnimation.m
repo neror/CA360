@@ -88,7 +88,6 @@ static const CGRect kMarioJumpingSpriteCoords = { 0., 0., .5, 1. };
   platformLayer_.frame = CGRectMake(160., 200., 160., 20.);
   platformLayer_.cornerRadius = 4.;
   [platformLayer_ setNeedsDisplay];
-  [platformLayer_ setNeedsDisplay];
 }
 
 - (void)viewDidAppear:(BOOL)animated {

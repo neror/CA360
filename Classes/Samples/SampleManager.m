@@ -38,6 +38,7 @@
 #import "AnimationTransactions.h"
 #import "AnimationGroups.h"
 #import "LayerTransitions.h"
+#import "BitmapFontCounter.h"
 
 @interface SampleManager ()
 
@@ -77,6 +78,7 @@ static SampleManager *sharedSampleManager = nil;
                           [AnimationTransactions class], [KeyframeAnimation class], [LayerActions class], 
                           [LayerTransitions class], nil];
     NSArray *special = [NSArray arrayWithObjects:[ShapeLayers class], [GradientLayers class], nil];
+    NSArray *advanced = [NSArray arrayWithObject:[BitmapFontCounter class]];
     
     
     groups_ = [[NSArray alloc] initWithObjects:@"Geometry & Transforms",
@@ -84,9 +86,10 @@ static SampleManager *sharedSampleManager = nil;
                                                @"Content & Style Properties",
                                                @"Animation",
                                                @"Special Layer Types",
+                                               @"Avanced Techniques",
                                                nil];
     
-    samples_ = [[NSArray alloc] initWithObjects:geom, hier, drawing, animation, special, nil]; 
+    samples_ = [[NSArray alloc] initWithObjects:geom, hier, drawing, animation, special, advanced, nil]; 
   }
   return self;
 }
