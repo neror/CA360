@@ -157,9 +157,6 @@ const static CGPoint kSimpleLayerStartPosition = { 160., 310. };
 
 - (void)rotate:(id)sender {
   if(self.cumulative) {
-//    CATransform3D perspective = CATransform3DIdentity;
-//    perspective.m34 = 1 / -2000.;
-//    self.view.layer.sublayerTransform = perspective;
     CATransform3D currentTransform = simpleLayer_.transform;
     CATransform3D rotated = CATransform3DRotate(currentTransform, 45., 0., 0., 1.);
     simpleLayer_.transform = rotated;
@@ -204,6 +201,8 @@ const static CGPoint kSimpleLayerStartPosition = { 160., 310. };
 
 - (void)reset:(id)sender {
   simpleLayer_.transform = CATransform3DIdentity;
+  simpleLayer_.anchorPoint = CGPointMake(.5, .5);
+  self.view.layer.sublayerTransform = CATransform3DIdentity;
   [simpleLayer_ setNeedsDisplay];
   [self updatePropertiesLabel];
 }
