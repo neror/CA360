@@ -8,8 +8,6 @@ static const unichar kCharacterOffset = 48;
 
 @implementation CounterView
 
-@synthesize number = number_;
-
 - (CounterView *)initWithNumber:(double)num {
   if (self = [super initWithFrame:CGRectMake(0.f, 0.f, kDigitWidth, kDigitHeight)]) {
     digitLayers_ = [[NSMutableArray alloc] init];
@@ -19,15 +17,19 @@ static const unichar kCharacterOffset = 48;
 }
 
 - (void)dealloc {
-  FTRELEASE(numberString_);
-  FTRELEASE(digitLayers_);
+  [numberString_ release], numberString_ = nil;
+  [digitLayers_ release], digitLayers_ = nil;
   [super dealloc];
+}
+
+- (double)number {
+    return number_;
 }
 
 - (void)setNumber:(double)num {
   number_ = num;
   [digitLayers_ makeObjectsPerformSelector:@selector(removeFromSuperlayer)];
-  FTRELEASE(numberString_);
+  [numberString_ release], numberString_ = nil;
   numberString_ = [[NSString stringWithFormat:@"%.0F", num] retain];
   
   NSUInteger count = [numberString_ length];
@@ -99,9 +101,9 @@ static const unichar kCharacterOffset = 48;
 }
 
 - (void)dealloc {
-  FTRELEASE(counter_);
-  FTRELEASE(textField_);
-  FTRELEASE(setNumberButton_);
+  [counter_ release], counter_ = nil;
+  [textField_ release], textField_ = nil;
+  [setNumberButton_ release], setNumberButton_ = nil;
   [super dealloc];
 }
 

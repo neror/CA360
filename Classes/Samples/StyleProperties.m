@@ -42,12 +42,12 @@
 }
 
 - (void)dealloc {
-  FTRELEASE(simpleLayer_);
-  FTRELEASE(maskLayer_);
-  FTRELEASE(roundCornersButton_);
-  FTRELEASE(toggleBorderButton_);
-  FTRELEASE(toggleOpacityButton_);
-  FTRELEASE(toggleMaskButton_);
+  [simpleLayer_ release], simpleLayer_ = nil;
+  [maskLayer_ release], maskLayer_ = nil;
+  [roundCornersButton_ release], roundCornersButton_ = nil;
+  [toggleBorderButton_ release], toggleBorderButton_ = nil;
+  [toggleOpacityButton_ release], toggleOpacityButton_ = nil;
+  [toggleMaskButton_ release], toggleMaskButton_ = nil;
   [super dealloc];
 }
 

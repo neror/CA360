@@ -27,44 +27,48 @@
 
 @implementation RootViewController
 
+- (void)dealloc {
+  [sampleManager_ release], sampleManager_ = nil;
+  [super dealloc];
+}
+
 - (void)viewDidLoad {
+  sampleManager_ = [[SampleManager alloc] init];
   self.title = @"Samples";
 }
 
+- (void)viewDidUnload {
+  [sampleManager_ release], sampleManager_ = nil;
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-  return [SampleManager groupCount];
+  return [sampleManager_ groupCount];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-  return [SampleManager sampleCountForGroup:section];
+  return [sampleManager_ sampleCountForGroup:section];
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-  return [SampleManager groupTitleAtIndex:section];
+  return [sampleManager_ groupTitleAtIndex:section];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
   
-  NSString *title = [SampleManager sampleNameAtIndexPath:indexPath];
+  NSString *theTitle = [sampleManager_ sampleNameAtIndexPath:indexPath];
   
-  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:title];
+  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:theTitle];
   if (cell == nil) {
-    cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:title] autorelease];
+    cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:theTitle] autorelease];
   }
   cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-  cell.textLabel.text = title;
+  cell.textLabel.text = theTitle;
   return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-  UIViewController *controller = [SampleManager sampleInstanceAtIndexPath:indexPath];
-  [self.navigationController pushViewController:controller animated:YES];
+  [self.navigationController pushViewController:[sampleManager_ sampleForIndexPath:indexPath] animated:YES];
 }
-
-- (void)dealloc {
-  [super dealloc];
-}
-
 
 @end
 

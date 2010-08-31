@@ -22,13 +22,12 @@
  THE SOFTWARE.
 */
 
-#import "AnimationGroups.h"
-#import <QuartzCore/QuartzCore.h>
+#import "AdvancedShapeLayers.h"
 
-@implementation AnimationGroups
+@implementation AdvancedShapeLayers
 
 + (NSString *)friendlyName {
-  return @"Animation Groups";
+  return @"Advanced Shape Layers";
 }
 
 #pragma mark init and dealloc
@@ -41,7 +40,7 @@
 }
 
 - (void)dealloc {
-  [pulseLayer_ release], pulseLayer_ = nil;
+  [shapeLayer_ release], shapeLayer_ = nil;
   [super dealloc];
 }
 
@@ -51,47 +50,49 @@
   UIView *myView = [[[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
   myView.backgroundColor = [UIColor whiteColor];
   
-  pulseLayer_ = [[CALayer layer] retain];
-  [myView.layer addSublayer:pulseLayer_];
-  
+  shapeLayer_ = [[CAShapeLayer alloc] init];
+  [myView.layer addSublayer:shapeLayer_];
+
   self.view = myView;
 }
 
+- (void)viewDidUnload {
+  [shapeLayer_ release], shapeLayer_ = nil;
+}
 
 #pragma mark View drawing
 
+- (void)drawPathWithArc:(CGFloat)arc {
+  CGMutablePathRef thePath = CGPathCreateMutable();
+  CGPathMoveToPoint(thePath, NULL, 100.f, 100.f);
+  CGPathAddLineToPoint(thePath, NULL, 200.f, 100.f);
+  CGPathAddArc(thePath, NULL, 100.f, 100.f, 100.f, 0.f, arc, NO);
+  CGPathCloseSubpath(thePath);
+  shapeLayer_.path = thePath;
+  CGPathRelease(thePath);
+}
+
 - (void)viewWillAppear:(BOOL)animated {
-  pulseLayer_.backgroundColor = [UIColorFromRGBA(0x000000, .75) CGColor];
-  pulseLayer_.bounds = CGRectMake(0., 0., 200., 200.);
-  pulseLayer_.cornerRadius = 12.;
-  pulseLayer_.position = self.view.center;
-  [pulseLayer_ setNeedsDisplay];
+  shapeLayer_.bounds = CGRectMake(0.f, 0.f, 200.f, 200.f);
+  shapeLayer_.position = self.view.center;
+  shapeLayer_.strokeColor = [[UIColor blueColor] CGColor];
+  shapeLayer_.lineWidth = 4.f;
+  shapeLayer_.fillColor = [[UIColor yellowColor] CGColor];
+  currentArc = M_PI_2;
+  [self drawPathWithArc:currentArc];
+}
+
+- (void)updatePath:(CADisplayLink *)displayLink {
+  currentArc = fminf(currentArc * 1.1f, M_PI * 1.5f);
+  [self drawPathWithArc:currentArc];
+  if(currentArc >= M_PI * 1.5f) {
+    [displayLink invalidate];
+  }
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-  CABasicAnimation *pulseAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
-  pulseAnimation.duration = 2.;
-  pulseAnimation.toValue = [NSNumber numberWithFloat:1.15];
-  
-  CABasicAnimation *pulseColorAnimation = [CABasicAnimation animationWithKeyPath:@"backgroundColor"];
-  pulseColorAnimation.duration = 1.;
-  pulseColorAnimation.fillMode = kCAFillModeForwards;
-  pulseColorAnimation.toValue = (id)[UIColorFromRGBA(0xFF0000, .75) CGColor];
-  
-  CABasicAnimation *rotateLayerAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
-  rotateLayerAnimation.duration = .5;
-  rotateLayerAnimation.beginTime = .5;
-  rotateLayerAnimation.fillMode = kCAFillModeBoth;
-  rotateLayerAnimation.toValue = [NSNumber numberWithFloat:DEGREES_TO_RADIANS(45.)];
-  
-  CAAnimationGroup *group = [CAAnimationGroup animation];
-  group.animations = [NSArray arrayWithObjects:pulseAnimation, pulseColorAnimation, rotateLayerAnimation, nil];
-  group.duration = 2.;
-  group.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-  group.autoreverses = YES;
-  group.repeatCount = FLT_MAX;
-  
-  [pulseLayer_ addAnimation:group forKey:nil];
+  CADisplayLink *displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(updatePath:)];
+  [displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
 }
 
 @end

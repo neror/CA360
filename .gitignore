@@ -5,3 +5,5 @@ build
 *.mode1v3
 *.pbxuser
 *.perspectivev3
+CA360.xcodeproj/project.xcworkspace
+CA360.xcodeproj/xcuserdata

@@ -41,7 +41,7 @@
 }
 
 - (void)dealloc {
-  FTRELEASE(pulseLayer_);
+  [pulseLayer_ release], pulseLayer_ = nil;
   [super dealloc];
 }
 

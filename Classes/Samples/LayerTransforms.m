@@ -47,14 +47,14 @@ const static CGPoint kSimpleLayerStartPosition = { 160., 310. };
 }
 
 - (void)dealloc {
-  FTRELEASE(simpleLayer_);
-  FTRELEASE(moveAnchorPointButton_);
-  FTRELEASE(rotateButton_);
-  FTRELEASE(scaleButton_);
-  FTRELEASE(translateButton_);
-  FTRELEASE(propertiesTextView_);
-  FTRELEASE(resetButton_);
-  FTRELEASE(cumulativeSwitch_);
+  [simpleLayer_ release], simpleLayer_ = nil;
+  [moveAnchorPointButton_ release], moveAnchorPointButton_ = nil;
+  [rotateButton_ release], rotateButton_ = nil;
+  [scaleButton_ release], scaleButton_ = nil;
+  [translateButton_ release], translateButton_ = nil;
+  [propertiesTextView_ release], propertiesTextView_ = nil;
+  [resetButton_ release], resetButton_ = nil;
+  [cumulativeSwitch_ release], cumulativeSwitch_ = nil;
   [super dealloc];
 }
 

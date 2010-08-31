@@ -41,7 +41,7 @@
 }
 
 - (void)dealloc {
-  FTRELEASE(drawingLayer_);
+  [drawingLayer_ release], drawingLayer_ = nil;
   [super dealloc];
 }
 

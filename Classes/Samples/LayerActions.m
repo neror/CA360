@@ -41,8 +41,8 @@
 }
 
 - (void)dealloc {
-  FTRELEASE(moneyLayer_);
-  FTRELEASE(magicButton_);
+  [moneyLayer_ release], moneyLayer_ = nil;
+  [magicButton_ release], magicButton_ = nil;
   [super dealloc];
 }
 

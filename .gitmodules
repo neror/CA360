@@ -1,3 +1,0 @@
-[submodule "Support/FTUtils"]
-	path = Support/FTUtils
-	url = git://github.com/neror/ftutils.git

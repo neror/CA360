@@ -39,12 +39,8 @@
 #import "AnimationGroups.h"
 #import "LayerTransitions.h"
 #import "BitmapFontCounter.h"
-
-@interface SampleManager ()
-
-+ (SampleManager *)sharedSampleManager;
-
-@end
+#import "ShutterTransition.h"
+#import "AdvancedShapeLayers.h"
 
 @interface UIViewController (ThisIsHereToAviodACompilerWarning)
 
@@ -53,20 +49,6 @@
 @end
 
 @implementation SampleManager
-
-#pragma mark -
-#pragma mark Singleton Management
-
-static SampleManager *sharedSampleManager = nil;
-
-+ (SampleManager *)sharedSampleManager {
-  @synchronized(self) {
-    if (sharedSampleManager == nil) {
-      sharedSampleManager = [[self alloc] init];
-    }
-  }
-  return sharedSampleManager;
-}
 
 - (id)init {
   self = [super init];
@@ -77,8 +59,8 @@ static SampleManager *sharedSampleManager = nil;
     NSArray *animation = [NSArray arrayWithObjects:[BasicAnimation class], [AnimationGroups class], 
                           [AnimationTransactions class], [KeyframeAnimation class], [LayerActions class], 
                           [LayerTransitions class], nil];
-    NSArray *special = [NSArray arrayWithObjects:[ShapeLayers class], [GradientLayers class], nil];
-    NSArray *advanced = [NSArray arrayWithObject:[BitmapFontCounter class]];
+    NSArray *special = [NSArray arrayWithObjects:[ShapeLayers class], [AdvancedShapeLayers class], [GradientLayers class], nil];
+    NSArray *advanced = [NSArray arrayWithObjects:[BitmapFontCounter class], [ShutterTransition class], nil];
     
     
     groups_ = [[NSArray alloc] initWithObjects:@"Geometry & Transforms",
@@ -94,42 +76,34 @@ static SampleManager *sharedSampleManager = nil;
   return self;
 }
 
-#pragma mark -
-#pragma mark Public class methods
 
-+ (NSUInteger)groupCount {
-  SampleManager *SELF = [SampleManager sharedSampleManager];
-  return [SELF->groups_ count];
+- (NSUInteger)groupCount {
+  return [groups_ count];
 }
 
-+ (NSUInteger)sampleCountForGroup:(NSUInteger)group {
-  SampleManager *SELF = [SampleManager sharedSampleManager];
-  return [[SELF->samples_ objectAtIndex:group] count];
+- (NSUInteger)sampleCountForGroup:(NSUInteger)group {
+  return [[samples_ objectAtIndex:group] count];
 }
 
-+ (NSArray *)samplesForGroup:(NSUInteger)group {
-  SampleManager *SELF = [SampleManager sharedSampleManager];
-  return [[[SELF->samples_ objectAtIndex:group] copy] autorelease];
+- (NSArray *)samplesForGroup:(NSUInteger)group {
+  return [[[samples_ objectAtIndex:group] copy] autorelease];
 }
 
-+ (NSString *)sampleNameAtIndexPath:(NSIndexPath *)indexPath {
-  SampleManager *SELF = [SampleManager sharedSampleManager];
-  NSArray *samples = [SELF->samples_ objectAtIndex:indexPath.section];
+- (NSString *)sampleNameAtIndexPath:(NSIndexPath *)indexPath {
+  NSArray *samples = [samples_ objectAtIndex:indexPath.section];
   Class clazz = [samples objectAtIndex:indexPath.row];
   return [clazz friendlyName];
 }
 
-+ (UIViewController *)sampleInstanceAtIndexPath:(NSIndexPath *)indexPath {
-  SampleManager *SELF = [SampleManager sharedSampleManager];
-  NSArray *samples = [SELF->samples_ objectAtIndex:indexPath.section];
+- (UIViewController *)sampleForIndexPath:(NSIndexPath *)indexPath {
+  NSArray *samples = [samples_ objectAtIndex:indexPath.section];
   Class clazz = [samples objectAtIndex:indexPath.row];
   UIViewController *instance = [[clazz alloc] initWithNibName:nil bundle:nil];
   return [instance autorelease];
 }
 
-+ (NSString *)groupTitleAtIndex:(NSUInteger)index {
-  SampleManager *SELF = [SampleManager sharedSampleManager];
- return [[[SELF->groups_ objectAtIndex:index] copy] autorelease];
+- (NSString *)groupTitleAtIndex:(NSUInteger)index {
+ return [[[groups_ objectAtIndex:index] copy] autorelease];
 }
 
 @end

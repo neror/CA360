@@ -42,10 +42,10 @@
 }
 
 - (void)dealloc {
-  FTRELEASE(simpleLayer_);
-  FTRELEASE(moveAnchorPointButton_);
-  FTRELEASE(movePositionButton_);
-  FTRELEASE(propertiesTextView_);
+  [simpleLayer_ release], simpleLayer_ = nil;
+  [moveAnchorPointButton_ release], moveAnchorPointButton_ = nil;
+  [movePositionButton_ release], movePositionButton_ = nil;
+  [propertiesTextView_ release], propertiesTextView_ = nil;
   [super dealloc];
 }
 

@@ -48,9 +48,9 @@
 #pragma mark Memory management
 
 - (void)dealloc {
-  FTRELEASE(rootViewController_);
-  FTRELEASE(navigationController_);
-  FTRELEASE(window_);
+  [rootViewController_ release], rootViewController_ = nil;
+  [navigationController_ release], navigationController_ = nil;
+  [window_ release], window_ = nil;
 	[super dealloc];
 }
 

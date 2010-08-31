@@ -22,7 +22,10 @@
  THE SOFTWARE.
 */
 
+@class SampleManager;
+
 @interface RootViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource> {
+  SampleManager *sampleManager_;
 }
 
 @end

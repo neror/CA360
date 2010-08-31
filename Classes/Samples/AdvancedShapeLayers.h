@@ -22,27 +22,12 @@
  THE SOFTWARE.
 */
 
-#import <Foundation/Foundation.h>
-#import "LayerTree.h"
+#import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 
-@interface Sample : UIViewController {
+@interface AdvancedShapeLayers : UIViewController {
+  CAShapeLayer *shapeLayer_;
+  CGFloat currentArc;
 }
-
-+ (NSString *)name;
-
-@end
-
-
-@interface SampleManager : NSObject {
-  NSArray *groups_;
-  NSArray *samples_;
-}
-
-- (NSUInteger)groupCount;
-- (NSUInteger)sampleCountForGroup:(NSUInteger)group;
-- (NSArray *)samplesForGroup:(NSUInteger)group;
-- (NSString *)sampleNameAtIndexPath:(NSIndexPath *)indexPath;
-- (UIViewController *)sampleForIndexPath:(NSIndexPath *)indexPath;
-- (NSString *)groupTitleAtIndex:(NSUInteger)index;
 
 @end

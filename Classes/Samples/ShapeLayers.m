@@ -32,7 +32,6 @@
 
 @end
 
-
 @implementation ShapeLayers
 
 + (NSString *)friendlyName {
@@ -49,8 +48,8 @@
 }
 
 - (void)dealloc {
-  FTRELEASE(shapeLayer_);
-  FTRELEASE(animateButton_);
+  [shapeLayer_ release], shapeLayer_ = nil;
+  [animateButton_ release], animateButton_ = nil;
   [super dealloc];
 }
 
@@ -80,7 +79,7 @@
   CGPathRef path = [self newCirclePathInRect:shapeLayer_.bounds];
   shapeLayer_.path = path;
   CGPathRelease(path);
-  [shapeLayer_ setValue:[NSNumber numberWithBool:NO] forKey:@"isFlower"];
+  [shapeLayer_ setValue:[NSNumber numberWithBool:NO] forKey:@"isCircle"];
   shapeLayer_.fillColor = [[UIColor blueColor] CGColor];
   shapeLayer_.strokeColor = [[UIColor blackColor] CGColor];
   shapeLayer_.lineWidth = 4.;
@@ -95,8 +94,8 @@
 
 - (void)animateShape:(id)sender {
   CGPathRef path;
-  BOOL isFlower = [[shapeLayer_ valueForKey:@"isFlower"] boolValue];
-  if(isFlower) {
+  BOOL isCircle = [[shapeLayer_ valueForKey:@"isCircle"] boolValue];
+  if(isCircle) {
     path = [self newCirclePathInRect:shapeLayer_.bounds];
   } else {
     path = [self newRectPathInRect:shapeLayer_.bounds];
@@ -106,7 +105,7 @@
   pathAnim.duration = 1.;
   pathAnim.delegate = self;
 
-  [shapeLayer_ setValue:[NSNumber numberWithBool:!isFlower] forKey:@"isFlower"];
+  [shapeLayer_ setValue:[NSNumber numberWithBool:!isCircle] forKey:@"isCircle"];
   [shapeLayer_ addAnimation:pathAnim forKey:@"animatePath"];
   CGPathRelease(path);
 }
@@ -114,10 +113,10 @@
 #pragma mark Animation Delegate
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)finished {
   CGPathRef path;
-  BOOL isFlower = [[shapeLayer_ valueForKey:@"isFlower"] boolValue];
+  BOOL isCircle = [[shapeLayer_ valueForKey:@"isCircle"] boolValue];
   [CATransaction begin];
   [CATransaction setDisableActions:YES];
-  if(isFlower) {
+  if(isCircle) {
     path = [self newRectPathInRect:shapeLayer_.bounds];
   } else {
     path = [self newCirclePathInRect:shapeLayer_.bounds];

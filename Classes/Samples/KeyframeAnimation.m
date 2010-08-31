@@ -44,9 +44,9 @@ static const CGRect kMarioJumpingSpriteCoords = { 0., 0., .5, 1. };
 }
 
 - (void)dealloc {
-  FTRELEASE(platformLayer_);
-  FTRELEASE(marioLayer_);
-  FTRELEASE(jumpButton_);
+  [platformLayer_ release], platformLayer_ = nil;
+  [marioLayer_ release], marioLayer_ = nil;
+  [jumpButton_ release], jumpButton_ = nil;
   [super dealloc];
 }
 

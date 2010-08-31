@@ -42,15 +42,15 @@
 }
 
 - (void)dealloc {
-  FTRELEASE(containerLayer_);
-  FTRELEASE(redLayer_);
-  FTRELEASE(blueLayer_);
-  FTRELEASE(purpleLayer_);
-  FTRELEASE(yellowLayer_);
-  FTRELEASE(maskBlueButton_);
-  FTRELEASE(maskContainerButton_);
-  FTRELEASE(reparentPurpleButton_);
-  FTRELEASE(addRemoveYellowButton_);
+  [containerLayer_ release], containerLayer_ = nil;
+  [redLayer_ release], redLayer_ = nil;
+  [blueLayer_ release], blueLayer_ = nil;
+  [purpleLayer_ release], purpleLayer_ = nil;
+  [yellowLayer_ release], yellowLayer_ = nil;
+  [maskBlueButton_ release], maskBlueButton_ = nil;
+  [maskContainerButton_ release], maskContainerButton_ = nil;
+  [reparentPurpleButton_ release], reparentPurpleButton_ = nil;
+  [addRemoveYellowButton_ release], addRemoveYellowButton_ = nil;
   [super dealloc];
 }
 

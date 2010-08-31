@@ -41,9 +41,9 @@
 }
 
 - (void)dealloc {
-  FTRELEASE(blueLayer_);
-  FTRELEASE(redLayer_);
-  FTRELEASE(runButton_);
+  [blueLayer_ release], blueLayer_ = nil;
+  [redLayer_ release], redLayer_ = nil;
+  [runButton_ release], runButton_ = nil;
   [super dealloc];
 }
 

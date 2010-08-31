@@ -47,7 +47,8 @@
 }
 
 - (void)dealloc {
-  FTRELEASE(gradientLayer_);
+  [gradientLayer_ release], gradientLayer_ = nil;
+  [animateButton_ release], animateButton_ = nil;
   [super dealloc];
 }
 

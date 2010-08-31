@@ -41,12 +41,12 @@
 }
 
 - (void)dealloc {
-  FTRELEASE(containerLayer_);
-  FTRELEASE(blueLayer_);
-  FTRELEASE(redLayer_);
-  FTRELEASE(transitionButton_);
-  FTRELEASE(typeSelectControl_);
-  FTRELEASE(subtypeSelectControl_);
+  [containerLayer_ release], containerLayer_ = nil;
+  [blueLayer_ release], blueLayer_ = nil;
+  [redLayer_ release], redLayer_ = nil;
+  [transitionButton_ release], transitionButton_ = nil;
+  [typeSelectControl_ release], typeSelectControl_ = nil;
+  [subtypeSelectControl_ release], subtypeSelectControl_ = nil;
   [super dealloc];
 }
 
