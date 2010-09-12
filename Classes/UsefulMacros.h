@@ -28,9 +28,12 @@
          alpha:alphaValue]
 
 #pragma mark -
-#pragma mark iOS 4 Sample Checker
+#pragma mark iOS 4 Version Checkers
+
+#define IS_IOS4 ([[[UIDevice currentDevice] systemVersion] hasPrefix:@"4"])
+
 #define CA360_SAMPLE_IOS4_ONLY \
-if(![[[UIDevice currentDevice] systemVersion] hasPrefix:@"4"]) { \
+if(!IS_IOS4) { \
   UILabel *badVersionLabel = [[UILabel alloc] initWithFrame:self.view.frame]; \
   badVersionLabel.text = @"This sample only works on iOS 4+"; \
   badVersionLabel.font = [UIFont boldSystemFontOfSize:26.f]; \
@@ -42,3 +45,15 @@ if(![[[UIDevice currentDevice] systemVersion] hasPrefix:@"4"]) { \
   NSLog(@"The sample '%@' only works in iOS 4+", [[self class] friendlyName]); \
   return; \
 }
+
+#define SHOW_VERSION_ALERT_FOR_FEATURE(__featureName) \
+UIAlertView *__versionAlert = \
+ [[[UIAlertView alloc] initWithTitle:@"Version Warning" \
+                             message:[NSString stringWithFormat:@"%@ uses features added " \
+                                                                @"in iOS 4, and it will only work on " \
+                                                                @"devices running iOS 4.0 or higher.", \
+                                                                __featureName] \
+                                                       delegate:nil \
+                                              cancelButtonTitle:@"OK" \
+                                              otherButtonTitles:nil] autorelease]; \
+  [__versionAlert show];

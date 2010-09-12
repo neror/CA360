@@ -41,6 +41,7 @@
 #import "BitmapFontCounter.h"
 #import "ShutterTransition.h"
 #import "AdvancedShapeLayers.h"
+#import "TextLayers.h"
 
 @interface UIViewController (ThisIsHereToAviodACompilerWarning)
 
@@ -59,7 +60,7 @@
     NSArray *animation = [NSArray arrayWithObjects:[BasicAnimation class], [AnimationGroups class], 
                           [AnimationTransactions class], [KeyframeAnimation class], [LayerActions class], 
                           [LayerTransitions class], nil];
-    NSArray *special = [NSArray arrayWithObjects:[ShapeLayers class], [AdvancedShapeLayers class], [GradientLayers class], nil];
+    NSArray *special = [NSArray arrayWithObjects:[ShapeLayers class], [AdvancedShapeLayers class], [GradientLayers class], [TextLayers class], nil];
     NSArray *advanced = [NSArray arrayWithObjects:[BitmapFontCounter class], [ShutterTransition class], nil];
     
     

@@ -16,6 +16,9 @@
 		DF5FC6C011C7FBD900130E6E /* AdvancedShapeLayers.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5FC6BF11C7FBD900130E6E /* AdvancedShapeLayers.m */; };
 		DF6D1C3A11C19AF200025ED7 /* ShutterTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = DF6D1C3911C19AF200025ED7 /* ShutterTransition.m */; };
 		DF75ABFD116A8252006FF3EB /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF75ABFC116A8252006FF3EB /* MainWindow-iPad.xib */; };
+		DF7A2F7D123D689400BDD60A /* TextLayers.m in Sources */ = {isa = PBXBuildFile; fileRef = DF7A2F7C123D689400BDD60A /* TextLayers.m */; };
+		DF7A2FA9123D6C3B00BDD60A /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF7A2FA8123D6C3B00BDD60A /* CoreText.framework */; };
+		DF7A2FAF123D6C5700BDD60A /* Delicious-Roman.otf in Resources */ = {isa = PBXBuildFile; fileRef = DF7A2FAE123D6C5700BDD60A /* Delicious-Roman.otf */; };
 		DF80136E10377A1200B48250 /* GradientLayers.m in Sources */ = {isa = PBXBuildFile; fileRef = DF80136C10377A1200B48250 /* GradientLayers.m */; };
 		DF8014A31038D12900B48250 /* CALayer+FTDebugDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8014A11038D12900B48250 /* CALayer+FTDebugDrawing.m */; };
 		DF8015631038E1C400B48250 /* LayerTransforms.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8015611038E1C400B48250 /* LayerTransforms.m */; };
@@ -60,6 +63,10 @@
 		DF6D1C3811C19AF200025ED7 /* ShutterTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShutterTransition.h; path = "Classes/Fun Stuff/ShutterTransition.h"; sourceTree = "<group>"; };
 		DF6D1C3911C19AF200025ED7 /* ShutterTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = ShutterTransition.m; path = "Classes/Fun Stuff/ShutterTransition.m"; sourceTree = "<group>"; };
 		DF75ABFC116A8252006FF3EB /* MainWindow-iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "MainWindow-iPad.xib"; path = "Resources-iPad/Resources/MainWindow-iPad.xib"; sourceTree = "<group>"; };
+		DF7A2F7B123D689400BDD60A /* TextLayers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextLayers.h; path = Classes/Samples/TextLayers.h; sourceTree = "<group>"; };
+		DF7A2F7C123D689400BDD60A /* TextLayers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextLayers.m; path = Classes/Samples/TextLayers.m; sourceTree = "<group>"; };
+		DF7A2FA8123D6C3B00BDD60A /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		DF7A2FAE123D6C5700BDD60A /* Delicious-Roman.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Delicious-Roman.otf"; sourceTree = "<group>"; };
 		DF80136B10377A1200B48250 /* GradientLayers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GradientLayers.h; path = Classes/Samples/GradientLayers.h; sourceTree = "<group>"; };
 		DF80136C10377A1200B48250 /* GradientLayers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = GradientLayers.m; path = Classes/Samples/GradientLayers.m; sourceTree = "<group>"; };
 		DF8014A01038D12900B48250 /* CALayer+FTDebugDrawing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+FTDebugDrawing.h"; sourceTree = "<group>"; };
@@ -114,6 +121,7 @@
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */,
 				DFF7F2F6103602470067ED5B /* QuartzCore.framework in Frameworks */,
+				DF7A2FA9123D6C3B00BDD60A /* CoreText.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,6 +164,7 @@
 				DF75ABFB116A8251006FF3EB /* Resources-iPad */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				DF7A2FA8123D6C3B00BDD60A /* CoreText.framework */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -202,6 +211,7 @@
 		DFF70C441039D9E60052EE6A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DF7A2FAE123D6C5700BDD60A /* Delicious-Roman.otf */,
 				DFC621E611745A1F00F5B5FD /* NumberStrip.png */,
 				DFB121611060279A00E7DB00 /* Mario.png */,
 				DFF70C451039D9E60052EE6A /* FTSLogo.png */,
@@ -287,6 +297,8 @@
 				DF80136C10377A1200B48250 /* GradientLayers.m */,
 				DF5FC6BE11C7FBD900130E6E /* AdvancedShapeLayers.h */,
 				DF5FC6BF11C7FBD900130E6E /* AdvancedShapeLayers.m */,
+				DF7A2F7B123D689400BDD60A /* TextLayers.h */,
+				DF7A2F7C123D689400BDD60A /* TextLayers.m */,
 			);
 			name = "Special Layer Types";
 			sourceTree = "<group>";
@@ -348,6 +360,7 @@
 				DFB121621060279A00E7DB00 /* Mario.png in Resources */,
 				DF75ABFD116A8252006FF3EB /* MainWindow-iPad.xib in Resources */,
 				DFC621E711745A1F00F5B5FD /* NumberStrip.png in Resources */,
+				DF7A2FAF123D6C5700BDD60A /* Delicious-Roman.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +393,7 @@
 				DFC621A0117399D700F5B5FD /* BitmapFontCounter.m in Sources */,
 				DF6D1C3A11C19AF200025ED7 /* ShutterTransition.m in Sources */,
 				DF5FC6C011C7FBD900130E6E /* AdvancedShapeLayers.m in Sources */,
+				DF7A2F7D123D689400BDD60A /* TextLayers.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
