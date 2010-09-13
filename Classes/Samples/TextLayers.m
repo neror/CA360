@@ -222,22 +222,22 @@
   if(IS_IOS4) {
     [CATransaction setCompletionBlock:^{
       CABasicAnimation *squish = [CABasicAnimation animationWithKeyPath:@"transform"];
-      CATransform3D squishTransform = CATransform3DMakeScale(1.5f, .5f, 1.f);
+      CATransform3D squishTransform = CATransform3DMakeScale(1.75f, .25f, 1.f);
       squish.toValue = [NSValue valueWithCATransform3D:squishTransform];
-      squish.duration = .25f;
+      squish.duration = .5f;
       squish.repeatCount = 1;
       squish.autoreverses = YES;
       
       CABasicAnimation *fadeOutBG = [CABasicAnimation animationWithKeyPath:@"backgroundColor"];
       fadeOutBG.toValue = (id)[[UIColor yellowColor] CGColor];
-      fadeOutBG.duration = .25f;
+      fadeOutBG.duration = .55f;
       fadeOutBG.repeatCount = 1;
       fadeOutBG.autoreverses = YES;
-      fadeOutBG.beginTime = .5f;
+      fadeOutBG.beginTime = 1.f;
 
       CAAnimationGroup *group = [CAAnimationGroup animation];
       group.animations = [NSArray arrayWithObjects:squish, fadeOutBG, nil];
-      group.duration = 1.f;
+      group.duration = 2.f;
       group.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
       
       [textLayer_ addAnimation:group forKey:@"SquishAndHighlight"];
