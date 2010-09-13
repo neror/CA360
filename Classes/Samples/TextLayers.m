@@ -54,7 +54,8 @@
 }
 
 - (void)dealloc {
-  [textLayer_ release], textLayer_ = nil;
+  [attributedTextLayer_ release], attributedTextLayer_ = nil;
+  [normalTextLayer_ release], normalTextLayer_ = nil;
   [super dealloc];
 }
 
@@ -66,9 +67,9 @@
   myView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
   self.view = myView;
   
-  textLayer_ = [[CATextLayer alloc] init];
-  textLayer_.frame = self.view.bounds;
-  [self.view.layer addSublayer:textLayer_];
+  attributedTextLayer_ = [[CATextLayer alloc] init];
+  attributedTextLayer_.frame = self.view.bounds;
+  [self.view.layer addSublayer:attributedTextLayer_];
   
   UIButton *animateButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
   [animateButton setTitle: @"Animate Text" forState:UIControlStateNormal];
@@ -159,14 +160,9 @@
   return suggestedSize;
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-  CTFontRef font = [self newCustomFontWithName:@"Delicious-Roman" 
-                                        ofType:@"otf" 
-                                    attributes:[NSDictionary dictionaryWithObject:[NSNumber numberWithFloat:16.f] 
-                                                                           forKey:(NSString *)kCTFontSizeAttribute]];
-  
+- (void)setupAttributedTextLayerWithFont:(CTFontRef)font {
   NSDictionary *baseAttributes = [NSDictionary dictionaryWithObject:(id)font 
-                                                               forKey:(NSString *)kCTFontAttributeName];
+                                                             forKey:(NSString *)kCTFontAttributeName];
   
   NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc] initWithString:EXAMPLE_STRING 
                                                                                  attributes:baseAttributes];
@@ -185,7 +181,7 @@
   CTFontRef courierFont = [self newFontWithAttributes:fontAttributes];
   
   NSRange rangeOfClassName = [[attrString string] rangeOfString:@"CATextLayer"];
-
+  
   [attrString addAttribute:(NSString *)kCTFontAttributeName 
                      value:(id)courierFont 
                      range:rangeOfClassName];
@@ -195,16 +191,35 @@
   
   CFRelease(courierFont);
   
-  textLayer_.string = attrString;
-  textLayer_.wrapped = YES;
+  attributedTextLayer_.string = attrString;
+  attributedTextLayer_.wrapped = YES;
   CFRange fitRange;
-  CGRect textDisplayRect = CGRectInset(textLayer_.bounds, 10.f, 10.f);
+  CGRect textDisplayRect = CGRectInset(attributedTextLayer_.bounds, 10.f, 10.f);
   CGSize recommendedSize = [self suggestSizeAndFitRange:&fitRange 
                                     forAttributedString:attrString 
                                               usingSize:textDisplayRect.size];
-  [textLayer_ setValue:[NSValue valueWithCGSize:recommendedSize] forKeyPath:@"bounds.size"];
-  textLayer_.position = self.view.center;
+  [attributedTextLayer_ setValue:[NSValue valueWithCGSize:recommendedSize] forKeyPath:@"bounds.size"];
+  attributedTextLayer_.position = self.view.center;
   [attrString release];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+  CTFontRef font = [self newCustomFontWithName:@"Delicious-Roman" 
+                                        ofType:@"otf" 
+                                    attributes:[NSDictionary dictionaryWithObject:[NSNumber numberWithFloat:16.f] 
+                                                                           forKey:(NSString *)kCTFontSizeAttribute]];
+  [self setupAttributedTextLayerWithFont:font];
+  
+  normalTextLayer_ = [[CATextLayer alloc] init];
+  normalTextLayer_.font = font;
+  normalTextLayer_.string = @"This is just a plain old CATextLayer";
+  normalTextLayer_.wrapped = YES;
+  normalTextLayer_.foregroundColor = [[UIColor purpleColor] CGColor];
+  normalTextLayer_.fontSize = 20.f;
+  normalTextLayer_.alignmentMode = kCAAlignmentCenter;
+  normalTextLayer_.frame = CGRectMake(0.f, 10.f, 320.f, 32.f);
+  [self.view.layer addSublayer:normalTextLayer_];
+  CFRelease(font);
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -240,10 +255,10 @@
       group.duration = 2.f;
       group.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
       
-      [textLayer_ addAnimation:group forKey:@"SquishAndHighlight"];
+      [attributedTextLayer_ addAnimation:group forKey:@"SquishAndHighlight"];
     }];
   }
-  [textLayer_ addAnimation:spin forKey:@"spinTheText"];
+  [attributedTextLayer_ addAnimation:spin forKey:@"spinTheText"];
   [CATransaction commit];
 }
 

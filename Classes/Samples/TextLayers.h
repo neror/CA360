@@ -26,7 +26,8 @@
 #import <QuartzCore/QuartzCore.h>
 
 @interface TextLayers : UIViewController {
-  CATextLayer *textLayer_;
+  CATextLayer *attributedTextLayer_;
+  CATextLayer *normalTextLayer_;
 }
 
 @end
