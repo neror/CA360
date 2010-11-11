@@ -42,6 +42,7 @@
 #import "ShutterTransition.h"
 #import "AdvancedShapeLayers.h"
 #import "TextLayers.h"
+#import "CustomPropertyAnimation.h"
 
 @interface UIViewController (ThisIsHereToAviodACompilerWarning)
 
@@ -59,7 +60,7 @@
     NSArray *drawing = [NSArray arrayWithObjects:[ImageContent class], [LayerDrawing class], [StyleProperties class], nil];
     NSArray *animation = [NSArray arrayWithObjects:[BasicAnimation class], [AnimationGroups class], 
                           [AnimationTransactions class], [KeyframeAnimation class], [LayerActions class], 
-                          [LayerTransitions class], nil];
+                          [LayerTransitions class], [CustomPropertyAnimation class], nil];
     NSArray *special = [NSArray arrayWithObjects:[ShapeLayers class], [AdvancedShapeLayers class], [GradientLayers class], [TextLayers class], nil];
     NSArray *advanced = [NSArray arrayWithObjects:[BitmapFontCounter class], [ShutterTransition class], nil];
     
