@@ -210,6 +210,8 @@
                                                                            forKey:(NSString *)kCTFontSizeAttribute]];
   [self setupAttributedTextLayerWithFont:font];
   
+  CGRect screenBounds = [[UIScreen mainScreen] bounds];
+  
   normalTextLayer_ = [[CATextLayer alloc] init];
   normalTextLayer_.font = font;
   normalTextLayer_.string = @"This is just a plain old CATextLayer";
@@ -217,7 +219,7 @@
   normalTextLayer_.foregroundColor = [[UIColor purpleColor] CGColor];
   normalTextLayer_.fontSize = 20.f;
   normalTextLayer_.alignmentMode = kCAAlignmentCenter;
-  normalTextLayer_.frame = CGRectMake(0.f, 10.f, 320.f, 32.f);
+  normalTextLayer_.frame = CGRectMake(0.f, 10.f, screenBounds.size.width, screenBounds.size.height / 10.f);
   [self.view.layer addSublayer:normalTextLayer_];
   CFRelease(font);
 }
