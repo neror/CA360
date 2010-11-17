@@ -42,7 +42,6 @@ static const unichar kCharacterOffset = 48;
       theNumber = 10;
     }
     CGFloat height = 1.f/11.f;
-//    CGFloat width = kDigitWidth / 20.f;
     CGFloat width = 1.f;
     CGRect contentsRect = CGRectMake(0.f, theNumber * height, width, height);
     
@@ -72,7 +71,6 @@ static const unichar kCharacterOffset = 48;
     theLayer.contents = (id)[[UIImage imageNamed:@"NumberStrip.png"] CGImage];
     
     CGFloat height = 1.f/11.f;
-    //CGFloat width = kDigitWidth;
     CGFloat width = 1.f;
     theLayer.contentsRect = CGRectMake(0.f, height, width, height);
     
@@ -128,6 +126,7 @@ static const unichar kCharacterOffset = 48;
   textField_.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
   textField_.clearButtonMode = UITextFieldViewModeWhileEditing;
   textField_.borderStyle = UITextBorderStyleRoundedRect;
+  textField_.text = @"1919";
   [myView addSubview:textField_];
   
   counter_ = [[CounterView alloc] initWithNumber:1919.f];
@@ -135,6 +134,10 @@ static const unichar kCharacterOffset = 48;
   [myView addSubview:counter_];
   
   self.view = myView;
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+  [textField_ becomeFirstResponder];
 }
 
 @end
