@@ -45,7 +45,7 @@
 
 - (void)drawInContext:(CGContextRef)ctx {
   CGContextSaveGState(ctx);
-  CGContextAddRect(ctx, CGRectInset(self.bounds, self.margin, self.margin));
+  CGContextAddEllipseInRect(ctx, CGRectInset(self.bounds, self.margin, self.margin));
   CGContextSetStrokeColorWithColor(ctx, [[UIColor yellowColor] CGColor]);
   CGContextSetLineWidth(ctx, 4.f);
   CGContextDrawPath(ctx, kCGPathStroke);
