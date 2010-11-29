@@ -58,8 +58,7 @@
     NSArray *geom = [NSArray arrayWithObjects:[GeometricProperties class], [LayerTransforms class], nil];
     NSArray *hier = [NSArray arrayWithObjects:[LayerTree class], nil];
     NSArray *drawing = [NSArray arrayWithObjects:[ImageContent class], [LayerDrawing class], [StyleProperties class], nil];
-    NSArray *animation = [NSArray arrayWithObjects:[BasicAnimation class], [AnimationGroups class], 
-                          [AnimationTransactions class], [KeyframeAnimation class], [LayerActions class], 
+    NSArray *animation = [NSArray arrayWithObjects:[BasicAnimation class], [AnimationGroups class], [KeyframeAnimation class], [LayerActions class], 
                           [LayerTransitions class], [CustomPropertyAnimation class], nil];
     NSArray *special = [NSArray arrayWithObjects:[ShapeLayers class], [AdvancedShapeLayers class], [GradientLayers class], [TextLayers class], nil];
     NSArray *advanced = [NSArray arrayWithObjects:[BitmapFontCounter class], [ShutterTransition class], nil];
