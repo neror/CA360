@@ -9,7 +9,7 @@ static const unichar kCharacterOffset = 48;
 @implementation CounterView
 
 - (CounterView *)initWithNumber:(double)num {
-  if (self = [super initWithFrame:CGRectMake(0.f, 0.f, kDigitWidth, kDigitHeight)]) {
+  if ((self = [super initWithFrame:CGRectMake(0.f, 0.f, kDigitWidth, kDigitHeight)])) {
     digitLayers_ = [[NSMutableArray alloc] init];
     [self setNumber:num];
   }
@@ -92,7 +92,7 @@ static const unichar kCharacterOffset = 48;
 #pragma mark init and dealloc
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-  if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
+  if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
     self.title = [[self class] friendlyName];
   }
   return self;

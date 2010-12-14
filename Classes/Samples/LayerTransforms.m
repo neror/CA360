@@ -39,7 +39,7 @@ const static CGPoint kSimpleLayerStartPosition = { 160., 310. };
 #pragma mark init and dealloc
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-  if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
+  if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
     self.title = [[self class] friendlyName];
     self.cumulative = YES;
   }

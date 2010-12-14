@@ -37,7 +37,7 @@ static const CGRect kMarioJumpingSpriteCoords = { 0., 0., .5, 1. };
 #pragma mark init and dealloc
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-  if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
+  if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
     self.title = [[self class] friendlyName];
   }
   return self;
