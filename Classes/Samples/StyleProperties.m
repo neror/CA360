@@ -23,7 +23,6 @@
 */
 
 #import "StyleProperties.h"
-#import <QuartzCore/QuartzCore.h>
 
 
 @implementation StyleProperties

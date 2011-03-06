@@ -23,7 +23,6 @@
 */
 
 #import "AnimationGroups.h"
-#import <QuartzCore/QuartzCore.h>
 
 @implementation AnimationGroups
 

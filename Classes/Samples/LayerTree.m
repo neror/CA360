@@ -23,7 +23,6 @@
 */
 
 #import "LayerTree.h"
-#import <QuartzCore/QuartzCore.h>
 #import "CALayer+FTDebugDrawing.h"
 
 @implementation LayerTree

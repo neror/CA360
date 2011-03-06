@@ -23,7 +23,6 @@
 */
 
 #import "CustomPropertyAnimation.h"
-#import <QuartzCore/QuartzCore.h>
 
 @interface CustomLayer : CALayer {
 }

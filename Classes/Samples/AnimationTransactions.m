@@ -23,7 +23,6 @@
 */
 
 #import "AnimationTransactions.h"
-#import <QuartzCore/QuartzCore.h>
 
 @implementation AnimationTransactions
 

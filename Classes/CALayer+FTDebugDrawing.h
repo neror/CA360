@@ -22,8 +22,6 @@
  THE SOFTWARE.
 */
 
-#import <QuartzCore/QuartzCore.h>
-
 @interface CALayer (FTDebugDrawing)
 
 - (void)debugDrawPoint:(CGPoint)point inContext:(CGContextRef)context withSize:(CGSize)size color:(UIColor *)color;

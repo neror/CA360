@@ -23,7 +23,6 @@
 */
 
 #import <UIKit/UIKit.h>
-#import <QuartzCore/QuartzCore.h>
 
 @interface ShapeLayers : UIViewController {
   CAShapeLayer *shapeLayer_;

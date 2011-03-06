@@ -23,7 +23,6 @@
 */
 
 #import <UIKit/UIKit.h>
-#import <QuartzCore/QuartzCore.h>
 
 @interface ShutterTransition : UIViewController {
   CALayer *mainLayer_;

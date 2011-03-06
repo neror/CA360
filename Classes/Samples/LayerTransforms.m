@@ -23,7 +23,6 @@
 */
 
 #import "LayerTransforms.h"
-#import <QuartzCore/QuartzCore.h>
 #import "CALayer+FTDebugDrawing.h"
 
 const static CGPoint kSimpleLayerStartPosition = { 160., 310. };

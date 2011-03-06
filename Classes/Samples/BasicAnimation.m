@@ -23,7 +23,6 @@
 */
 
 #import "BasicAnimation.h"
-#import <QuartzCore/QuartzCore.h>
 
 @implementation BasicAnimation
 

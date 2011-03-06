@@ -23,7 +23,6 @@
 */
 
 #import "LayerDrawing.h"
-#import <QuartzCore/QuartzCore.h>
 
 @implementation LayerDrawing
 

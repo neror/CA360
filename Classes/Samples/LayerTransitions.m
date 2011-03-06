@@ -23,7 +23,6 @@
 */
 
 #import "LayerTransitions.h"
-#import <QuartzCore/QuartzCore.h>
 
 @implementation LayerTransitions
 

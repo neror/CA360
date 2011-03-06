@@ -23,7 +23,6 @@
 */
 
 #import "KeyframeAnimation.h"
-#import <QuartzCore/QuartzCore.h>
 
 static const CGRect kMarioStandingSpriteCoords = { .5, 0., .5, 1. };
 static const CGRect kMarioJumpingSpriteCoords = { 0., 0., .5, 1. };

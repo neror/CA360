@@ -23,7 +23,6 @@
 */
 
 #import "LayerActions.h"
-#import <QuartzCore/QuartzCore.h>
 
 @implementation LayerActions
 

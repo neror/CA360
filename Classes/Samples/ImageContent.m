@@ -23,7 +23,6 @@
 */
 
 #import "ImageContent.h"
-#import <QuartzCore/QuartzCore.h>
 
 @implementation ImageContent
 
